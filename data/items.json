@@ -1957,8 +1957,8 @@
         "en": "Electric golf carts"
       },
       "summary": {
-        "mn": "Монголоос авах лити батарейтай 4 суудалтай хоёр цахилгаан гольфын тэрэг. Лодж дотор зочид, ачаа зөөж, бусад үед зочдод түрээслэнэ.",
-        "en": "Two 4-seat electric golf carts with lithium batteries, bought in Mongolia. They move guests and luggage around the lodge, and are rented to guests the rest of the time."
+        "mn": "Монголоос авах лити батарейтай 6 суудалтай хоёр Evolution D5 Maverick 6 Plus цахилгаан гольфын тэрэг. Лодж дотор зочид, ачаа зөөж, бусад үед зочдод түрээслэнэ. Батсуурь ахаас авна.",
+        "en": "Two 6-seat Evolution D5 Maverick 6 Plus electric golf carts with lithium batteries, bought in Mongolia from Batsuur. They move guests and luggage around the lodge, and are rented to guests the rest of the time."
       },
       "images": [
         {
@@ -1975,6 +1975,29 @@
           },
           "options": [
             {
+              "id": "evolution-d5-maverick-6-plus",
+              "name": {
+                "mn": "Evolution D5 Maverick 6 Plus, Батсуурь ахаас",
+                "en": "Evolution D5 Maverick 6 Plus, from Batsuur"
+              },
+              "note": {
+                "mn": "6 суудалтай, лити батарей; Батсуурь ахаас авна.",
+                "en": "6 seats, lithium battery; bought from Batsuur."
+              },
+              "source": "given",
+              "price": {
+                "amount": 12000,
+                "currency": "USD"
+              },
+              "origin": "local",
+              "shipping": 0,
+              "default": true,
+              "basis": {
+                "mn": "Таны өгсөн үнэ: тус бүр $12,000, Батсуурь ахаас Монголд худалдан авна (импортын зардалгүй). УБ-аас Дадал хүртэлх тээвэр хөдөө орон нутгийн нэмэгдэлд орсон. 6 суудалтай тул нэг удаад илүү олон зочин, ачаа зөөнө. Лити батарей хүйтэнд хар тугалганыхаас хамаагүй сайн ажилладаг, өвөл дулаан барилгад хадгална.",
+                "en": "The price you gave: $12,000 each, bought in Mongolia from Batsuur (so no import costs). Transport from UB to Dadal is in the countryside premium. Six seats means more guests and luggage per trip. Lithium batteries hold their range far better in the cold than lead-acid, and they winter in the heated building."
+              }
+            },
+            {
               "id": "premium-lithium",
               "name": {
                 "mn": "4 суудалтай цахилгаан тэрэг, лити батарей",
@@ -1987,10 +2010,13 @@
               },
               "origin": "local",
               "shipping": 0,
-              "default": true,
               "basis": {
-                "mn": "Таны өгсөн үнэ: тус бүр ~$8,000, Монголоос худалдан авна (импортын зардалгүй). УБ-аас Дадал хүртэлх тээвэр хөдөө орон нутгийн нэмэгдэлд орсон. Лити батарей хүйтэнд хар тугалганыхаас хамаагүй сайн ажилладаг, өвөл дулаан барилгад хадгална.",
-                "en": "The price you gave: about $8,000 each, bought in Mongolia (so no import costs). Transport from UB to Dadal is in the countryside premium. Lithium batteries hold their range far better in the cold than lead-acid, and they winter in the heated building."
+                "mn": "Энгийн 4 суудалтай лити батарейтай цахилгаан тэрэг, Монголоос ~$8,000 (импортын зардалгүй). УБ-аас Дадал хүртэлх тээвэр хөдөө орон нутгийн нэмэгдэлд орсон.",
+                "en": "A plain 4-seat electric cart with a lithium battery, about $8,000 in Mongolia (so no import costs). Transport from UB to Dadal is in the countryside premium."
+              },
+              "note": {
+                "mn": "Хямд хувилбар: жижиг, 4 суудалтай.",
+                "en": "Cheaper choice: smaller, 4 seats."
               }
             }
           ]

@@ -8,23 +8,26 @@ This file isn't served: `.htaccess` blocks .md, .py, .bat, .xlsx, scripts/ and .
 
 ## 1. Create the subdomain (once)
 
-hPanel → Websites → ninepines.mn → Manage → Domains → Subdomains
+The site is hosted on monbit.com, which is already on Hostinger, so DNS is automatic.
 
-- Subdomain: `wishlist`  (the site becomes wishlist.ninepines.mn)
-- Leave "Custom folder" as Hostinger suggests, usually `public_html/wishlist`
+If monbit.com has no website yet: hPanel → Websites → Add website → use the existing domain monbit.com → skip the builder / start with an empty site.
+
+Then hPanel → Websites → monbit.com → Manage → Domains → Subdomains
+
+- Subdomain: `ninepines`  (the site becomes ninepines.monbit.com)
+- Leave "Custom folder" as Hostinger suggests, usually `public_html/ninepines`
 - Create
 
-If ninepines.mn's DNS is managed somewhere other than Hostinger, add an A record there:
-`wishlist` → the IP shown in hPanel → Hosting → Plan details.
+(To use monbit.com itself instead, skip the subdomain and in step 2 leave Directory empty, so it deploys into public_html.)
 
 
 ## 2. Connect the repo (once)
 
-hPanel → Websites → ninepines.mn → Manage → Advanced → GIT
+hPanel → Websites → monbit.com → Manage → Advanced → GIT
 
 - Repository: `https://github.com/twodogsclucking/wishlist2027.git`
 - Branch: `main`
-- Directory: the subdomain folder from step 1, e.g. `wishlist`
+- Directory: the subdomain folder from step 1, e.g. `ninepines`
   (relative to public_html; the folder must be empty, so delete any default index.php / default.php first)
 - Create, then press Deploy once
 
@@ -45,7 +48,7 @@ From then on every push to `main` goes live in a few seconds.
 
 ## 4. HTTPS (once)
 
-hPanel → Security → SSL → install the free SSL for wishlist.ninepines.mn (it can take up to an hour).
+hPanel → Security → SSL → install the free SSL for ninepines.monbit.com (it can take up to an hour).
 
 
 ## 5. Optional: password-protect it
@@ -57,8 +60,8 @@ Share links still work; viewers just enter the password once.
 
 ## Checking it went live
 
-- Open https://wishlist.ninepines.mn (use a hard refresh if it looks old: Ctrl+F5).
-- https://wishlist.ninepines.mn/README.md and /scripts/validate.py should both say 403 Forbidden.
+- Open https://ninepines.monbit.com (use a hard refresh if it looks old: Ctrl+F5).
+- https://ninepines.monbit.com/README.md and /scripts/validate.py should both say 403 Forbidden.
 - Download Excel should work.
 - The Photos button doesn't appear on the live site; photos are only added locally.
 
