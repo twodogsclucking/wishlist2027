@@ -1,0 +1,4817 @@
+{
+  "$schema": "./items.schema.json",
+  "items": [
+    {
+      "id": "storage-parking",
+      "category": "buildings",
+      "earns": "no",
+      "name": {
+        "mn": "Дулаан зогсоол, агуулах",
+        "en": "Heated parking & storage"
+      },
+      "summary": {
+        "mn": "Өвөлжин хөлдөхөөс дээш температурт байлгах нэг дулаалгатай барилга: 1 ажилтны + 4 хүртэл зочны машины зогсоол, жагсаалтын бүх тээврийн хэрэгсэл, тоног төхөөрөмжийг өвөлжүүлэх агуулах. Зочдын зогсоол үнэгүй (өрөөний үнэд багтсан). Нисдэг тэрэгний ангар батлагдвал энэ барилгын өргөтгөл болж баригдана.",
+        "en": "One insulated building, kept just above freezing all winter: parking for 1 staff car + up to 4 guest cars, and winter storage for every vehicle and machine on this list. Parking is free for guests (included in the room rate). If the helicopter hangar is approved, it is built as an extension of this building."
+      },
+      "params": [
+        {
+          "id": "length",
+          "name": {
+            "mn": "Урт",
+            "en": "Length"
+          },
+          "unit": {
+            "mn": "м",
+            "en": "m"
+          },
+          "value": 20,
+          "basis": {
+            "mn": "20 × 15 м = 300 м²: өвөл 5 машины зогсоол (1 ажилтны + 4 хүртэл зочны, тус бүр орж гарах зайтай ~30 м² = 150 м²) дээр нь гольфын тэрэг, UTV, цасны мотоцикл, скүтер, мотоцикл, чиргүүлтэй усан онгоц, хөлдөөгч, батарейд ~150 м².",
+            "en": "20 × 15 m = 300 m²: parking for 5 cars in winter (1 staff + up to 4 guests, ~30 m² each with room to drive in = 150 m²) plus ~150 m² for the golf carts, UTVs, snowmobiles, scooters, bikes, the boat on its trailer, the freezers and the battery."
+          }
+        },
+        {
+          "id": "width",
+          "name": {
+            "mn": "Өргөн",
+            "en": "Width"
+          },
+          "unit": {
+            "mn": "м",
+            "en": "m"
+          },
+          "value": 15,
+          "basis": {
+            "mn": "Уртыг харна уу.",
+            "en": "See length."
+          }
+        },
+        {
+          "id": "height",
+          "name": {
+            "mn": "Ханын өндөр",
+            "en": "Wall height"
+          },
+          "unit": {
+            "mn": "м",
+            "en": "m"
+          },
+          "value": 4.5,
+          "basis": {
+            "mn": "Дээвэр хүртэл ~4.5 м — 4 м хаалга, чиргүүлтэй усан онгоцонд хангалттай.",
+            "en": "About 4.5 m to the eaves, enough for 4 m doors and a boat on its trailer."
+          }
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/img/items/storage-parking/20261013-112709-542.jpg"
+        },
+        {
+          "src": "assets/img/items/storage-parking/20261013-121210-217.jpg"
+        }
+      ],
+      "components": [
+        {
+          "id": "floor",
+          "name": {
+            "mn": "Суурь, бетон шал",
+            "en": "Foundation and concrete floor"
+          },
+          "quantity": "length * width",
+          "quantityBasis": {
+            "mn": "Барилгын урт × өргөн.",
+            "en": "Length × width of the building."
+          },
+          "unit": {
+            "mn": "м²",
+            "en": "m²"
+          },
+          "options": [
+            {
+              "id": "main",
+              "name": {
+                "mn": "Арматуртай бетон шал",
+                "en": "Reinforced slab"
+              },
+              "source": "construction-benchmark",
+              "price": {
+                "amount": 300000,
+                "currency": "MNT"
+              },
+              "origin": "local",
+              "shipping": 0,
+              "default": true,
+              "basis": {
+                "mn": "Клуб байр м² тутам ~₮8 сая (1,000 м² — ₮8 тэрбум) зардлаар ижил гүйцэтгэгч барьсан. Энгийн ган барилга түүний багахан хэсэг; суурь, машин даах арматуртай бетон шалыг (хөлдөлтөөс хамгаалах захын дулаалгатай) м² тутам ₮300,000 (≈$80) гэж тооцсон. Гүйцэтгэгчийн үнийн санал хэрэгтэй.",
+                "en": "The clubhouse cost about ₮8m per m² (₮8bn per 1,000 m²), built by the same contractor. A plain steel building is a fraction of that; for the foundation and a vehicle-grade reinforced concrete floor (with edge insulation against frost) we estimate ₮300,000 per m² (≈$80). Needs the contractor's quote."
+              }
+            }
+          ]
+        },
+        {
+          "id": "shell",
+          "name": {
+            "mn": "Ган каркас, сэндвич хавтан",
+            "en": "Steel frame and insulated panels"
+          },
+          "quantity": "length * width",
+          "unit": {
+            "mn": "м²",
+            "en": "m²"
+          },
+          "options": [
+            {
+              "id": "main",
+              "name": {
+                "mn": "Ган + сэндвич хавтан",
+                "en": "Steel + sandwich panels"
+              },
+              "source": "construction-benchmark",
+              "price": {
+                "amount": 550000,
+                "currency": "MNT"
+              },
+              "origin": "local",
+              "shipping": 0,
+              "default": true,
+              "basis": {
+                "mn": "Дулаалгатай ган агуулахын бүтэц гадаадад м² тутам ~$90–150. −40°C-д зориулсан зузаан (150 мм) хавтан, лоджийн гүйцэтгэгчийн угсралтыг нэмж м² тутам ₮550,000 (≈$150) гэж авсан; Дадал хүртэл зөөх нь хөдөө орон нутгийн нэмэгдэлд орсон. Гүйцэтгэгчийн үнийн санал хэрэгтэй.",
+                "en": "Insulated steel warehouses cost about $90–150 per m² for the structure abroad. With thick (150 mm) panels for −40°C and erection by the lodge contractor we use ₮550,000 per m² (≈$150); getting it to Dadal is in the countryside premium. Needs the contractor's quote."
+              }
+            }
+          ],
+          "quantityBasis": {
+            "mn": "Шалны м²-аар тооцсон: урт × өргөн.",
+            "en": "Priced per m² of floor: length × width."
+          }
+        },
+        {
+          "id": "facade",
+          "name": {
+            "mn": "Лоджтой зохицох гадна өнгөлгөө",
+            "en": "Exterior finish matching the lodge"
+          },
+          "quantity": "2 * (length + width) * height",
+          "quantityBasis": {
+            "mn": "Гадна хана: барилгын тойрог × ханын өндөр.",
+            "en": "The outside walls: the distance around the building × wall height."
+          },
+          "unit": {
+            "mn": "м²",
+            "en": "m²"
+          },
+          "options": [
+            {
+              "id": "main",
+              "name": {
+                "mn": "Лоджийн загварын өнгөлгөө",
+                "en": "Lodge-style cladding"
+              },
+              "source": "construction-benchmark",
+              "price": {
+                "amount": 200000,
+                "currency": "MNT"
+              },
+              "origin": "local",
+              "shipping": 0,
+              "default": true,
+              "basis": {
+                "mn": "Барилга лоджтой зохицохоор хавтан дээгүүр мод/чулуун өнгөлгөө, ханын м² тутам ~₮200,000. Зөвхөн зочдод харагдах талыг өнгөлбөл хямдрна.",
+                "en": "Timber/stone-look cladding over the panels so the building matches the lodge, about ₮200,000 per m² of wall. Cheaper if only the sides facing guests are finished."
+              }
+            }
+          ]
+        },
+        {
+          "id": "doors",
+          "name": {
+            "mn": "Дулаалгатай гаражийн хаалга",
+            "en": "Insulated garage doors"
+          },
+          "quantity": 3,
+          "quantityBasis": {
+            "mn": "3 том хаалга: 2 нь машинд, 1 өргөн нь усан онгоцны чиргүүл, тоног төхөөрөмжид.",
+            "en": "3 large doors: 2 for cars, 1 wider for the boat trailer and equipment."
+          },
+          "options": [
+            {
+              "id": "main",
+              "name": {
+                "mn": "Секцэн хаалга, ~4 × 4 м",
+                "en": "Sectional door, ~4 × 4 m"
+              },
+              "source": "research-china",
+              "price": {
+                "amount": 3500,
+                "currency": "USD"
+              },
+              "origin": "import",
+              "shipping": 0.04,
+              "default": true,
+              "basis": {
+                "mn": "Моторт, дулаалгатай секцэн гаражийн хаалга ~4 × 4 м, Хятадаас: тус бүр ~$2,500–4,500. Импорт тул тээвэр, гааль, НӨАТ нэмэгдэнэ.",
+                "en": "Insulated sectional garage doors with motor, about 4 × 4 m, from China: about $2,500–4,500 each. Imported, so shipping, duty and VAT are added."
+              }
+            }
+          ]
+        },
+        {
+          "id": "heating",
+          "name": {
+            "mn": "Цахилгаан халаалт (хөлдөлтөөс хамгаалах)",
+            "en": "Electric frost-protection heating"
+          },
+          "quantity": 1,
+          "options": [
+            {
+              "id": "main",
+              "name": {
+                "mn": "Халаагуур + термостат",
+                "en": "Heaters + thermostats"
+              },
+              "source": "construction-benchmark",
+              "price": {
+                "amount": 15000000,
+                "currency": "MNT"
+              },
+              "origin": "local",
+              "shipping": 0,
+              "default": true,
+              "basis": {
+                "mn": "Барилгыг хөлдөхөөс дээш (дулаан биш) байлгах үйлдвэрийн цахилгаан халаагуур (нийт ~30 кВт), термостаттай. Ашиглалт 10-р сараас 4-р сар хүртэл сард ~₮500–600 мянга (жилд ≈₮3.9 сая), энэ үнэд ороогүй.",
+                "en": "Industrial electric heaters (about 30 kW in total) with thermostats, to keep the building just above freezing — not warm. Running it costs about ₮500–600 thousand a month from October to April (≈₮3.9m a year), not included in this price."
+              }
+            }
+          ]
+        },
+        {
+          "id": "electrical",
+          "name": {
+            "mn": "Цахилгааны утас, гэрэлтүүлэг, залгуур",
+            "en": "Wiring, lighting and sockets"
+          },
+          "quantity": "length * width",
+          "unit": {
+            "mn": "м²",
+            "en": "m²"
+          },
+          "options": [
+            {
+              "id": "main",
+              "name": {
+                "mn": "Цахилгааны угсралт",
+                "en": "Electrical fit-out"
+              },
+              "source": "construction-benchmark",
+              "price": {
+                "amount": 60000,
+                "currency": "MNT"
+              },
+              "origin": "local",
+              "shipping": 0,
+              "default": true,
+              "basis": {
+                "mn": "Гэрэлтүүлэг, хөдөлгүүр халаагуур, батарей цэнэглэх залгуур, халаагуурын тэжээл: м² тутам ~₮60,000.",
+                "en": "Lighting, power sockets for engine heaters and battery charging, and the supply for the heaters: about ₮60,000 per m²."
+              }
+            }
+          ],
+          "quantityBasis": {
+            "mn": "Барилгын урт × өргөн.",
+            "en": "Length × width of the building."
+          }
+        }
+      ],
+      "timeline": {
+        "work": [
+          4,
+          10
+        ],
+        "use": [
+          11,
+          12
+        ],
+        "note": {
+          "mn": "Барилга эрт хавар эхэлнэ; өвөлд бэлэн.",
+          "en": "Construction starts early spring; ready for winter."
+        }
+      },
+      "upkeep": {
+        "perYear": 3850000,
+        "basis": {
+          "mn": "Барилгыг хөлдөхөөс дээш байлгах цахилгаан халаалт: 10-р сараас 4-р сар хүртэл (7 сар) сард ~₮500–600 мянга ≈ жилд ₮3.85 сая, таны тооцоогоор.",
+          "en": "Electric heating to keep the building just above freezing: about ₮500–600 thousand a month from October to April (7 months) ≈ ₮3.85m a year, as you estimated."
+        }
+      }
+    },
+    {
+      "id": "helicopter-hangar",
+      "category": "buildings",
+      "earns": "no",
+      "name": {
+        "mn": "Нисдэг тэрэгний ангар",
+        "en": "Helicopter hangar"
+      },
+      "summary": {
+        "mn": "Eurocopter EC145-д зориулсан ангар, дулаан зогсоолын барилгын өргөтгөл болж баригдана, түүн шиг хөлдөхөөс дээш температурт байна. Том цахилгаан ангарын хаалга, түлш цэнэглэх авиа түлшний сав, нисдэг тэрэгийг оруулж гаргах алсын удирдлагатай тэрэг багтсан.",
+        "en": "A hangar for a Eurocopter EC145, built as an extension of the heated parking building and kept just above freezing like it. Includes a large electric hangar door, an aviation fuel tank for refuelling and a remote-controlled dolly to move the helicopter in and out."
+      },
+      "params": [
+        {
+          "id": "length",
+          "name": {
+            "mn": "Урт",
+            "en": "Length"
+          },
+          "unit": {
+            "mn": "м",
+            "en": "m"
+          },
+          "value": 16,
+          "basis": {
+            "mn": "16 × 16 м = 256 м². EC145-ийн сэнс 11 м диаметртэй, сэнстэйгээ ~13 м урт; ир нь эвхэгддэггүй. 16 м нь сэнсний эргэн тойронд ~1.5 м зай үлдээж аюулгүй оруулж гаргах боломж олгоно.",
+            "en": "16 × 16 m = 256 m². The EC145's rotor is 11 m across and it is about 13 m long with the rotor turning; the blades don't fold. 16 m each way leaves about 1.5 m clearance around the rotor to push it in and out safely."
+          }
+        },
+        {
+          "id": "width",
+          "name": {
+            "mn": "Өргөн",
+            "en": "Width"
+          },
+          "unit": {
+            "mn": "м",
+            "en": "m"
+          },
+          "value": 16,
+          "basis": {
+            "mn": "Уртыг харна уу.",
+            "en": "See length."
+          }
+        },
+        {
+          "id": "height",
+          "name": {
+            "mn": "Ханын өндөр",
+            "en": "Wall height"
+          },
+          "unit": {
+            "mn": "м",
+            "en": "m"
+          },
+          "value": 6,
+          "basis": {
+            "mn": "Дээвэр хүртэл ~6 м — 5 м өндөр хаалга, EC145-ийн ~4 м өндөрт.",
+            "en": "About 6 m to the eaves, for a 5 m high door and the EC145's ~4 m height."
+          }
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/img/items/helicopter-hangar/20261013-121240-440.jpg"
+        },
+        {
+          "src": "assets/img/items/helicopter-hangar/20261013-183305-986.jpg",
+          "option": "fuel-tank/fixed-10000"
+        },
+        {
+          "src": "assets/img/items/helicopter-hangar/20261013-183411-408.jpg",
+          "option": "fuel-tank/bowser-2140"
+        },
+        {
+          "src": "assets/img/items/helicopter-hangar/20261013-183545-863.jpg",
+          "option": "tug/remote-platform"
+        },
+        {
+          "src": "assets/img/items/helicopter-hangar/20261013-183633-616.jpg",
+          "option": "tug/wheels-tug"
+        }
+      ],
+      "components": [
+        {
+          "id": "floor",
+          "name": {
+            "mn": "Суурь, бетон шал",
+            "en": "Foundation and concrete floor"
+          },
+          "quantity": "length * width",
+          "quantityBasis": {
+            "mn": "Ангарын урт × өргөн.",
+            "en": "Length × width of the hangar."
+          },
+          "unit": {
+            "mn": "м²",
+            "en": "m²"
+          },
+          "options": [
+            {
+              "id": "main",
+              "name": {
+                "mn": "Арматуртай бетон шал",
+                "en": "Reinforced slab"
+              },
+              "source": "construction-benchmark",
+              "price": {
+                "amount": 300000,
+                "currency": "MNT"
+              },
+              "origin": "local",
+              "shipping": 0,
+              "default": true,
+              "basis": {
+                "mn": "Зогсоолын барилгатай ижил: суурь, арматуртай шал м² тутам ₮300,000 (≈$80). Тэрэг дээрх 3.6 тн нисдэг тэрэг ачаатай машины тэнхлэгээс хөнгөн тул тусгай шал хэрэггүй.",
+                "en": "Same rate as the parking building: ₮300,000 per m² (≈$80) for foundation and reinforced floor. A 3.6-tonne helicopter on a dolly is lighter on the floor than a loaded car axle, so no special slab is needed."
+              }
+            }
+          ]
+        },
+        {
+          "id": "shell",
+          "name": {
+            "mn": "Ган каркас, сэндвич хавтан",
+            "en": "Steel frame and insulated panels"
+          },
+          "quantity": "length * width",
+          "unit": {
+            "mn": "м²",
+            "en": "m²"
+          },
+          "options": [
+            {
+              "id": "main",
+              "name": {
+                "mn": "Тулгуургүй ган + сэндвич хавтан",
+                "en": "Clear-span steel + sandwich panels"
+              },
+              "source": "construction-benchmark",
+              "price": {
+                "amount": 650000,
+                "currency": "MNT"
+              },
+              "origin": "local",
+              "shipping": 0,
+              "default": true,
+              "basis": {
+                "mn": "Дээвэр 16 м-т тулгуургүй, хана ~6 м өндөр тул зогсоолоос (₮550,000) өндөр; нэг хана зогсоолын барилгатай нийтлэг тул хэсэгчлэн хэмнэнэ. м² тутам ₮650,000 (≈$180). Гүйцэтгэгчийн үнийн санал хэрэгтэй.",
+                "en": "Higher than the parking (₮550,000) because the roof must span 16 m with no columns and the walls are about 6 m tall; partly offset because one wall is shared with the parking building. ₮650,000 per m² (≈$180). Needs the contractor's quote."
+              }
+            }
+          ],
+          "quantityBasis": {
+            "mn": "Шалны м²-аар тооцсон: урт × өргөн.",
+            "en": "Priced per m² of floor: length × width."
+          }
+        },
+        {
+          "id": "facade",
+          "name": {
+            "mn": "Лоджтой зохицох гадна өнгөлгөө",
+            "en": "Exterior finish matching the lodge"
+          },
+          "quantity": "(2 * length + width) * height - 70",
+          "quantityBasis": {
+            "mn": "3 гадна хана (4 дэх нь зогсоолтой нийтлэг) × ханын өндөр, хаалганы 70 м²-ийг хассан.",
+            "en": "3 outside walls (the 4th is shared with the parking) × wall height, minus the 70 m² door."
+          },
+          "unit": {
+            "mn": "м²",
+            "en": "m²"
+          },
+          "options": [
+            {
+              "id": "main",
+              "name": {
+                "mn": "Лоджийн загварын өнгөлгөө",
+                "en": "Lodge-style cladding"
+              },
+              "source": "construction-benchmark",
+              "price": {
+                "amount": 200000,
+                "currency": "MNT"
+              },
+              "origin": "local",
+              "shipping": 0,
+              "default": true,
+              "basis": {
+                "mn": "Зогсоолын барилгатай ижил: ханын м² тутам ~₮200,000.",
+                "en": "Same as the parking building: about ₮200,000 per m² of wall."
+              }
+            }
+          ]
+        },
+        {
+          "id": "door",
+          "name": {
+            "mn": "Ангарын хаалга",
+            "en": "Hangar door"
+          },
+          "quantity": 1,
+          "quantityBasis": {
+            "mn": "Нэг хаалга 14 м өргөн × 5 м өндөр: 11 м сэнс, хоёр талд зай, EC145-ийн ~4 м өндөр.",
+            "en": "One door 14 m wide × 5 m high: the 11 m rotor plus room either side, and the EC145's ~4 m height."
+          },
+          "options": [
+            {
+              "id": "main",
+              "name": {
+                "mn": "Цахилгаан дулаалгатай гулсдаг/эвхэгддэг хаалга, 14 × 5 м",
+                "en": "Electric insulated sliding/folding door, 14 × 5 m"
+              },
+              "source": "research-china",
+              "price": {
+                "amount": 18000,
+                "currency": "USD"
+              },
+              "origin": "import",
+              "shipping": 0.125,
+              "default": true,
+              "basis": {
+                "mn": "Хятадын цахилгаан дулаалгатай ангарын хаалга хаалганы м² тутам ~$150–300; 70 м² → ~$18,000. Том, хүнд тул том ачааны тээвэр.",
+                "en": "Chinese electric insulated hangar doors cost about $150–300 per m² of door; 70 m² → about $18,000. Large and heavy, so bulky-goods shipping."
+              }
+            }
+          ]
+        },
+        {
+          "id": "heating",
+          "name": {
+            "mn": "Цахилгаан халаалт (хөлдөлтөөс хамгаалах)",
+            "en": "Electric frost-protection heating"
+          },
+          "quantity": 1,
+          "options": [
+            {
+              "id": "main",
+              "name": {
+                "mn": "Халаагуур + термостат",
+                "en": "Heaters + thermostats"
+              },
+              "source": "construction-benchmark",
+              "price": {
+                "amount": 15000000,
+                "currency": "MNT"
+              },
+              "origin": "local",
+              "shipping": 0,
+              "default": true,
+              "basis": {
+                "mn": "Зогсоолтой ижил түвшин: хөлдөхөөс дээш. Ашиглалт зогсоолоос бага зэрэг өндөр (том, өндөр), 10–4-р сард сард ~₮600–700 мянга — энэ үнэд ороогүй.",
+                "en": "Same level as the parking: just above freezing. Running it should cost a little more than the parking (bigger and taller), roughly ₮600–700 thousand a month from October to April — not included in this price."
+              }
+            }
+          ]
+        },
+        {
+          "id": "electrical",
+          "name": {
+            "mn": "Цахилгааны утас, гэрэлтүүлэг",
+            "en": "Wiring and lighting"
+          },
+          "quantity": "length * width",
+          "unit": {
+            "mn": "м²",
+            "en": "m²"
+          },
+          "options": [
+            {
+              "id": "main",
+              "name": {
+                "mn": "Цахилгааны угсралт",
+                "en": "Electrical fit-out"
+              },
+              "source": "construction-benchmark",
+              "price": {
+                "amount": 60000,
+                "currency": "MNT"
+              },
+              "origin": "local",
+              "shipping": 0,
+              "default": true,
+              "basis": {
+                "mn": "Зогсоолтой ижил: м² тутам ~₮60,000, хаалга, тэрэгний цэнэглэгч, түлшний насосны тэжээлтэй.",
+                "en": "Same rate as the parking: about ₮60,000 per m², including power for the door, the dolly charger and the fuel pump."
+              }
+            }
+          ],
+          "quantityBasis": {
+            "mn": "Ангарын урт × өргөн.",
+            "en": "Length × width of the hangar."
+          }
+        },
+        {
+          "id": "fuel-tank",
+          "name": {
+            "mn": "Авиа түлшний сав",
+            "en": "Aviation fuel tank"
+          },
+          "quantity": 1,
+          "options": [
+            {
+              "id": "fixed-10000",
+              "name": {
+                "mn": "Суурин 10,000 л давхар ханатай Jet A-1 сав",
+                "en": "Fixed 10,000 L self-bunded Jet A-1 tank"
+              },
+              "note": {
+                "mn": "~11 цэнэглэлтийн түлш; цөөн тээвэрлэлт.",
+                "en": "Stores fuel for about 11 fill-ups; fewer deliveries."
+              },
+              "source": "research-global",
+              "price": {
+                "amount": 35000,
+                "currency": "USD"
+              },
+              "origin": "import",
+              "shipping": 0.125,
+              "default": true,
+              "basis": {
+                "mn": "Авиа шүүлтүүр, насос, тоолуур, хоолойтой суурин давхар ханатай сав: ~$30,000–45,000. 10,000 л нь EC145-ийн ~11 бүтэн цэнэглэлт (~860 л), тул Улаанбаатараас улиралд хэдхэн удаа түлш зөөнө.",
+                "en": "A fixed double-walled tank with aviation filtration, pump, meter and hose reel: about $30,000–45,000. 10,000 L is about 11 full EC145 tanks (~860 L each), so fuel only needs trucking from Ulaanbaatar a few times a season."
+              }
+            },
+            {
+              "id": "bowser-2140",
+              "name": {
+                "mn": "Чирэгддэг 2,140 л Jet A-1 цистерн",
+                "en": "Towable 2,140 L Jet A-1 bowser"
+              },
+              "note": {
+                "mn": "Хямд, хөдөлгөөнт, гэхдээ ~2.5 цэнэглэлт.",
+                "en": "Cheaper and mobile, but only about 2.5 fill-ups."
+              },
+              "source": "research-global",
+              "price": {
+                "amount": 15000,
+                "currency": "USD"
+              },
+              "origin": "import",
+              "shipping": 0.125,
+              "basis": {
+                "mn": "Шүүлтүүр, насостой НҮБ-ын стандартын Jet A-1 цистерн: Их Британид ~£11,500 (≈$15,000). ~2.5 цэнэглэлт багтаах тул түлш ойр ойрхон зөөнө, гэхдээ буух талбай руу чирж болно.",
+                "en": "UN-approved bunded Jet A-1 bowser with filter monitor and pump: about £11,500 (≈$15,000) in the UK. Holds about 2.5 fill-ups, so fuel deliveries are more frequent, but it can be towed to the helipad."
+              }
+            }
+          ]
+        },
+        {
+          "id": "tug",
+          "name": {
+            "mn": "Нисдэг тэрэг зөөх тэрэг",
+            "en": "Helicopter dolly"
+          },
+          "quantity": 1,
+          "options": [
+            {
+              "id": "remote-platform",
+              "name": {
+                "mn": "Алсын удирдлагатай цахилгаан тавцан",
+                "en": "Remote-controlled electric platform"
+              },
+              "note": {
+                "mn": "Бүрэн автомат: дээр нь буугаад оруулна.",
+                "en": "Fully automated: land on it, drive it in."
+              },
+              "source": "research-global",
+              "price": {
+                "amount": 45000,
+                "currency": "USD"
+              },
+              "origin": "import",
+              "shipping": 0.04,
+              "default": true,
+              "basis": {
+                "mn": "Нисдэг тэрэг дээр нь буудаг, нэг хүн алсын удирдлагаар оруулж гаргадаг батарейтай тавцан (HeliWagon ангилал), ~3.6 тн гулгууртай нисдэг тэрэгт тохирсон. Үйлдвэрлэгчид үнээ нийтэлдэггүй; ~$35,000–60,000 гэж тооцсон. Үнийн санал хэрэгтэй.",
+                "en": "A battery-powered platform the helicopter lands on and that one person drives in and out by remote control (e.g. HeliWagon class), rated for a ~3.6-tonne skid helicopter. Makers don't publish prices; we estimate $35,000–60,000. Needs a quote."
+              }
+            },
+            {
+              "id": "wheels-tug",
+              "name": {
+                "mn": "Газрын дугуй + жижиг цахилгаан чирэгч",
+                "en": "Ground-handling wheels + small electric tug"
+              },
+              "note": {
+                "mn": "Хямд, гар ажиллагаа их.",
+                "en": "Cheaper, more manual."
+              },
+              "source": "research-global",
+              "price": {
+                "amount": 15000,
+                "currency": "USD"
+              },
+              "origin": "import",
+              "shipping": 0.04,
+              "basis": {
+                "mn": "Гулгуурт залгадаг дугуй, жижиг цахилгаан чирэгч: ~$10,000–20,000. Хямд, гэхдээ хоёр хүн, илүү хугацаа шаардана.",
+                "en": "Clip-on skid wheels plus a small electric tug: about $10,000–20,000. Cheaper, but needs two people and more time each move."
+              }
+            }
+          ]
+        }
+      ],
+      "timeline": {
+        "work": [
+          5,
+          10
+        ],
+        "use": [
+          11,
+          12
+        ],
+        "note": {
+          "mn": "Зогсоолын каркас босмогц өргөтгөл болж баригдана.",
+          "en": "Built as an extension once the parking frame is up."
+        }
+      },
+      "upkeep": {
+        "perYear": 4550000,
+        "basis": {
+          "mn": "Хөлдөлтөөс хамгаалах халаалт, том, өндөр тул зогсоолоос бага зэрэг их: 7 сар сард ~₮650 мянга ≈ жилд ₮4.55 сая.",
+          "en": "Frost-protection heating, a little more than the parking building because it is bigger and taller: about ₮650 thousand a month for 7 months ≈ ₮4.55m a year."
+        }
+      }
+    },
+    {
+      "id": "river-dock",
+      "category": "buildings",
+      "earns": "no",
+      "name": {
+        "mn": "Голын буудал, усан онгоцны налуу зам",
+        "en": "River landing & boat ramp"
+      },
+      "summary": {
+        "mn": "Байнгын бетон налуу зам, хажууд нь шаталсан буудал. Зочид усны түвшинд байгаа шатнаас усан онгоцонд сууна — голын түвшин ямар ч байсан ажиллана, улирлын ажилгүй, мөсөнд гэмтэхгүй. Усан онгоцыг чиргүүлээс усанд оруулах налуу зам болно.",
+        "en": "A permanent concrete boat ramp with a stepped landing beside it. Guests board the jet boat from whichever step is at the waterline, so it works whatever the river level, needs no seasonal work and is not damaged by ice. The ramp is also where the boat is launched from its trailer."
+      },
+      "images": [
+        {
+          "src": "assets/img/items/river-dock/20261013-183917-530.jpg",
+          "option": "main/pile-dock"
+        },
+        {
+          "src": "assets/img/items/river-dock/20261013-184027-855.jpg",
+          "option": "main/floating"
+        },
+        {
+          "src": "assets/img/items/river-dock/20261013-184147-902.jpg",
+          "option": "main/ramp-steps"
+        }
+      ],
+      "components": [
+        {
+          "id": "main",
+          "quantity": 1,
+          "quantityBasis": {
+            "mn": "Лоджид нэг буудал.",
+            "en": "One landing for the lodge."
+          },
+          "options": [
+            {
+              "id": "ramp-steps",
+              "name": {
+                "mn": "Бетон налуу зам + шаталсан буудал",
+                "en": "Concrete boat ramp + stepped landing"
+              },
+              "note": {
+                "mn": "Байнгын. Усны ямар ч түвшинд ажиллана, мөсөнд тэсвэртэй, улирлын ажилгүй. Усан онгоц оруулах налуу зам болно.",
+                "en": "Permanent. Works at any water level, ice-proof, no seasonal work. Also launches the boat."
+              },
+              "source": "construction-benchmark",
+              "price": {
+                "amount": 47000000,
+                "currency": "MNT"
+              },
+              "origin": "local",
+              "shipping": 0,
+              "default": true,
+              "basis": {
+                "mn": "Налуу зам 4 м өргөн × 15 м урт (60 м²), нягтруулсан хайрган дээр арматуртай бетон, доод хэсэг нь усанд тавих бэлэн хавтан: ~₮24 сая (м² ₮400,000). Хажууд нь эрэг уруу 6 м өргөн бетон шат (~30 м²): ~₮13.5 сая. Үерт эрэг идэгдэхээс хамгаалах хоёр талын чулуун габион: ~₮5 сая. Хоёр ган уях багана, хашлага: ~₮4 сая. Нийт ≈ ₮47 сая. Эрэг зөөлөн налуу хайргатай гэж тооцсон — эгц, өндөр эрэг илүү үнэтэй. Гүйцэтгэгчийн үнийн санал хэрэгтэй.",
+                "en": "Ramp 4 m wide × 15 m long (60 m²) of reinforced concrete on compacted gravel, the lower end in precast planks laid into the water: ~₮24m (₮400,000/m²). Concrete steps beside it, 6 m wide down the bank (~30 m²): ~₮13.5m. Rock-filled gabion wings on both sides so floods don't wash out the bank: ~₮5m. Two steel mooring posts and a handrail: ~₮4m. Total ≈ ₮47m. Assumes a gently sloping gravel bank — a steep or high bank costs more. Needs the contractor's quote."
+              }
+            },
+            {
+              "id": "pile-dock",
+              "name": {
+                "mn": "Тулгуурт суурин тавцан, 4 × 10 м",
+                "en": "Fixed pile dock, 4 × 10 m"
+              },
+              "note": {
+                "mn": "Тулгуур дээрх энгийн тавцан. Ус багатай үед завинаас өндөр үлдэнэ, голын мөс тулгуурыг сугалж болно — хавар бүр шалгаж засна.",
+                "en": "A classic deck on piles. At low water it sits high above the boat, and river ice can lift the piles — check and repair every spring."
+              },
+              "source": "construction-benchmark",
+              "price": {
+                "amount": 12800,
+                "currency": "USD"
+              },
+              "origin": "local",
+              "shipping": 0,
+              "basis": {
+                "mn": "Тулгуурт тавцан суурилуулалттайгаа м² тутам ~$215–430; 40 м² × дундаж $320 = $12,800. Орон нутагт барина.",
+                "en": "Fixed piling docks cost about $215–430 per m² installed; 40 m² at the midpoint $320 = $12,800. Built locally."
+              }
+            },
+            {
+              "id": "floating",
+              "name": {
+                "mn": "Хөвөгч тавцан, 4 × 10 м",
+                "en": "Floating pontoon, 4 × 10 m"
+              },
+              "note": {
+                "mn": "Голын түвшинтэй хамт дээшилж доошилно, гэхдээ намар бүр мөс тогтохоос өмнө гаргаж, хавар буцааж тавина.",
+                "en": "Rises and falls with the river, but must be lifted out before the ice every autumn and put back in spring."
+              },
+              "source": "research-china",
+              "price": {
+                "amount": 15000,
+                "currency": "USD"
+              },
+              "origin": "import",
+              "shipping": 0.04,
+              "basis": {
+                "mn": "Модуль хуванцар (HDPE) хөвөгч куб м² тутам ~$100–150, 40 м²-д ~$5,000; нугастай хөнгөн цагаан гарц (~$3,000), дөрвөн чиглүүлэгч багана, зангуу (~$7,000). Нийт ~$15,000, голдуу Хятадаас импорт.",
+                "en": "Modular plastic (HDPE) pontoon cubes cost about $100–150 per m², so ~$5,000 for 40 m²; plus a hinged aluminium gangway (~$3,000) and four guide posts and anchors (~$7,000). About $15,000, mostly imported from China."
+              }
+            }
+          ]
+        }
+      ],
+      "timeline": {
+        "work": [
+          5,
+          5
+        ],
+        "use": [
+          6,
+          9
+        ],
+        "note": {
+          "mn": "5-р сард барьж, 6–9-р сард ашиглана.",
+          "en": "Built in May, used June–September."
+        }
+      }
+    },
+    {
+      "id": "river-crossing",
+      "category": "buildings",
+      "earns": "no",
+      "name": {
+        "mn": "Горхины гарц (хоолой)",
+        "en": "Stream crossing (culvert)"
+      },
+      "summary": {
+        "mn": "Энгийн хоолойн гарц: горхинд том хоолой тавьж, дээрээс нь шороо нягтруулж хайрга дэвсэн тул хүн, машин гарна. Энгийн шийдэл — их үерт ус дээгүүр нь гарч, дараа нь хайргаа нэмж засна.",
+        "en": "A simple culvert: large pipes laid in the stream, covered with compacted earth and a gravel top so people and cars can cross. Nothing fancy — in a big flood the water goes over the top, and the gravel is topped up afterwards."
+      },
+      "images": [
+        {
+          "src": "assets/img/items/river-crossing/20261013-184255-070.jpg"
+        }
+      ],
+      "components": [
+        {
+          "id": "main",
+          "quantity": 1,
+          "options": [
+            {
+              "id": "pipe-culvert",
+              "name": {
+                "mn": "Шороо, хайрган дээвэртэй хоолойн гарц",
+                "en": "Pipe culvert with earth and gravel top"
+              },
+              "source": "construction-benchmark",
+              "price": {
+                "amount": 25000000,
+                "currency": "MNT"
+              },
+              "origin": "local",
+              "shipping": 0,
+              "default": true,
+              "basis": {
+                "mn": "Горхинд ~1.2 м диаметр, 8 м урт хоёр гофр ган хоолой: ~₮14 сая. ~60 м³ нягтруулсан шороо, хайрган зам: ~₮2.5 сая. Экскаватор, ачигч ~3 өдөр: ~₮4.5 сая. Ус эрэг идэхгүйн тулд хоёр үзүүрт чулуу: ~₮2 сая. Нийт ~₮25 сая. Хэрэв хоолой аль хэдийн байгаа, зөвхөн засвар хэрэгтэй бол хамаагүй бага.",
+                "en": "Two corrugated steel pipes about 1.2 m across and 8 m long laid in the stream: ~₮14m. About 60 m³ of compacted earth and a gravel driving surface: ~₮2.5m. An excavator and loader for about 3 days: ~₮4.5m. Rocks at both ends so the water doesn't wash the bank away: ~₮2m. Rounded to ₮25m. If a culvert is already there and only needs repairs, this is much less."
+              }
+            }
+          ],
+          "quantityBasis": {
+            "mn": "~1 м горхин дээр нэг гарц.",
+            "en": "One crossing over the ~1 m stream."
+          }
+        }
+      ],
+      "timeline": {
+        "work": [
+          4,
+          5
+        ],
+        "use": [
+          5,
+          12
+        ],
+        "note": {
+          "mn": "Ачааны машин барилгын талбайд хүрэхийн тулд эрт хийнэ.",
+          "en": "Done early so trucks can reach the building sites."
+        }
+      }
+    },
+    {
+      "id": "boardwalk",
+      "category": "buildings",
+      "earns": "no",
+      "name": {
+        "mn": "Гол руу явах зам (тавцан)",
+        "en": "Boardwalk to the river"
+      },
+      "summary": {
+        "mn": "Лодж, голын хоорондох намгархаг газар дээгүүр 450 м өндөрлөсөн зам, хоёр хүн зэрэгцэн явах 1.5 м өргөн. Ган шураг тулгуур, цайрдсан каркас, арчилгаагүй хучилт: тослох, ялзрах зүйлгүй. Намгаас ~40–50 см өндөр тул хашлага хэрэггүй — хоёр талдаа өндөрлөсөн хүрээтэй.",
+        "en": "A 450 m raised walkway across the boggy ground between the lodge and the river, 1.5 m wide so two people can walk side by side. Steel screw piles and a galvanised frame with no-maintenance decking: nothing to oil, nothing to rot. About 40–50 cm above the bog, so no railings are needed — just a raised edge on both sides."
+      },
+      "images": [
+        {
+          "src": "assets/img/items/boardwalk/20261013-184732-123.jpg"
+        },
+        {
+          "src": "assets/img/items/boardwalk/20261013-184819-179.jpg"
+        },
+        {
+          "src": "assets/img/items/boardwalk/20261013-184912-421.jpg",
+          "option": "deck/composite"
+        },
+        {
+          "src": "assets/img/items/boardwalk/20261013-185002-726.jpg",
+          "option": "deck/frp-grating"
+        },
+        {
+          "src": "assets/img/items/boardwalk/20261013-185054-982.jpg",
+          "option": "lights/solar"
+        },
+        {
+          "src": "assets/img/items/boardwalk/20261013-185128-681.jpg",
+          "option": "railings/both-sides"
+        }
+      ],
+      "params": [
+        {
+          "id": "length",
+          "name": {
+            "mn": "Урт",
+            "en": "Length"
+          },
+          "unit": {
+            "mn": "м",
+            "en": "m"
+          },
+          "value": 450,
+          "basis": {
+            "mn": "450 м — таны заасан.",
+            "en": "450 m, as you specified."
+          }
+        },
+        {
+          "id": "width",
+          "name": {
+            "mn": "Өргөн",
+            "en": "Width"
+          },
+          "unit": {
+            "mn": "м",
+            "en": "m"
+          },
+          "value": 1.5,
+          "basis": {
+            "mn": "1.5 м нь хоёр хүн зэрэгцэн явахад хангалттай.",
+            "en": "1.5 m lets two people walk side by side."
+          }
+        }
+      ],
+      "components": [
+        {
+          "id": "piles",
+          "name": {
+            "mn": "Ган шураг тулгуур",
+            "en": "Steel screw piles"
+          },
+          "quantity": "ceil(length / 2) * 2",
+          "quantityBasis": {
+            "mn": "Замын дагуу 2 м тутам хос тулгуур.",
+            "en": "A pair of piles every 2 m along the walkway."
+          },
+          "options": [
+            {
+              "id": "main",
+              "name": {
+                "mn": "Цайрдсан шураг тулгуур, ~1.5 м",
+                "en": "Galvanised screw pile, ~1.5 m"
+              },
+              "source": "research-china",
+              "price": {
+                "amount": 75,
+                "currency": "USD"
+              },
+              "origin": "import",
+              "shipping": 0.04,
+              "default": true,
+              "basis": {
+                "mn": "Шураг тулгуурыг жижиг машинаар зөөлөн хөрсөнд эргүүлж оруулна — ухах, бетон цутгах шаардлагагүй, ухсан багана шиг хөлдөлтөд түлхэгдэхгүй. Хятадын цайрдсан тулгуур тус бүр ~$50–100.",
+                "en": "Screw piles are twisted into soft ground by a small machine — no digging or concrete, and frost can't lift them the way it lifts dug posts. Chinese galvanised piles cost about $50–100 each."
+              }
+            }
+          ]
+        },
+        {
+          "id": "frame",
+          "name": {
+            "mn": "Цайрдсан ган каркас",
+            "en": "Galvanised steel frame"
+          },
+          "quantity": "length",
+          "quantityBasis": {
+            "mn": "Замын бүтэн урт.",
+            "en": "The full length of the walkway."
+          },
+          "unit": {
+            "mn": "м",
+            "en": "m"
+          },
+          "options": [
+            {
+              "id": "main",
+              "name": {
+                "mn": "Тулгуур дам нуруу + хөндлөвч",
+                "en": "Bearers + joists"
+              },
+              "source": "construction-benchmark",
+              "price": {
+                "amount": 150000,
+                "currency": "MNT"
+              },
+              "origin": "local",
+              "shipping": 0,
+              "default": true,
+              "basis": {
+                "mn": "Хучилтыг даах цайрдсан ган дам нуруу, хөндлөвч, метр тутам ~25 кг ган × ~₮6,000/кг (боловсруулсан): метр тутам ~₮150,000. Намагт байх модон каркас шиг ялзрахгүй.",
+                "en": "Galvanised steel beams and cross-pieces carrying the deck, about 25 kg of steel per metre at ~₮6,000/kg fabricated: ~₮150,000 per metre. Never rots, unlike a timber frame sitting in a bog."
+              }
+            }
+          ]
+        },
+        {
+          "id": "deck",
+          "name": {
+            "mn": "Хучилт",
+            "en": "Decking"
+          },
+          "quantity": "length * width",
+          "quantityBasis": {
+            "mn": "Замын урт × өргөн.",
+            "en": "Length × width of the walkway."
+          },
+          "unit": {
+            "mn": "м²",
+            "en": "m²"
+          },
+          "options": [
+            {
+              "id": "composite",
+              "name": {
+                "mn": "Нийлмэл хавтан (модны өнгөтэй)",
+                "en": "Composite boards (wood-look)"
+              },
+              "note": {
+                "mn": "Мод шиг дулаан харагдана, тослох шаардлагагүй. Өвөл мөстөж болно.",
+                "en": "Warm, wood-like look; no oiling. Can ice over in winter."
+              },
+              "source": "research-china",
+              "price": {
+                "amount": 25,
+                "currency": "USD"
+              },
+              "origin": "import",
+              "shipping": 0.04,
+              "default": true,
+              "basis": {
+                "mn": "Хятадын мод-хуванцар нийлмэл хучилт м² тутам ~$20–35. Мод шиг харагдана, тослох шаардлагагүй, ялзрахгүй. Өвөл мөстөхөд гулгамтгай болж болно.",
+                "en": "Wood-plastic composite decking from China, about $20–35 per m². Looks like timber, never needs oiling and doesn't rot. Can be slippery when iced over in winter."
+              }
+            },
+            {
+              "id": "frp-grating",
+              "name": {
+                "mn": "Шилэн торон хучилт",
+                "en": "Fibreglass grating"
+              },
+              "note": {
+                "mn": "Цас нэвтэрнэ, мөстдөггүй, гулгадаггүй. Үйлдвэрийн төрхтэй.",
+                "en": "Snow falls through, never icy, non-slip. Industrial look."
+              },
+              "source": "research-china",
+              "price": {
+                "amount": 45,
+                "currency": "USD"
+              },
+              "origin": "import",
+              "shipping": 0.04,
+              "basis": {
+                "mn": "Шилэн (FRP) торон хучилт м² тутам ~$35–60. Цас, ус шууд нэвтэрнэ, гулгадаггүй, ялзрах, зэврэхгүй. Илүү үйлдвэрийн төрхтэй.",
+                "en": "Fibreglass (FRP) walkway grating, about $35–60 per m². Snow and water fall straight through, it is non-slip and can't rot or rust. Looks more industrial."
+              }
+            }
+          ]
+        },
+        {
+          "id": "install",
+          "name": {
+            "mn": "Угсралт",
+            "en": "Installation"
+          },
+          "quantity": "length",
+          "quantityBasis": {
+            "mn": "Замын бүтэн урт.",
+            "en": "The full length of the walkway."
+          },
+          "unit": {
+            "mn": "м",
+            "en": "m"
+          },
+          "options": [
+            {
+              "id": "main",
+              "name": {
+                "mn": "Баг + жижиг тулгуур суулгагч",
+                "en": "Crew + small pile driver"
+              },
+              "source": "construction-benchmark",
+              "price": {
+                "amount": 70000,
+                "currency": "MNT"
+              },
+              "origin": "local",
+              "shipping": 0,
+              "default": true,
+              "basis": {
+                "mn": "Гар эсвэл жижиг тулгуур суулгагчтай бага баг, өндөрлөсөн хүрээ хавтангийн хамт метр тутам ~₮70,000. Багийг Дадал хүртэл хүргэх нь хөдөө орон нутгийн нэмэгдэлд орсон.",
+                "en": "A small crew with a hand-held or mini pile driver, about ₮70,000 per metre including the raised edge boards. Getting the crew to Dadal is in the countryside premium."
+              }
+            }
+          ]
+        },
+        {
+          "id": "railings",
+          "name": {
+            "mn": "Хашлага",
+            "en": "Railings"
+          },
+          "quantity": "length",
+          "quantityBasis": {
+            "mn": "Замын бүтэн урт (үнэ нь хоёр талынх).",
+            "en": "The full length of the walkway (price is for both sides)."
+          },
+          "unit": {
+            "mn": "м",
+            "en": "m"
+          },
+          "options": [
+            {
+              "id": "none",
+              "name": {
+                "mn": "Хашлагагүй (зөвхөн хүрээ)",
+                "en": "No railings (raised edge only)"
+              },
+              "note": {
+                "mn": "Хоёр талдаа хүрээтэй; энэ өндөрт хангалттай.",
+                "en": "Raised edge on both sides; enough at this height."
+              },
+              "source": "construction-benchmark",
+              "price": {
+                "amount": 0,
+                "currency": "MNT"
+              },
+              "origin": "local",
+              "shipping": 0,
+              "default": true,
+              "basis": {
+                "mn": "Газраас 40–50 см өндөрт хашлага ихэвчлэн шаардлагагүй (~60 см-ээс шаардагддаг). Хоёр талын өндөрлөсөн хүрээ (угсралтад орсон) хөл гулсахаас хамгаалж, цасанд ирмэгийг тэмдэглэнэ.",
+                "en": "At 40–50 cm above the ground, railings are not normally needed (they are usually required from about 60 cm). A raised edge board on both sides — included in installation — stops feet slipping off and marks the edge in snow."
+              }
+            },
+            {
+              "id": "both-sides",
+              "name": {
+                "mn": "Хоёр талдаа ган хашлага",
+                "en": "Steel railings on both sides"
+              },
+              "note": {
+                "mn": "Хүүхэд, шөнийн аюулгүй байдалд нэмэлт.",
+                "en": "Extra safety for children or at night."
+              },
+              "source": "construction-benchmark",
+              "price": {
+                "amount": 200000,
+                "currency": "MNT"
+              },
+              "origin": "local",
+              "shipping": 0,
+              "basis": {
+                "mn": "~1 м өндөр цайрдсан ган хашлага, нэг талын метр ~₮100,000, тул замын метр тутам ₮200,000.",
+                "en": "Galvanised steel railings about 1 m high, ~₮100,000 per metre per side, so ₮200,000 per metre of walkway."
+              }
+            }
+          ]
+        },
+        {
+          "id": "lights",
+          "name": {
+            "mn": "Замын гэрэл",
+            "en": "Path lights"
+          },
+          "quantity": "ceil(length / 5)",
+          "quantityBasis": {
+            "mn": "5 м тутам нэг гэрэл.",
+            "en": "One light every 5 m."
+          },
+          "options": [
+            {
+              "id": "none",
+              "name": {
+                "mn": "Гэрэлгүй",
+                "en": "No lights"
+              },
+              "note": {
+                "mn": "Гэрэлгүй.",
+                "en": "No lights."
+              },
+              "source": "research-china",
+              "price": {
+                "amount": 0,
+                "currency": "USD"
+              },
+              "origin": "import",
+              "shipping": 0.04,
+              "default": true,
+              "basis": {
+                "mn": "Замын гэрэлгүй; зочид гар чийдэн хэрэглэнэ.",
+                "en": "No path lighting; guests use torches."
+              }
+            },
+            {
+              "id": "solar",
+              "name": {
+                "mn": "Нарны зайтай багана гэрэл",
+                "en": "Solar bollard lights"
+              },
+              "note": {
+                "mn": "Утасгүй; өвлийн хүйтэнд богино ажиллана.",
+                "en": "No wiring; shorter run-time in deep winter."
+              },
+              "source": "research-china",
+              "price": {
+                "amount": 60,
+                "currency": "USD"
+              },
+              "origin": "import",
+              "shipping": 0.04,
+              "basis": {
+                "mn": "Өдөр цэнэглэж, бүрэнхийд асдаг нам нарны зайтай багана гэрэл, Хятадаас тус бүр ~$40–80. Утас татах шаардлагагүй. Өвөл өдөр богино, батарей хүйтэнд ажиллах хугацаа богиносно.",
+                "en": "Low solar bollard lights that charge by day and switch on at dusk, about $40–80 each from China. No wiring needed. Winter run-time is shorter because of short days and cold batteries."
+              }
+            }
+          ]
+        }
+      ],
+      "timeline": {
+        "work": [
+          5,
+          5
+        ],
+        "use": [
+          6,
+          12
+        ],
+        "note": {
+          "mn": "5-р сард барьж, зуны улиралд бэлэн.",
+          "en": "Built in May, ready for the summer season."
+        }
+      }
+    },
+    {
+      "id": "concrete-path",
+      "category": "buildings",
+      "earns": "no",
+      "name": {
+        "mn": "Клуб байрны хажуугийн хавтанцар зам",
+        "en": "Paved path by the clubhouse"
+      },
+      "summary": {
+        "mn": "Клуб байрны орчимд, хатуу хөрсөн дээр 1.5 м өргөн бетон хавтанцар зам. Нягтруулсан хайрган суурин дээр тавьсан тул ус шүүрч, хөлдөлтөд тэсвэртэй; хөлдөлтөд хөдөлбөл хавтангаа дахин тавихад хангалттай.",
+        "en": "A 1.5 m wide path of concrete paving stones near the clubhouse, on firm ground. Laid on a compacted gravel base so it drains and survives frost; if frost ever lifts a section, the stones are simply re-laid."
+      },
+      "images": [
+        {
+          "src": "assets/img/items/concrete-path/20261013-185328-587.jpg"
+        },
+        {
+          "src": "assets/img/items/concrete-path/20261013-185418-082.jpg"
+        }
+      ],
+      "params": [
+        {
+          "id": "length",
+          "name": {
+            "mn": "Урт",
+            "en": "Length"
+          },
+          "unit": {
+            "mn": "м",
+            "en": "m"
+          },
+          "value": 90,
+          "basis": {
+            "mn": "Клуб байрны орчмын ~90 м зам — таны заасан.",
+            "en": "About 90 m of path around the clubhouse, as you specified."
+          }
+        },
+        {
+          "id": "width",
+          "name": {
+            "mn": "Өргөн",
+            "en": "Width"
+          },
+          "unit": {
+            "mn": "м",
+            "en": "m"
+          },
+          "value": 1.5,
+          "basis": {
+            "mn": "1.5 м нь хоёр хүн зэрэгцэн явахад хангалттай.",
+            "en": "1.5 m lets two people walk side by side."
+          }
+        }
+      ],
+      "components": [
+        {
+          "id": "base",
+          "name": {
+            "mn": "Хайрган суурь",
+            "en": "Gravel base"
+          },
+          "quantity": "length * width",
+          "quantityBasis": {
+            "mn": "Замын урт × өргөн.",
+            "en": "Length × width of the path."
+          },
+          "unit": {
+            "mn": "м²",
+            "en": "m²"
+          },
+          "options": [
+            {
+              "id": "main",
+              "name": {
+                "mn": "Ухах + хайрга + элс",
+                "en": "Dig out + gravel + sand"
+              },
+              "source": "construction-benchmark",
+              "price": {
+                "amount": 30000,
+                "currency": "MNT"
+              },
+              "origin": "local",
+              "shipping": 0,
+              "default": true,
+              "basis": {
+                "mn": "~30 см ухаж, геотекстиль дэвсэж, ~20 см нягтруулсан хайрга, хавтан суулгах хэдэн см элс. Энэ нь зам хөлдөлтөд хөдлөхөөс хамгаална: м² тутам ~₮30,000.",
+                "en": "Dig out about 30 cm, lay a geotextile sheet, then about 20 cm of compacted gravel and a few cm of sand to bed the stones. This is what stops frost from heaving the path: about ₮30,000 per m²."
+              }
+            }
+          ]
+        },
+        {
+          "id": "pavers",
+          "name": {
+            "mn": "Бетон хавтанцар",
+            "en": "Concrete paving stones"
+          },
+          "quantity": "length * width",
+          "quantityBasis": {
+            "mn": "Замын урт × өргөн.",
+            "en": "Length × width of the path."
+          },
+          "unit": {
+            "mn": "м²",
+            "en": "m²"
+          },
+          "options": [
+            {
+              "id": "main",
+              "name": {
+                "mn": "Хөлдөлтөд тэсвэртэй хавтанцар, 6–8 см",
+                "en": "Frost-resistant pavers, 6–8 cm"
+              },
+              "source": "construction-benchmark",
+              "price": {
+                "amount": 35000,
+                "currency": "MNT"
+              },
+              "origin": "local",
+              "shipping": 0,
+              "default": true,
+              "basis": {
+                "mn": "Хөлдөлтөд тэсвэртэй 6–8 см зузаан бетон хавтанцар, Улаанбаатараас: загвараас хамаарч м² тутам ~₮25,000–45,000; ₮35,000 гэж авсан.",
+                "en": "Frost-resistant concrete paving stones 6–8 cm thick, bought in Ulaanbaatar: about ₮25,000–45,000 per m² depending on style; we used ₮35,000."
+              }
+            }
+          ]
+        },
+        {
+          "id": "laying",
+          "name": {
+            "mn": "Тавилт",
+            "en": "Laying"
+          },
+          "quantity": "length * width",
+          "quantityBasis": {
+            "mn": "Замын урт × өргөн.",
+            "en": "Length × width of the path."
+          },
+          "unit": {
+            "mn": "м²",
+            "en": "m²"
+          },
+          "options": [
+            {
+              "id": "main",
+              "name": {
+                "mn": "Баг",
+                "en": "Crew"
+              },
+              "source": "construction-benchmark",
+              "price": {
+                "amount": 25000,
+                "currency": "MNT"
+              },
+              "origin": "local",
+              "shipping": 0,
+              "default": true,
+              "basis": {
+                "mn": "Хавтан тавих, огтлох, нягтруулах: м² тутам ~₮25,000.",
+                "en": "Laying, cutting and compacting the stones: about ₮25,000 per m²."
+              }
+            }
+          ]
+        },
+        {
+          "id": "edging",
+          "name": {
+            "mn": "Хашлага чулуу",
+            "en": "Edging stones"
+          },
+          "quantity": "2 * length",
+          "quantityBasis": {
+            "mn": "Замын хоёр тал: 2 × урт.",
+            "en": "Both sides of the path: 2 × length."
+          },
+          "unit": {
+            "mn": "м",
+            "en": "m"
+          },
+          "options": [
+            {
+              "id": "main",
+              "name": {
+                "mn": "Бетон хашлага",
+                "en": "Concrete kerb"
+              },
+              "source": "construction-benchmark",
+              "price": {
+                "amount": 25000,
+                "currency": "MNT"
+              },
+              "origin": "local",
+              "shipping": 0,
+              "default": true,
+              "basis": {
+                "mn": "Зам хэлбэрээ алдахгүйн тулд хоёр талд бетонд суулгасан хашлага чулуу: суурилуулалттайгаа метр тутам ~₮25,000.",
+                "en": "Concrete edging stones set in concrete on both sides, so the path keeps its shape: about ₮25,000 per metre installed."
+              }
+            }
+          ]
+        }
+      ],
+      "timeline": {
+        "work": [
+          5,
+          5
+        ],
+        "use": [
+          6,
+          12
+        ],
+        "note": {
+          "mn": "5-р сард тавьж, зуны улиралд бэлэн.",
+          "en": "Laid in May, ready for the summer season."
+        }
+      }
+    },
+    {
+      "id": "basketball-court",
+      "category": "buildings",
+      "earns": "no",
+      "name": {
+        "mn": "Сагсан бөмбөгийн хагас талбай (3x3)",
+        "en": "Basketball half court (3x3)"
+      },
+      "summary": {
+        "mn": "FIBA хэмжээний 3x3 хагас талбай (15 × 11 м): бетон суурин дээр бие биедээ углардаг хуванцар спорт хавтан, газарт суурилуулсан нэг цагираг. Хавтан ус шүүрүүлнэ, цас цэвэрлэхэд хялбар, нэг нэгээр нь сольж болно. Нарны зайтай прожектор сонголтоор.",
+        "en": "A FIBA-size 3x3 half court (15 × 11 m): concrete slab topped with interlocking plastic sport tiles, and one in-ground hoop. Tiles drain, are easy to clear of snow and can be replaced one at a time. Solar floodlights are an option."
+      },
+      "images": [
+        {
+          "src": "assets/img/items/basketball-court/20261013-185526-744.jpg"
+        }
+      ],
+      "params": [
+        {
+          "id": "length",
+          "name": {
+            "mn": "Урт",
+            "en": "Length"
+          },
+          "unit": {
+            "mn": "м",
+            "en": "m"
+          },
+          "value": 15,
+          "basis": {
+            "mn": "FIBA 3x3 хагас талбай 15 м × 11 м.",
+            "en": "A FIBA 3x3 half court is 15 m × 11 m."
+          }
+        },
+        {
+          "id": "width",
+          "name": {
+            "mn": "Өргөн",
+            "en": "Width"
+          },
+          "unit": {
+            "mn": "м",
+            "en": "m"
+          },
+          "value": 11,
+          "basis": {
+            "mn": "FIBA 3x3 хагас талбай 15 м × 11 м.",
+            "en": "A FIBA 3x3 half court is 15 m × 11 m."
+          }
+        }
+      ],
+      "components": [
+        {
+          "id": "slab",
+          "name": {
+            "mn": "Бетон суурь",
+            "en": "Concrete slab"
+          },
+          "quantity": "length * width",
+          "quantityBasis": {
+            "mn": "Талбайн урт × өргөн.",
+            "en": "Length × width of the court."
+          },
+          "unit": {
+            "mn": "м²",
+            "en": "m²"
+          },
+          "options": [
+            {
+              "id": "main",
+              "name": {
+                "mn": "Хайрган дээрх 10 см бетон",
+                "en": "10 cm slab on gravel"
+              },
+              "source": "construction-benchmark",
+              "price": {
+                "amount": 120000,
+                "currency": "MNT"
+              },
+              "origin": "local",
+              "shipping": 0,
+              "default": true,
+              "basis": {
+                "mn": "Хавтан тавих нягтруулсан хайрган дээрх 10 см тэгш бетон: м² тутам ~₮120,000 — зөвхөн хүн явах тул зогсоолын шалнаас хөнгөн.",
+                "en": "A flat 10 cm concrete slab on compacted gravel for the tiles to sit on: about ₮120,000 per m² — lighter than the parking floor because only people use it."
+              }
+            }
+          ]
+        },
+        {
+          "id": "tiles",
+          "name": {
+            "mn": "Углардаг спорт хавтан",
+            "en": "Interlocking sport tiles"
+          },
+          "quantity": "length * width",
+          "quantityBasis": {
+            "mn": "Талбайн урт × өргөн.",
+            "en": "Length × width of the court."
+          },
+          "unit": {
+            "mn": "м²",
+            "en": "m²"
+          },
+          "options": [
+            {
+              "id": "main",
+              "name": {
+                "mn": "Шугамтай полипропилен талбайн хавтан",
+                "en": "Polypropylene court tiles with printed lines"
+              },
+              "source": "research-china",
+              "price": {
+                "amount": 12,
+                "currency": "USD"
+              },
+              "origin": "import",
+              "shipping": 0.04,
+              "default": true,
+              "basis": {
+                "mn": "Хятадын гадна талбайн полипропилен углардаг хавтан м² тутам ~$8–15, 3x3 шугам, өнгөтэй. −40°C өвөлд зориулсан нар, хүйтэнд тэсвэртэй хавтан хэрэгтэй.",
+                "en": "Interlocking polypropylene outdoor court tiles from China, about $8–15 per m², with the 3x3 lines and colours built in. UV- and frost-rated tiles are needed for −40°C winters."
+              }
+            }
+          ]
+        },
+        {
+          "id": "laying",
+          "name": {
+            "mn": "Хавтан тавих",
+            "en": "Laying the tiles"
+          },
+          "quantity": "length * width",
+          "quantityBasis": {
+            "mn": "Талбайн урт × өргөн.",
+            "en": "Length × width of the court."
+          },
+          "unit": {
+            "mn": "м²",
+            "en": "m²"
+          },
+          "options": [
+            {
+              "id": "main",
+              "name": {
+                "mn": "Баг",
+                "en": "Crew"
+              },
+              "source": "construction-benchmark",
+              "price": {
+                "amount": 10000,
+                "currency": "MNT"
+              },
+              "origin": "local",
+              "shipping": 0,
+              "default": true,
+              "basis": {
+                "mn": "Хавтанг гараар углан тавина: м² тутам ~₮10,000.",
+                "en": "The tiles click together by hand: about ₮10,000 per m²."
+              }
+            }
+          ]
+        },
+        {
+          "id": "hoop",
+          "name": {
+            "mn": "Цагираг",
+            "en": "Hoop"
+          },
+          "quantity": 1,
+          "quantityBasis": {
+            "mn": "Хагас талбайд нэг цагираг.",
+            "en": "One hoop for a half court."
+          },
+          "options": [
+            {
+              "id": "main",
+              "name": {
+                "mn": "Газарт суурилуулсан, жийргэвчтэй шон",
+                "en": "In-ground hoop with padded pole"
+              },
+              "source": "research-china",
+              "price": {
+                "amount": 2000,
+                "currency": "USD"
+              },
+              "origin": "import",
+              "shipping": 0.125,
+              "default": true,
+              "basis": {
+                "mn": "Хатуулаг шилэн самбар, жийргэвчтэй шонтой газарт суурилуулах цагираг ~$1,500–3,000. Урт, хүнд ачаа.",
+                "en": "An in-ground hoop with tempered-glass backboard and padded pole, about $1,500–3,000. Long and heavy to ship."
+              }
+            }
+          ]
+        },
+        {
+          "id": "lights",
+          "name": {
+            "mn": "Прожектор",
+            "en": "Floodlights"
+          },
+          "quantity": 4,
+          "quantityBasis": {
+            "mn": "Булан бүрт ойр шон дээр дөрвөн гэрэл.",
+            "en": "Four lights on poles, one near each corner."
+          },
+          "options": [
+            {
+              "id": "none",
+              "name": {
+                "mn": "Гэрэлгүй",
+                "en": "No lights"
+              },
+              "note": {
+                "mn": "Зөвхөн өдөр.",
+                "en": "Daylight play only."
+              },
+              "source": "research-china",
+              "price": {
+                "amount": 0,
+                "currency": "USD"
+              },
+              "origin": "import",
+              "shipping": 0.04,
+              "default": true,
+              "basis": {
+                "mn": "Талбайн гэрэлгүй; өдрийн цагаар тоглоно.",
+                "en": "No court lighting; play in daylight."
+              }
+            },
+            {
+              "id": "solar",
+              "name": {
+                "mn": "Шон дээрх нарны зайтай прожектор",
+                "en": "Solar floodlights on poles"
+              },
+              "note": {
+                "mn": "Утасгүй; зун шөнөдөө хэдэн цаг гэрэлтэнэ.",
+                "en": "No wiring; a few hours of light a night in summer."
+              },
+              "source": "research-china",
+              "price": {
+                "amount": 400,
+                "currency": "USD"
+              },
+              "origin": "import",
+              "shipping": 0.04,
+              "basis": {
+                "mn": "Өөрийн хавтан, батарейтай нарны прожектор 5–6 м шон дээр, Хятадаас тус бүр ~$300–500. Утас, цахилгааны төлбөргүй. Зун шөнөдөө хэдэн цаг; хатуу өвөл хамаагүй бага.",
+                "en": "Solar floodlight with its own panel and battery on a 5–6 m pole, about $300–500 each from China. No wiring or electricity bill. A few hours a night in summer; much less in deep winter."
+              }
+            }
+          ]
+        }
+      ],
+      "timeline": {
+        "work": [
+          6,
+          6
+        ],
+        "use": [
+          7,
+          9
+        ],
+        "note": {
+          "mn": "6-р сард барьж, 7–9-р сард тоглоно.",
+          "en": "Built in June, played July–September."
+        }
+      }
+    },
+    {
+      "id": "viewpoint-rest-area",
+      "category": "buildings",
+      "earns": "no",
+      "name": {
+        "mn": "Ажиглалтын цэгийн амралтын газар",
+        "en": "Viewpoint rest area"
+      },
+      "summary": {
+        "mn": "Ажиглалтын цэг дээр 2–6 хүн суух газар: суурин ширээ, сандалтай ~3 × 3 м дээвэртэй шинэсэн асар, эсвэл задгай бат бөх ширээ, сандал. Байгальтай зохицох байгалийн мод.",
+        "en": "A place to sit at the viewpoint for 2–6 people: either a small roofed larch pavilion (about 3 × 3 m) with a built-in table and benches, or just a sturdy table and benches in the open. Natural wood to match the surroundings."
+      },
+      "images": [
+        {
+          "src": "assets/img/items/viewpoint-rest-area/20261013-185711-652.jpg",
+          "option": "main/table-only"
+        },
+        {
+          "src": "assets/img/items/viewpoint-rest-area/20261013-185735-188.jpg",
+          "option": "main/pavilion"
+        }
+      ],
+      "components": [
+        {
+          "id": "main",
+          "quantity": 1,
+          "quantityBasis": {
+            "mn": "Ажиглалтын цэг дээр нэг.",
+            "en": "One rest area at the viewpoint."
+          },
+          "options": [
+            {
+              "id": "pavilion",
+              "name": {
+                "mn": "Дээвэртэй асар, 3 × 3 м",
+                "en": "Roofed pavilion, 3 × 3 m"
+              },
+              "note": {
+                "mn": "Сүүдэр, борооноос хамгаална; дотор нь ширээ, сандал.",
+                "en": "Shade and shelter from rain; table and benches inside."
+              },
+              "source": "construction-benchmark",
+              "price": {
+                "amount": 17080000,
+                "currency": "MNT"
+              },
+              "origin": "local",
+              "shipping": 0,
+              "default": true,
+              "basis": {
+                "mn": "Баганын доорх 4 бетон тулгуур (~₮1.0 сая); шинэсэн багана, дам нуруу, хоёр налуу дээвэр, тосон будагтай (9 м² × ₮1,000,000 ≈ ₮9.0 сая); өндөрлөсөн шинэсэн шал (9 м² × ₮170,000 ≈ ₮1.5 сая); суурин ширээ, хоёр сандал (~₮1.5 сая); газар дээрх мужааны баг (9 м² × ₮450,000 ≈ ₮4.1 сая). Нийт ≈ ₮17.1 сая. Ажиглалтын цэг хүртэл материал зөөх нь хөдөө орон нутгийн нэмэгдэлд орсон.",
+                "en": "4 concrete piers under the posts (~₮1.0m); larch posts, beams and a pitched roof, oil-stained (9 m² × ₮1,000,000 ≈ ₮9.0m); raised larch floor (9 m² × ₮170,000 ≈ ₮1.5m); built-in table and two benches (~₮1.5m); carpenter crew on site (9 m² × ₮450,000 ≈ ₮4.1m). Total ≈ ₮17.1m. Carrying materials the short way to the viewpoint is covered by the countryside premium."
+              }
+            },
+            {
+              "id": "table-only",
+              "name": {
+                "mn": "Зөвхөн ширээ, сандал",
+                "en": "Table and benches only"
+              },
+              "note": {
+                "mn": "Хамаагүй хямд; нар, борооноос хамгаалалтгүй.",
+                "en": "Much cheaper; no shelter from sun or rain."
+              },
+              "source": "construction-benchmark",
+              "price": {
+                "amount": 2300000,
+                "currency": "MNT"
+              },
+              "origin": "local",
+              "shipping": 0,
+              "basis": {
+                "mn": "Нутгийн мужааны хийсэн 6 хүний сандалтай хүнд шинэсэн ширээ (~₮1.5 сая), тэгш, шаваргүй байлгах жижиг нягтруулсан хайрган талбай (~₮0.3 сая), салхинд хөдлөхгүй бэхэлгээ (~₮0.5 сая). Нийт ≈ ₮2.3 сая.",
+                "en": "A heavy larch picnic table with benches for 6, made by a local carpenter (~₮1.5m), on a small compacted-gravel pad so it stays level and out of the mud (~₮0.3m), anchored down against wind (~₮0.5m). Total ≈ ₮2.3m."
+              }
+            }
+          ]
+        }
+      ],
+      "timeline": {
+        "work": [
+          6,
+          6
+        ],
+        "use": [
+          7,
+          10
+        ],
+        "note": {
+          "mn": "6-р сард барина.",
+          "en": "Built in June."
+        }
+      }
+    },
+    {
+      "id": "telecom-station",
+      "category": "partners",
+      "earns": "no",
+      "funding": {
+        "by": {
+          "mn": "Юнител",
+          "en": "Unitel"
+        }
+      },
+      "name": {
+        "mn": "Норовлин–Дадал замын гар утасны сүлжээ",
+        "en": "Mobile coverage on the Norovlin–Dadal road"
+      },
+      "summary": {
+        "mn": "Норовлиноос Дадал хүртэл явж буй зочид одоогоор утасны сүлжээгүй: төөрөх эсвэл шаварт суувал тусламж дуудаж чадахгүй. Энэ замд Юнителийн реле станц / антен аль хэдийн байгаа; зөвхөн гар утасны дохио нэмэх шаардлагатай. Үүнийг Юнителийн 2027 оны дэд бүтцийн төлөвлөгөөнд оруулахыг хүсэж байна — лодж зардал гаргахгүй.",
+        "en": "Guests driving from Norovlin to Dadal currently have no phone reception: if they get lost or stuck in mud, they cannot call for help. Unitel already has a relay station / antenna along this road; it only needs mobile signal added. We are asking Unitel to include this in their 2027 infrastructure plan — the lodge does not pay for it."
+      },
+      "images": [
+        {
+          "src": "assets/img/items/telecom-station/20261013-194716-061.jpg"
+        }
+      ],
+      "components": [
+        {
+          "id": "main",
+          "quantity": 1,
+          "quantityBasis": {
+            "mn": "Зам дээрх Юнителийн одоо байгаа нэг антенд дохио нэмэх.",
+            "en": "Signal added to the one existing Unitel antenna on the road."
+          },
+          "options": [
+            {
+              "id": "main",
+              "name": {
+                "mn": "Одоо байгаа антенд гар утасны дохио нэмэх",
+                "en": "Add mobile signal to the existing antenna"
+              },
+              "source": "partner-estimate",
+              "price": {
+                "amount": 150000000,
+                "currency": "MNT"
+              },
+              "origin": "local",
+              "shipping": 0,
+              "remote": false,
+              "default": true,
+              "basis": {
+                "mn": "Зөвхөн мэдээлэл — Юнител төлнө, лодж биш. Удирдлагын өмнөх ₮350 сая нь шинэ станцын бүтэн зардал байсан; цамхаг, тэжээл, сүлжээний холболт аль хэдийн байгаа тул гар утасны станцын радио, антен нэмэх нь Юнителд хамаагүй хямд байх ёстой. ₮150 сая нь ойролцоо таамаг; бодит дүнг Юнител мэднэ.",
+                "en": "For information only — Unitel pays, not the lodge. Management's earlier figure was ₮350m for a full new station; because the tower, power and link to the network are already there, adding a mobile base-station radio and antennas should cost Unitel much less. ₮150m is a rough guess; Unitel will know the real figure."
+              }
+            }
+          ]
+        }
+      ],
+      "timeline": {
+        "work": [
+          1,
+          10
+        ],
+        "use": [
+          11,
+          12
+        ],
+        "note": {
+          "mn": "Юнителийн 2027 оны төлөвлөгөөнд орохын тулд оны эхэнд хүсэлт тавина.",
+          "en": "Ask Unitel early in the year so it is in their 2027 plan."
+        }
+      }
+    },
+    {
+      "id": "golf-carts",
+      "category": "vehicles",
+      "earns": "yes",
+      "name": {
+        "mn": "Цахилгаан гольфын тэрэг",
+        "en": "Electric golf carts"
+      },
+      "summary": {
+        "mn": "Монголоос авах лити батарейтай 4 суудалтай хоёр цахилгаан гольфын тэрэг. Лодж дотор зочид, ачаа зөөж, бусад үед зочдод түрээслэнэ.",
+        "en": "Two 4-seat electric golf carts with lithium batteries, bought in Mongolia. They move guests and luggage around the lodge, and are rented to guests the rest of the time."
+      },
+      "images": [
+        {
+          "src": "assets/img/items/golf-carts/20261013-185848-064.jpg"
+        }
+      ],
+      "components": [
+        {
+          "id": "main",
+          "quantity": 2,
+          "quantityBasis": {
+            "mn": "Хүслийн жагсаалтад заасны дагуу 2 тэрэг: зочдын ачаа зөөж, ихэнх үед нэгийг нь түрээслэх боломжтой.",
+            "en": "2 carts, as specified in your wishlist: enough to move guests' luggage and still have one free to rent most of the time."
+          },
+          "options": [
+            {
+              "id": "premium-lithium",
+              "name": {
+                "mn": "4 суудалтай цахилгаан тэрэг, лити батарей",
+                "en": "4-seat electric cart, lithium battery"
+              },
+              "source": "given",
+              "price": {
+                "amount": 8000,
+                "currency": "USD"
+              },
+              "origin": "local",
+              "shipping": 0,
+              "default": true,
+              "basis": {
+                "mn": "Таны өгсөн үнэ: тус бүр ~$8,000, Монголоос худалдан авна (импортын зардалгүй). УБ-аас Дадал хүртэлх тээвэр хөдөө орон нутгийн нэмэгдэлд орсон. Лити батарей хүйтэнд хар тугалганыхаас хамаагүй сайн ажилладаг, өвөл дулаан барилгад хадгална.",
+                "en": "The price you gave: about $8,000 each, bought in Mongolia (so no import costs). Transport from UB to Dadal is in the countryside premium. Lithium batteries hold their range far better in the cold than lead-acid, and they winter in the heated building."
+              }
+            }
+          ]
+        }
+      ],
+      "timeline": {
+        "work": [
+          5,
+          5
+        ],
+        "use": [
+          6,
+          9
+        ],
+        "note": {
+          "mn": "Зуны улиралд авна; өвөл дулаан барилгад хадгална.",
+          "en": "Bought for the summer season; stored in the heated building in winter."
+        }
+      },
+      "revenue": {
+        "unit": {
+          "mn": "хагас өдрийн түрээс",
+          "en": "per half-day rental"
+        },
+        "attachApplies": true,
+        "capexShare": 1.0,
+        "scenarios": {
+          "cons": {
+            "price": 130000,
+            "perDay": 0.6,
+            "days": 160,
+            "opex": 800000
+          },
+          "base": {
+            "price": 150000,
+            "perDay": 1,
+            "days": 180,
+            "opex": 800000
+          },
+          "aggr": {
+            "price": 180000,
+            "perDay": 1.4,
+            "days": 200,
+            "opex": 900000
+          }
+        },
+        "basis": {
+          "mn": "Хагас өдрийн түрээс ₮150,000 (Дунд), хоёр тэргээр өдөрт ~1 түрээс — ачаа зөөх тул хоёулаа бүтэн өдөр чөлөөтэй байхгүй. Зөвхөн цасгүй улиралд, ~180 өдөр (5–10-р сар, дээр нь хэдэн долоо хоног); тэрэг гүн цасанд явж чадахгүй. Зардал: цахилгаан, дугуй, засвар үйлчилгээ.",
+          "en": "₮150,000 per half-day rental (Base), about 1 rental a day across both carts — they also carry luggage, so not both are free all day. Only in the snow-free season, about 180 days (May–October plus a few shoulder weeks); carts can't drive in deep snow. Running cost: electricity, tyres and servicing."
+        }
+      }
+    },
+    {
+      "id": "utv",
+      "category": "vehicles",
+      "earns": "yes",
+      "included": false,
+      "name": {
+        "mn": "UTV машин (сонголтоор)",
+        "en": "UTVs (optional)"
+      },
+      "summary": {
+        "mn": "Анхдагчаар төлөвлөгөөнд ороогүй. Хоёр гольфын тэрэг лодж дотор зочид, ачаа зөөж, богино аялалд түрээслэгдэнэ; адал явдлын хэрэгцээг цасны мотоцикл, Surron мотоцикл хангана — тиймээс UTV нь жагсаалтад байгаа зүйлсийг давхардуулна. Хэрэгтэй бол нэмж болохоор жагсаав: \"Төлөвлөгөөнд оруулах\"-ыг Тийм болгоно. Нэмбэл: Монгол дахь дилерээс авч, зочдод өөрөө жолоодох түрээслэнэ; өвөлд цасны гинжит дугуй сонголтоор.",
+        "en": "Not in the plan by default. The two golf carts already move guests and luggage around the lodge and are rented out for short rides, and the snowmobiles and Surron bikes cover the adventure side — so UTVs would mostly duplicate what is already on the list. Listed here so they can be added if wanted: switch \"Included in the plan\" to Yes. If added: bought from a dealer in Mongolia and rented to guests for self-drive trips; snow tracks are an option for winter use."
+      },
+      "images": [
+        {
+          "src": "assets/img/items/utv/20261013-185934-108.jpg"
+        },
+        {
+          "src": "assets/img/items/utv/20261013-190004-530.jpg",
+          "option": "tracks/track-kit"
+        }
+      ],
+      "params": [
+        {
+          "id": "count",
+          "name": {
+            "mn": "UTV-ийн тоо",
+            "en": "Number of UTVs"
+          },
+          "value": 3,
+          "basis": {
+            "mn": "Анхны хүслийн жагсаалтын дагуу 3 UTV.",
+            "en": "3 UTVs, as in the original wishlist."
+          }
+        }
+      ],
+      "components": [
+        {
+          "id": "main",
+          "name": {
+            "mn": "UTV",
+            "en": "UTV"
+          },
+          "quantity": "count",
+          "quantityBasis": {
+            "mn": "Дээрх UTV-ийн тоо.",
+            "en": "The number of UTVs above."
+          },
+          "options": [
+            {
+              "id": "cfmoto-uforce",
+              "name": {
+                "mn": "CFMOTO UFORCE, Монгол дахь дилерээс",
+                "en": "CFMOTO UFORCE, from a Mongolian dealer"
+              },
+              "source": "research-mongolia",
+              "price": {
+                "amount": 13000,
+                "currency": "USD"
+              },
+              "origin": "local",
+              "shipping": 0,
+              "default": true,
+              "basis": {
+                "mn": "CFMOTO UFORCE гадаадад бөөний үнээр ~$8,200–10,800; Монгол дахь дилерийн үнэд импорт, гааль, НӨАТ, ашиг шингэсэн тул тус бүр ~$13,000 гэж тооцов. Дотоодоос авах тул импортын зардал нэмэхгүй; Дадал хүртэлх тээвэр хөдөө орон нутгийн нэмэгдэлд орсон. Дилерийн үнийн санал авбал баталгаажна.",
+                "en": "CFMOTO UFORCE wholesale abroad is about $8,200–10,800; a Mongolian dealer's price already includes their import, duty, VAT and margin, so we estimate about $13,000 each. Bought locally, so no import costs are added; transport to Dadal is in the countryside premium. A dealer quote would firm this up."
+              }
+            }
+          ]
+        },
+        {
+          "id": "tracks",
+          "name": {
+            "mn": "Цасны гинжит дугуй",
+            "en": "Snow tracks"
+          },
+          "quantity": "count",
+          "quantityBasis": {
+            "mn": "UTV тус бүрт нэг иж бүрдэл.",
+            "en": "One set per UTV."
+          },
+          "options": [
+            {
+              "id": "none",
+              "name": {
+                "mn": "Гинжит дугуйгүй",
+                "en": "No snow tracks"
+              },
+              "note": {
+                "mn": "Зөвхөн зун, намар.",
+                "en": "Summer and autumn use only."
+              },
+              "source": "research-mongolia",
+              "price": {
+                "amount": 0,
+                "currency": "USD"
+              },
+              "origin": "local",
+              "shipping": 0,
+              "default": true,
+              "basis": {
+                "mn": "Гинжит дугуйгүй: зөвхөн цасгүй улиралд ашиглана.",
+                "en": "No tracks: the UTVs are used in the snow-free season only."
+              }
+            },
+            {
+              "id": "track-kit",
+              "name": {
+                "mn": "UTV бүрт гинжит дугуйн иж бүрдэл",
+                "en": "Track kit for each UTV"
+              },
+              "note": {
+                "mn": "Дугуйг гинж болгож өвөл цасан дээр явна.",
+                "en": "Swaps the wheels for tracks so they can run on snow in winter."
+              },
+              "source": "research-global",
+              "price": {
+                "amount": 4500,
+                "currency": "USD"
+              },
+              "origin": "import",
+              "shipping": 0.125,
+              "basis": {
+                "mn": "UTV-ийн гинжит дугуйн иж бүрдэл (Camso / Polaris төрлийн) нэг иж бүрдэл ~$3,500–6,000. Хүнд, том ачаа тул том ачааны тээвэр.",
+                "en": "UTV track conversion kits (e.g. Camso / Polaris-type) cost about $3,500–6,000 per set. Heavy and bulky to ship, so bulky-goods shipping is used."
+              }
+            }
+          ]
+        }
+      ],
+      "timeline": {
+        "work": [
+          5,
+          5
+        ],
+        "use": [
+          6,
+          10
+        ],
+        "note": {
+          "mn": "Нэмбэл: зуны улиралд авна.",
+          "en": "If added: bought for the summer season."
+        }
+      },
+      "revenue": {
+        "unit": {
+          "mn": "хагас өдрийн түрээс",
+          "en": "per half-day rental"
+        },
+        "attachApplies": true,
+        "capexShare": 1.0,
+        "scenarios": {
+          "cons": {
+            "price": 155000,
+            "perDay": 0.7,
+            "days": 160,
+            "opex": 5400000
+          },
+          "base": {
+            "price": 180000,
+            "perDay": 1.2,
+            "days": 180,
+            "opex": 5400000
+          },
+          "aggr": {
+            "price": 215000,
+            "perDay": 1.7,
+            "days": 200,
+            "opex": 6200000
+          }
+        },
+        "basis": {
+          "mn": "Өөрөө жолоодох түрээс хагас өдөр ₮180,000 (Дунд), бүх машинаар өдөрт ~1.2 түрээс, цасгүй улиралд (~180 өдөр). Цасны гинжит дугуй нэмбэл өвөл ч түрээслэх боломжтой — ажиллах өдрийг нэмнэ. Зардал: шатахуун, засвар үйлчилгээ, даатгал.",
+          "en": "Self-drive rental at ₮180,000 per half-day (Base), about 1.2 rentals a day across the fleet, in the snow-free season (~180 days). If snow tracks are added, winter rentals become possible — raise the operating days to include them. Running cost: fuel, servicing and insurance."
+        }
+      }
+    },
+    {
+      "id": "atv",
+      "category": "vehicles",
+      "earns": "yes",
+      "name": {
+        "mn": "ATV (дөрвөн дугуйт мотоцикл)",
+        "en": "ATVs (quad bikes)"
+      },
+      "summary": {
+        "mn": "Зочдод өөрсдөө жолоодох бартаат замын аялалд түрээслэх дөрвөн дугуйт мотоцикл. Анхдагчаар цахилгаан: чимээгүй, утаагүй, ойн замд байгальд ээлтэй. Цахилгаан ATV бүрэн хэмжээгээр зөвхөн Can-Am үйлдвэрлэдэг тул түүнийг сонгосон; хямд Хятад цахилгаан, хүйтэнд хамгийн найдвартай бензин хувилбарууд сонголтоор. Өвөл цасны гинжит дугуй нэмж болно.",
+        "en": "Quad bikes rented to guests for self-drive trail rides. Electric by default: quiet, no fumes, kind to the forest trails. Only Can-Am makes a full-size electric ATV, so that is the default; a cheaper Chinese electric quad and a petrol quad (the most dependable in deep cold) are the alternatives. Snow tracks can be added for winter."
+      },
+      "images": [
+        {
+          "src": "assets/img/items/atv/20261013-202822-180.jpg",
+          "option": "main/canam-outlander-electric"
+        },
+        {
+          "src": "assets/img/items/atv/20261013-202856-829.jpg",
+          "option": "main/china-72v-electric"
+        },
+        {
+          "src": "assets/img/items/atv/20261013-202920-175.jpg",
+          "option": "main/cfmoto-cforce-600"
+        },
+        {
+          "src": "assets/img/items/atv/20261013-203007-557.jpg",
+          "option": "tracks/camso-x4s"
+        }
+      ],
+      "params": [
+        {
+          "id": "count",
+          "name": {
+            "mn": "ATV-ийн тоо",
+            "en": "Number of ATVs"
+          },
+          "value": 3,
+          "basis": {
+            "mn": "Таны заасан 2–3-аас 3-ыг авав; 2 болгож болно.",
+            "en": "You said 2 or 3; we use 3 — set it to 2 if preferred."
+          }
+        }
+      ],
+      "components": [
+        {
+          "id": "main",
+          "name": {
+            "mn": "ATV",
+            "en": "ATV"
+          },
+          "quantity": "count",
+          "quantityBasis": {
+            "mn": "Дээрх ATV-ийн тоо.",
+            "en": "The number of ATVs above."
+          },
+          "options": [
+            {
+              "id": "canam-outlander-electric",
+              "name": {
+                "mn": "Can-Am Outlander Electric (цахилгаан)",
+                "en": "Can-Am Outlander Electric (electric)"
+              },
+              "note": {
+                "mn": "Бүрэн хэмжээний цахилгаан ATV-ийн цорын ганц томоохон брэнд; хүйтэнд зориулсан шингэнээр дулаацуулдаг батерей.",
+                "en": "The only full-size electric ATV from a major maker; liquid-heated battery built for cold."
+              },
+              "source": "research-global",
+              "price": {
+                "amount": 13000,
+                "currency": "USD"
+              },
+              "origin": "import",
+              "shipping": 0.125,
+              "default": true,
+              "basis": {
+                "mn": "BRP (Канад) — Ski-Doo, Can-Am-ийн үйлдвэрлэгч — 2026 онд гаргасан бүрэн хэмжээний цуврал үйлдвэрлэлийн анхны цахилгаан ATV. 47 м.х., 4x4, 8.9 кВт·ц батерейг шингэнээр дулаацуулж/хөргөдөг (хүйтэнд чухал), батерейн баталгаа 5 жил. Нэг цэнэглэлтээр ~50 км (хамгийн ихдээ 80 км) — лоджийн эргэн тойронд хагас өдрийн аялалд хангалттай; хүйтэнд бага зэрэг буурна. АНУ-д $12,999-өөс, дилерийн үнэ $13,249–14,549; $13,000 авав. Том ачаа тул том ачааны тээвэр.",
+                "en": "BRP (Canada) — the maker of Ski-Doo and Can-Am — launched this in 2026 as the first full-size, mass-produced electric ATV. 47 hp, 4x4, an 8.9 kWh battery that is liquid heated and cooled (which matters in the cold), and a 5-year battery warranty. About 50 km per charge (80 km at best) — plenty for half-day rides around the lodge; expect less in deep cold. US price from $12,999, dealers list $13,249–14,549; we use $13,000. Bulky, so bulky-goods shipping is used."
+              }
+            },
+            {
+              "id": "china-72v-electric",
+              "name": {
+                "mn": "Хятад үйлдвэрийн 72V 4x4 цахилгаан ATV",
+                "en": "Chinese factory 72V 4x4 electric ATV"
+              },
+              "note": {
+                "mn": "Хамгийн хямд цахилгаан хувилбар; чанар, сэлбэг нь үйлдвэрээс хамаарна.",
+                "en": "The cheapest electric choice; quality and spare parts depend on the factory."
+              },
+              "source": "research-china",
+              "price": {
+                "amount": 3500,
+                "currency": "USD"
+              },
+              "origin": "import",
+              "shipping": 0.125,
+              "basis": {
+                "mn": "Hisun, Linhai зэрэг Хятадын томоохон брэндүүд бүрэн хэмжээний цахилгаан ATV гаргадаггүй (тэдний цахилгаан загварууд UTV). Тиймээс энэ нь үйлдвэрээс шууд авах 72V, 3–8 кВт, литийн батарейтай 4x4 ATV (Alibaba / Made-in-China). Үнэ ~$3,300–3,800, 2-оос дээш ширхэг захиална. Хүйтэнд батерейн дулаацуулга байхгүй тул өвөл тохиромжгүй; захиалахаас өмнө дээж, CE гэрчилгээ, сэлбэгийг шалгана.",
+                "en": "The big Chinese brands such as Hisun and Linhai don't make a full-size electric ATV (their electric models are UTVs). So this is a factory-direct 72V, 3–8 kW, lithium-battery 4x4 quad (Alibaba / Made-in-China). About $3,300–3,800 each, minimum order 2. No battery heating, so poor in winter; check a sample, CE certification and spare parts before ordering."
+              }
+            },
+            {
+              "id": "cfmoto-cforce-600",
+              "name": {
+                "mn": "CFMOTO CFORCE 600 (бензин), Монгол дахь дилерээс",
+                "en": "CFMOTO CFORCE 600 (petrol), from a Mongolian dealer"
+              },
+              "note": {
+                "mn": "Цахилгаан биш, гэхдээ −30°C-д ч найдвартай, цасны гинжтэй хамгийн сайн ажиллана.",
+                "en": "Not electric, but dependable at −30°C and the best match for snow tracks."
+              },
+              "source": "research-mongolia",
+              "price": {
+                "amount": 10500,
+                "currency": "USD"
+              },
+              "origin": "local",
+              "shipping": 0,
+              "basis": {
+                "mn": "CFMOTO (Хятад) — Монголд дилертэй, сэлбэг олдоцтой. CFORCE 600 (580cc, 4x4) АНУ-д $7,799–8,149. Монгол дахь дилерийн үнэд импорт, гааль, НӨАТ, ашиг шингэсэн тул ~$10,500 гэж тооцов (UTV-ийн адил харьцаа). Дотоодоос авах тул импортын зардал нэмэхгүй. Дилерийн үнийн санал авбал баталгаажна.",
+                "en": "CFMOTO (China) has dealers and spare parts in Mongolia. The CFORCE 600 (580cc, 4x4) sells for $7,799–8,149 in the US. A Mongolian dealer's price already includes their import, duty, VAT and margin, so we estimate about $10,500 (the same mark-up as the UTVs). Bought locally, so no import costs are added. A dealer quote would firm this up."
+              }
+            }
+          ]
+        },
+        {
+          "id": "gear",
+          "name": {
+            "mn": "Дуулга, хамгаалалтын хувцас",
+            "en": "Helmets and protective gear"
+          },
+          "quantity": "count",
+          "quantityBasis": {
+            "mn": "ATV бүрт нэг иж бүрдэл.",
+            "en": "One set per ATV."
+          },
+          "options": [
+            {
+              "id": "main",
+              "name": {
+                "mn": "Бартаат замын дуулга, нүдний шил, бээлий",
+                "en": "Off-road helmet, goggles, gloves"
+              },
+              "source": "research-global",
+              "price": {
+                "amount": 200,
+                "currency": "USD"
+              },
+              "origin": "import",
+              "shipping": 0.04,
+              "default": true,
+              "basis": {
+                "mn": "Түрээсийн бартаат замын дуулга, нүдний шил, бээлий: иж бүрдэл ~$150–250. Өөрөө жолоодох түрээсэд зайлшгүй.",
+                "en": "Rental-grade off-road helmet, goggles and gloves: about $150–250 a set. Essential for self-drive rental."
+              }
+            }
+          ]
+        },
+        {
+          "id": "tracks",
+          "name": {
+            "mn": "Цасны гинжит дугуй",
+            "en": "Snow tracks"
+          },
+          "quantity": "count",
+          "quantityBasis": {
+            "mn": "ATV тус бүрт нэг иж бүрдэл.",
+            "en": "One set per ATV."
+          },
+          "options": [
+            {
+              "id": "none",
+              "name": {
+                "mn": "Гинжит дугуйгүй",
+                "en": "No snow tracks"
+              },
+              "note": {
+                "mn": "Зөвхөн цасгүй улиралд.",
+                "en": "Snow-free season only."
+              },
+              "source": "research-global",
+              "price": {
+                "amount": 0,
+                "currency": "USD"
+              },
+              "origin": "import",
+              "shipping": 0.125,
+              "default": true,
+              "basis": {
+                "mn": "Гинжит дугуйгүй: зөвхөн цасгүй улиралд ашиглана.",
+                "en": "No tracks: the ATVs are used in the snow-free season only."
+              }
+            },
+            {
+              "id": "camso-x4s",
+              "name": {
+                "mn": "Camso X4S гинжит иж бүрдэл, ATV бүрт",
+                "en": "Camso X4S track kit for each ATV"
+              },
+              "note": {
+                "mn": "Дөрвөн дугуйг гинж болгоно. Цахилгаан ATV-д явах зайг ~хагас болгоно — бензинтэй хамгийн тохиромжтой.",
+                "en": "Swaps all four wheels for tracks. Roughly halves an electric ATV's range — best paired with the petrol quad."
+              },
+              "source": "research-global",
+              "price": {
+                "amount": 4500,
+                "currency": "USD"
+              },
+              "origin": "import",
+              "shipping": 0.125,
+              "basis": {
+                "mn": "Camso X4S (Канад) — ATV-ийн гинжит иж бүрдлийн хамгийн түгээмэл брэнд: ~$3,800–4,000 + тухайн загварт тохирох холбох иж бүрдэл ~$500. Хүнд, том ачаа тул том ачааны тээвэр. Can-Am Outlander Electric-д тохирох эсэхийг дилерээс лавлана; Хятад цахилгаан ATV-д тохирох холбох иж бүрдэл байхгүй байж магадгүй.",
+                "en": "Camso X4S (Canada), the most common ATV track system: about $3,800–4,000 plus a model-specific mounting kit of about $500. Heavy and bulky, so bulky-goods shipping is used. Confirm the fit for the Can-Am Outlander Electric with the dealer; the Chinese electric quad may have no mounting kit at all."
+              }
+            }
+          ]
+        }
+      ],
+      "timeline": {
+        "work": [
+          5,
+          5
+        ],
+        "use": [
+          6,
+          10
+        ],
+        "note": {
+          "mn": "Зуны улиралд авна; гинжит дугуй нэмбэл өвөл ч ашиглана.",
+          "en": "Bought for the summer season; usable in winter too if snow tracks are added."
+        }
+      },
+      "revenue": {
+        "unit": {
+          "mn": "ATV бүрээр хагас өдөр",
+          "en": "per ATV per half-day"
+        },
+        "attachApplies": true,
+        "capexShare": 1.0,
+        "scenarios": {
+          "cons": {
+            "price": 100000,
+            "perDay": 1.0,
+            "days": 128,
+            "opex": 1800000
+          },
+          "base": {
+            "price": 120000,
+            "perDay": 1.5,
+            "days": 150,
+            "opex": 2000000
+          },
+          "aggr": {
+            "price": 150000,
+            "perDay": 2.2,
+            "days": 165,
+            "opex": 2400000
+          }
+        },
+        "basis": {
+          "mn": "Өөрөө жолоодох түрээс ATV бүрээр хагас өдөр ₮120,000 (Дунд) — Surron мотоциклоос (₮90,000) илүү, UTV-ээс (₮180,000) бага. Бүх ATV-аар өдөрт ~1.5 түрээс, цасгүй улиралд (~150 өдөр). Цасны гинжит дугуй нэмбэл өвөл ч түрээслэнэ — ажиллах өдрийг нэмнэ. Зардал: цэнэглэлт (эсвэл бензин), дугуй, засвар, даатгал, жилд ~₮2 сая.",
+          "en": "Self-drive rental at ₮120,000 per ATV for a half-day (Base) — more than a Surron bike (₮90,000), less than a UTV (₮180,000). About 1.5 rentals a day across the fleet, in the snow-free season (~150 days). If snow tracks are added, they can be rented in winter too — raise the operating days. Running cost: charging (or fuel), tyres, servicing and insurance, about ₮2m a year."
+        }
+      }
+    },
+    {
+      "id": "snowmobiles",
+      "category": "vehicles",
+      "earns": "yes",
+      "name": {
+        "mn": "Цасны мотоцикл",
+        "en": "Snowmobiles"
+      },
+      "summary": {
+        "mn": "Өвлийн аялалд зориулсан найдвартай бензин 4 шатлалт цасны мотоциклын цөөн парк — ажилтан хөтлөх эсвэл зочид өөрсдөө жолоодох түрээс. Гэр бүлээрээ явахад зориулж цасны мотоциклоор чирэх хүүхдийн битүү чарга нэмж болно. Монголд дилер цөөн тул импортоор авна.",
+        "en": "A small fleet of reliable petrol 4-stroke snowmobiles for winter tours, either guided by a staff member or rented for self-drive. An enclosed snowcoach for children, towed behind a snowmobile, can be added so families can come along. There are few snowmobile dealers in Mongolia, so they are imported."
+      },
+      "images": [
+        {
+          "src": "assets/img/items/snowmobiles/20261013-190506-109.jpg",
+          "option": "main/ski-doo-expedition-sport"
+        },
+        {
+          "src": "assets/img/items/snowmobiles/20261013-190534-327.jpg",
+          "option": "main/yamaha-vk-pro2"
+        },
+        {
+          "src": "assets/img/items/snowmobiles/20261013-190604-887.jpg",
+          "option": "gear/main"
+        },
+        {
+          "src": "assets/img/items/snowmobiles/20261013-190701-167.jpg",
+          "option": "snowcoach/snowcoach"
+        },
+        {
+          "src": "assets/img/items/snowmobiles/20261013-192425-806.jpg"
+        }
+      ],
+      "params": [
+        {
+          "id": "count",
+          "name": {
+            "mn": "Цасны мотоциклын тоо",
+            "en": "Number of snowmobiles"
+          },
+          "value": 3,
+          "basis": {
+            "mn": "3 цасны мотоцикл: хөтөлсөн аялалд нэг нь хөтөчид, хоёр нь зочдод; эсвэл гурвуулаа өөрөө жолоодох түрээсэнд.",
+            "en": "3 snowmobiles: one for a guide and two for guests on a guided tour, or three for self-drive rental."
+          }
+        }
+      ],
+      "components": [
+        {
+          "id": "main",
+          "name": {
+            "mn": "Цасны мотоцикл",
+            "en": "Snowmobile"
+          },
+          "quantity": "count",
+          "quantityBasis": {
+            "mn": "Дээрх тоо.",
+            "en": "The number of snowmobiles above."
+          },
+          "options": [
+            {
+              "id": "ski-doo-expedition-sport",
+              "name": {
+                "mn": "Ski-Doo Expedition Sport 900 ACE",
+                "en": "Ski-Doo Expedition Sport 900 ACE"
+              },
+              "note": {
+                "mn": "Түрээсийн паркийн дуртай сонголт: найдвартай 4 шатлалт, анхлан суралцагчдад хялбар, хоёр суудалтай.",
+                "en": "The rental-fleet favourite: reliable 4-stroke, easy for beginners, two-up seat."
+              },
+              "source": "research-global",
+              "price": {
+                "amount": 12500,
+                "currency": "USD"
+              },
+              "origin": "import",
+              "shipping": 0.125,
+              "default": true,
+              "basis": {
+                "mn": "Найдвартай байдлаар сонгосон. Rotax 900 ACE нь цахилгаан асаалттай, түлш шахалттай 4 шатлалт хөдөлгүүр: тос холих шаардлагагүй, хүйтэнд найдвартай асна, түлш хэмнэлттэй — тиймээс түрээсийн компаниуд олноор нь ашигладаг. 20 инч өргөн гинж гүн цасанд живэхгүй, ухрах араатай, хоёр хүний суудалтай. 2026 оны Expedition жагсаалтын үнэ $10,849-өөс; 900 ACE хөдөлгүүр, дилерийн бэлтгэлтэй ~$12,500. Том оврын ачаа.",
+                "en": "Chosen for reliability. Its Rotax 900 ACE is a 4-stroke, fuel-injected engine with electric start: no oil mixing, dependable cold starts and good fuel economy — which is why rental operators run fleets of them. A 20-inch-wide track floats in deep snow, it has reverse, and the two-up seat carries a guide's passenger. The 2026 Expedition starts at $10,849 list; about $12,500 with the 900 ACE and dealer preparation. Bulky to ship."
+              }
+            },
+            {
+              "id": "yamaha-vk-pro2",
+              "name": {
+                "mn": "Yamaha VK Professional II",
+                "en": "Yamaha VK Professional II"
+              },
+              "note": {
+                "mn": "Хамгийн бат бөх, чирэхэд хамгийн сайн; хүнд, үнэтэй.",
+                "en": "The toughest, best for towing; heavier and dearer."
+              },
+              "source": "research-global",
+              "price": {
+                "amount": 17000,
+                "currency": "USD"
+              },
+              "origin": "import",
+              "shipping": 0.125,
+              "basis": {
+                "mn": "Yamaha-гийн удаан хугацааны 'ажлын морь': 1,049 cc Genesis 4 шатлалт хөдөлгүүр, хүнд ачаа чирэхэд зориулсан 2 шатлалт хурдны хайрцаг (бага араа), маш өргөн гинж. Бараг эвдэрдэггүй гэдгээрээ алдартай — хүүхдийн чарга чирэхэд хамгийн тохиромжтой — гэхдээ хүнд, жолоодлого удаан, үнэтэй, ~$17,000. Том оврын ачаа.",
+                "en": "Yamaha's long-running utility 'workhorse': a 1,049 cc Genesis 4-stroke engine and a 2-speed gearbox (low range) made for pulling heavy loads, with a very wide track. Known for being almost unbreakable — the best choice for towing the kids' snowcoach — but heavier, slower to steer and more expensive, about $17,000. Bulky to ship."
+              }
+            }
+          ]
+        },
+        {
+          "id": "gear",
+          "name": {
+            "mn": "Дуулга, хувцас хэрэгсэл",
+            "en": "Helmets and riding gear"
+          },
+          "quantity": "count * 2",
+          "quantityBasis": {
+            "mn": "Цасны мотоцикл бүрт хоёр иж бүрдэл (жолооч, зорчигч).",
+            "en": "Two sets per snowmobile (rider and passenger)."
+          },
+          "options": [
+            {
+              "id": "main",
+              "name": {
+                "mn": "Дуулга, нүдний шил, дулаан хувцас, бээлий",
+                "en": "Helmet, goggles, insulated suit, gloves"
+              },
+              "source": "research-global",
+              "price": {
+                "amount": 450,
+                "currency": "USD"
+              },
+              "origin": "import",
+              "shipping": 0.04,
+              "default": true,
+              "basis": {
+                "mn": "Халаалттай шилтэй дуулга, дулаалгатай комбинезон, бээлий, гутал: иж бүрдэл ~$350–550. −30°C-д зочдод зохих хувцас хэрэгтэй.",
+                "en": "Rental-grade helmet with heated visor, insulated one-piece suit, gloves and boots: about $350–550 a set. Guests need proper gear at −30°C."
+              }
+            }
+          ]
+        },
+        {
+          "id": "snowcoach",
+          "name": {
+            "mn": "Хүүхдийн битүү чарга",
+            "en": "Kids' snowcoach"
+          },
+          "quantity": 1,
+          "quantityBasis": {
+            "mn": "Цасны мотоциклоор чирэх нэг чарга.",
+            "en": "One coach, towed behind a snowmobile."
+          },
+          "options": [
+            {
+              "id": "none",
+              "name": {
+                "mn": "Чаргагүй",
+                "en": "No snowcoach"
+              },
+              "note": {
+                "mn": "Зөвхөн жолоочид.",
+                "en": "Riders only."
+              },
+              "source": "research-global",
+              "price": {
+                "amount": 0,
+                "currency": "USD"
+              },
+              "origin": "import",
+              "shipping": 0.04,
+              "default": true,
+              "basis": {
+                "mn": "Чаргагүй: аялал зөвхөн жолоочдод.",
+                "en": "No snowcoach: tours are for riders only."
+              }
+            },
+            {
+              "id": "snowcoach",
+              "name": {
+                "mn": "4–6 хүүхдийн битүү зорчигчийн чарга",
+                "en": "Enclosed passenger sled for 4–6 children"
+              },
+              "note": {
+                "mn": "Бага насны хүүхэдтэй гэр бүл аялалд нэгдэх боломж.",
+                "en": "Lets families with small children join the tour."
+              },
+              "source": "research-global",
+              "price": {
+                "amount": 7000,
+                "currency": "USD"
+              },
+              "origin": "import",
+              "shipping": 0.125,
+              "basis": {
+                "mn": "Цонхтой, зөөлөн суудал, бүстэй 4–6 хүүхдийн битүү чарга, цасны мотоциклоор чирнэ — Лапландын аялалын компаниуд гэр бүлийн аялалд ашигладаг. Үнэ нийтлэгдээгүй; ~$5,000–9,000 гэж тооцов. Yamaha VK-ээр чирэх нь хамгийн тохиромжтой. Үнийн санал хэрэгтэй.",
+                "en": "An enclosed sled with windows, padded seats and seat belts for 4–6 children, towed behind a snowmobile — as used by tour operators in Lapland so families can come along. No public prices; we estimate about $5,000–9,000. Best towed by the Yamaha VK. Needs a quote."
+              }
+            }
+          ]
+        }
+      ],
+      "timeline": {
+        "work": [
+          8,
+          10
+        ],
+        "use": [
+          11,
+          12
+        ],
+        "note": {
+          "mn": "Импорт удаан тул зуны сүүлээр захиална; анхны цасанд бэлэн.",
+          "en": "Ordered in late summer (import takes time); ready for the first snow."
+        }
+      },
+      "revenue": {
+        "attachApplies": true,
+        "capexShare": 1.0,
+        "variants": [
+          {
+            "id": "guided",
+            "name": {
+              "mn": "Хөтөчтэй аялал",
+              "en": "Guided tours"
+            },
+            "note": {
+              "mn": "Аялал бүрийг ажилтан хөтөлнө: цасны мотоцикл, хүйтэнд дасаагүй зочдод аюулгүй, үнэ өндөр — гэхдээ хөтөчийн цалин шаардана.",
+              "en": "A staff guide leads every tour: safer for guests new to snowmobiles and the cold, and it sells for more — but needs a guide's pay."
+            },
+            "default": true,
+            "unit": {
+              "mn": "зочин бүрээр нэг аялал (2–3 цаг)",
+              "en": "per guest per tour (2–3 h)"
+            },
+            "scenarios": {
+              "cons": {
+                "price": 210000,
+                "perDay": 1.8,
+                "days": 102,
+                "opex": 20000000
+              },
+              "base": {
+                "price": 250000,
+                "perDay": 3,
+                "days": 120,
+                "opex": 24000000
+              },
+              "aggr": {
+                "price": 300000,
+                "perDay": 4.2,
+                "days": 120,
+                "opex": 28000000
+              }
+            },
+            "basis": {
+              "mn": "Хөтөчтэй 2–3 цагийн аялал зочин бүрээр ₮250,000 (Дунд), өдөрт ~3 зочин, зөвхөн өвөл (~120 өдөр). Жилийн зардал ~₮24 сая: хөтөчийн цалин (өдөрт ~₮100,000 × 120 ≈ ₮12 сая), шатахуун (~₮7.6 сая: аялалд ~15 л × ~₮2,800/л, өдөрт 1.5 аялал), засвар үйлчилгээ (цасны мотоцикл бүрт ~₮1.5 сая).",
+              "en": "₮250,000 per guest for a 2–3 hour guided tour (Base), about 3 guests a day, winter only (~120 days). Running cost about ₮24m a year: a guide's pay (~₮100,000 a day × 120 days ≈ ₮12m), fuel (~₮7.6m: about 15 L per tour at ~₮2,800/L, 1.5 tours a day) and servicing (~₮1.5m per snowmobile)."
+            }
+          },
+          {
+            "id": "self-drive",
+            "name": {
+              "mn": "Өөрөө жолоодох түрээс",
+              "en": "Self-drive rental"
+            },
+            "note": {
+              "mn": "Зочид тэмдэглэсэн замаар өөрсдөө явна: хөтөч хэрэггүй, гэхдээ төөрөх, машин эвдрэх эрсдэл өндөр.",
+              "en": "Guests ride on their own on marked trails: no guide needed, but more risk of getting lost or damaging a machine."
+            },
+            "unit": {
+              "mn": "цасны мотоцикл бүрээр хагас өдөр",
+              "en": "per snowmobile per half-day"
+            },
+            "scenarios": {
+              "cons": {
+                "price": 210000,
+                "perDay": 0.9,
+                "days": 102,
+                "opex": 11000000
+              },
+              "base": {
+                "price": 250000,
+                "perDay": 1.5,
+                "days": 120,
+                "opex": 11000000
+              },
+              "aggr": {
+                "price": 300000,
+                "perDay": 2.1,
+                "days": 120,
+                "opex": 12600000
+              }
+            },
+            "basis": {
+              "mn": "Хагас өдрийн түрээс цасны мотоцикл бүрээр ₮250,000 (Дунд), өдөрт ~1.5 түрээс, зөвхөн өвөл (~120 өдөр). Жилийн зардал ~₮11 сая: шатахуун (~₮5 сая), засвар (~₮4.5 сая), эвдрэл/даатгал (~₮1.5 сая). Хөтөчийн цалингүй.",
+              "en": "₮250,000 per snowmobile for a half-day (Base), about 1.5 rentals a day, winter only (~120 days). Running cost about ₮11m a year: fuel (~₮5m), servicing (~₮4.5m) and damage/insurance (~₮1.5m). No guide's pay."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "snow-scooters",
+      "category": "vehicles",
+      "earns": "yes",
+      "name": {
+        "mn": "Цахилгаан цасны скүтер",
+        "en": "Electric snow scooters"
+      },
+      "summary": {
+        "mn": "Урд нь цана, ард нь гинжтэй зогсож унадаг цахилгаан цасны скүтер — лодж орчимд богино, хялбар аялал. Цасны мотоциклоос хөнгөн, хямд адал явдал, залуу эсвэл болгоомжтой зочдод тохиромжтой. Хүйтэнд батарей хурдан суулгадаг тул дулаан барилгад цэнэглэж хадгална.",
+        "en": "Stand-up electric snow scooters (a ski at the front, a track at the back) for short, easy rides around the lodge — a lighter, cheaper thrill than the snowmobiles, good for younger or nervous guests. Batteries are charged and stored in the heated building, since cold drains them quickly."
+      },
+      "images": [
+        {
+          "src": "assets/img/items/snow-scooters/20261013-190822-798.jpg"
+        }
+      ],
+      "params": [
+        {
+          "id": "count",
+          "name": {
+            "mn": "Скүтерийн тоо",
+            "en": "Number of scooters"
+          },
+          "value": 4,
+          "basis": {
+            "mn": "Таны заасны дагуу 4 скүтер: гэр бүл эсвэл бага бүлэг хамт унахад хангалттай.",
+            "en": "4 scooters, as you specified: enough for a family or small group to ride together."
+          }
+        }
+      ],
+      "components": [
+        {
+          "id": "main",
+          "name": {
+            "mn": "Цасны скүтер",
+            "en": "Snow scooter"
+          },
+          "quantity": "count",
+          "quantityBasis": {
+            "mn": "Дээрх тоо.",
+            "en": "The number of scooters above."
+          },
+          "options": [
+            {
+              "id": "eunorau-icex",
+              "name": {
+                "mn": "EUNORAU ICEX 1.0",
+                "en": "EUNORAU ICEX 1.0"
+              },
+              "note": {
+                "mn": "Экспортын дилер, баталгаа, сэлбэгтэй тогтвортой Хятад брэнд.",
+                "en": "Established Chinese brand with export dealers, warranty and spare parts."
+              },
+              "source": "research-china",
+              "price": {
+                "amount": 2500,
+                "currency": "USD"
+              },
+              "origin": "import",
+              "shipping": 0.04,
+              "default": true,
+              "basis": {
+                "mn": "EUNORAU (Чанжоу, Хятад) нь гадаадад дилер, сэлбэгтэйгээр борлуулдаг тогтвортой цахилгаан тээврийн үйлдвэрлэгч, ICEX нь бие даасан тоймтой, тусгайлан хийсэн зогсож унадаг цасны скүтер тул сонгосон. Жижиглэнгийн үнэ ~$2,500. Хятадаас импорт.",
+                "en": "Chosen because EUNORAU (Changzhou, China) is an established e-vehicle maker that sells abroad with dealer support and spare parts, and the ICEX is a purpose-built stand-up snow scooter with independent reviews. About $2,500 retail. Imported from China."
+              }
+            },
+            {
+              "id": "generic-60v",
+              "name": {
+                "mn": "Брэндгүй үйлдвэрийн 60V цасны скүтер",
+                "en": "Generic factory-direct 60V snow scooter"
+              },
+              "note": {
+                "mn": "Маш хямд, гэхдээ чанар, сэлбэг эрсдэлтэй.",
+                "en": "Very cheap, but quality and spare parts are a gamble."
+              },
+              "source": "research-china",
+              "price": {
+                "amount": 450,
+                "currency": "USD"
+              },
+              "origin": "import",
+              "shipping": 0.04,
+              "basis": {
+                "mn": "Брэндгүй 2–3 кВт, 60V лити цасны скүтер Made-in-China дээр үйлдвэрийн үнээр ~$230–250, хамгийн бага захиалга 10 ширхэг. Бага захиалга, савлагаа, хэдэн сэлбэгийг тооцож тус бүр ~$450 гэж авсан. Дилерийн дэмжлэггүй.",
+                "en": "Unbranded 2–3 kW, 60V lithium snow scooters are listed on Made-in-China at about $230–250 ex-factory with a 10-unit minimum order. We use about $450 each to allow for a small order, packing and a few spare parts. No dealer support."
+              }
+            }
+          ]
+        }
+      ],
+      "timeline": {
+        "work": [
+          9,
+          10
+        ],
+        "use": [
+          11,
+          12
+        ],
+        "note": {
+          "mn": "9–10-р сард өвөлд зориулж авна.",
+          "en": "Bought in September–October for the winter."
+        }
+      },
+      "revenue": {
+        "unit": {
+          "mn": "1 цагийн унаа",
+          "en": "per 1-hour ride"
+        },
+        "attachApplies": true,
+        "capexShare": 1.0,
+        "scenarios": {
+          "cons": {
+            "price": 40000,
+            "perDay": 1.8,
+            "days": 102,
+            "opex": 1000000
+          },
+          "base": {
+            "price": 50000,
+            "perDay": 3,
+            "days": 120,
+            "opex": 1000000
+          },
+          "aggr": {
+            "price": 60000,
+            "perDay": 4.2,
+            "days": 120,
+            "opex": 1200000
+          }
+        },
+        "basis": {
+          "mn": "Лодж орчимд богино унаа: скүтер бүрээр 1 цаг ₮50,000 (Дунд), бүх скүтерээр өдөрт ~3 унаа, зөвхөн өвөл (~120 өдөр). Зардал бага: цэнэглэх цахилгаан, бага зэргийн засвар, жилд ~₮1 сая.",
+          "en": "Short rides near the lodge: ₮50,000 per scooter for an hour (Base), about 3 rides a day across the fleet, winter only (~120 days). Running cost is small: electricity for charging and a little servicing, about ₮1m a year."
+        }
+      }
+    },
+    {
+      "id": "surron-bikes",
+      "category": "vehicles",
+      "earns": "yes",
+      "name": {
+        "mn": "Surron цахилгаан мотоцикл",
+        "en": "Surron electric trail bikes"
+      },
+      "summary": {
+        "mn": "Зун зочдод өөрсдөө жолоодох замын аялалд түрээслэх хөнгөн Хятад цахилгаан бартаат замын мотоцикл — чимээгүй, шатахуунгүй, унахад хялбар. Цасны гинжит иж бүрдэл нэмж өвөл жижиг цасны мотоцикл болгож болно. Дуулга, хамгаалалтын хувцас багтсан.",
+        "en": "Lightweight Chinese electric off-road bikes rented to guests for self-drive trail rides in summer — quiet, no fuel, easy to ride. Snow-track kits can be added to turn them into small snow bikes for winter. Helmets and protective gear included."
+      },
+      "images": [
+        {
+          "src": "assets/img/items/surron-bikes/20261013-190905-731.jpg",
+          "option": "main/standard"
+        },
+        {
+          "src": "assets/img/items/surron-bikes/20261013-191906-972.jpg",
+          "option": "main/ultra-bee"
+        },
+        {
+          "src": "assets/img/items/surron-bikes/20261013-191952-620.jpg",
+          "option": "gear/main"
+        },
+        {
+          "src": "assets/img/items/surron-bikes/20261013-192038-813.jpg",
+          "option": "snowkit/snow-kit"
+        }
+      ],
+      "params": [
+        {
+          "id": "count",
+          "name": {
+            "mn": "Мотоциклын тоо",
+            "en": "Number of bikes"
+          },
+          "value": 4,
+          "basis": {
+            "mn": "Таны заасны дагуу 4 мотоцикл.",
+            "en": "4 bikes, as you specified."
+          }
+        }
+      ],
+      "components": [
+        {
+          "id": "main",
+          "name": {
+            "mn": "Мотоцикл",
+            "en": "Bike"
+          },
+          "quantity": "count",
+          "quantityBasis": {
+            "mn": "Дээрх тоо.",
+            "en": "The number of bikes above."
+          },
+          "options": [
+            {
+              "id": "standard",
+              "name": {
+                "mn": "Surron Light Bee X",
+                "en": "Surron Light Bee X"
+              },
+              "note": {
+                "mn": "Хамгийн их зарагддаг хөнгөн цахилгаан мотоцикл; анхлан суралцагчдад хялбар.",
+                "en": "The best-selling light e-trail bike; easy for beginners."
+              },
+              "source": "research-china",
+              "price": {
+                "amount": 4700,
+                "currency": "USD"
+              },
+              "origin": "import",
+              "shipping": 0.04,
+              "default": true,
+              "basis": {
+                "mn": "Surron (Чунцин, Хятад) нь хөнгөн цахилгаан бартаат замын мотоциклын хамгийн алдартай үйлдвэрлэгч, сэлбэг, дагалдах хэрэгслийн зах зээл өргөн. Light Bee X (~50 кг, ~75 км/ц хүртэл, хурд хязгаарлах эко горимтой) жижиглэнгийн үнэ ~$4,399–4,999; дунджийг авсан. Импорт.",
+                "en": "Surron (Chongqing, China) is the best-known maker of light electric trail bikes, with a large spare-parts and accessories market. The Light Bee X (~50 kg, up to ~75 km/h, with an eco mode that limits speed) retails at about $4,399–4,999; we use the middle. Imported."
+              }
+            },
+            {
+              "id": "ultra-bee",
+              "name": {
+                "mn": "Surron Ultra Bee",
+                "en": "Surron Ultra Bee"
+              },
+              "note": {
+                "mn": "Том, хүчтэй, жин ихтэй насанд хүрэгчдэд илүү; үнэтэй.",
+                "en": "Bigger and stronger, better for heavier adult riders; dearer."
+              },
+              "source": "research-china",
+              "price": {
+                "amount": 7000,
+                "currency": "USD"
+              },
+              "origin": "import",
+              "shipping": 0.04,
+              "basis": {
+                "mn": "Surron-ий том загвар: илүү хүчтэй, том дугуй, түдгэлзүүлэлт, жин ихтэй насанд хүрэгчид, бартаатай замд илүү. ~$6,500–7,500. Импорт.",
+                "en": "Surron's larger model: more power, bigger wheels and suspension, better for heavier adults and rougher trails. About $6,500–7,500. Imported."
+              }
+            }
+          ]
+        },
+        {
+          "id": "gear",
+          "name": {
+            "mn": "Дуулга, хамгаалалтын хувцас",
+            "en": "Helmets and protective gear"
+          },
+          "quantity": "count",
+          "quantityBasis": {
+            "mn": "Мотоцикл бүрт нэг иж бүрдэл.",
+            "en": "One set per bike."
+          },
+          "options": [
+            {
+              "id": "main",
+              "name": {
+                "mn": "Бартаат замын дуулга, нүдний шил, бээлий, хамгаалалт",
+                "en": "Off-road helmet, goggles, gloves, body armour"
+              },
+              "source": "research-global",
+              "price": {
+                "amount": 250,
+                "currency": "USD"
+              },
+              "origin": "import",
+              "shipping": 0.04,
+              "default": true,
+              "basis": {
+                "mn": "Түрээсийн бартаат замын дуулга, нүдний шил, бээлий, биеийн хамгаалалт: иж бүрдэл ~$200–300. Өөрөө жолоодох түрээсэд зайлшгүй.",
+                "en": "Rental-grade off-road helmet, goggles, gloves and a body-armour vest: about $200–300 a set. Essential for self-drive rental."
+              }
+            }
+          ]
+        },
+        {
+          "id": "snowkit",
+          "name": {
+            "mn": "Цасны иж бүрдэл",
+            "en": "Snow kits"
+          },
+          "quantity": "count",
+          "quantityBasis": {
+            "mn": "Мотоцикл бүрт нэг иж бүрдэл.",
+            "en": "One kit per bike."
+          },
+          "options": [
+            {
+              "id": "none",
+              "name": {
+                "mn": "Цасны иж бүрдэлгүй",
+                "en": "No snow kits"
+              },
+              "note": {
+                "mn": "Зөвхөн зун.",
+                "en": "Summer use only."
+              },
+              "source": "research-global",
+              "price": {
+                "amount": 0,
+                "currency": "USD"
+              },
+              "origin": "import",
+              "shipping": 0.04,
+              "default": true,
+              "basis": {
+                "mn": "Цасны иж бүрдэлгүй: зөвхөн зун ашиглана.",
+                "en": "No snow kits: the bikes are used in summer only."
+              }
+            },
+            {
+              "id": "snow-kit",
+              "name": {
+                "mn": "Мотоцикл бүрт цасны гинжит иж бүрдэл",
+                "en": "Snow-track kit for each bike"
+              },
+              "note": {
+                "mn": "Хойд дугуйг гинж, урдыг цана болгож өвөл жижиг цасны мотоцикл болгоно.",
+                "en": "Swaps the rear wheel for a track and the front for a ski: a mini snow bike for winter."
+              },
+              "source": "research-global",
+              "price": {
+                "amount": 2000,
+                "currency": "USD"
+              },
+              "origin": "import",
+              "shipping": 0.04,
+              "basis": {
+                "mn": "Surron-д зориулсан цасны иж бүрдэл (хойд гинж, урд цана) ~$1,500–2,500. Импорт.",
+                "en": "Aftermarket snow-bike conversion kits for the Surron (a rear track and a front ski) cost about $1,500–2,500. Imported."
+              }
+            }
+          ]
+        }
+      ],
+      "timeline": {
+        "work": [
+          5,
+          5
+        ],
+        "use": [
+          6,
+          9
+        ],
+        "note": {
+          "mn": "Зуны улиралд авна.",
+          "en": "Bought for the summer season."
+        }
+      },
+      "revenue": {
+        "unit": {
+          "mn": "мотоцикл бүрээр хагас өдөр",
+          "en": "per bike per half-day"
+        },
+        "attachApplies": true,
+        "capexShare": 1.0,
+        "scenarios": {
+          "cons": {
+            "price": 75000,
+            "perDay": 1.2,
+            "days": 128,
+            "opex": 1200000
+          },
+          "base": {
+            "price": 90000,
+            "perDay": 2,
+            "days": 150,
+            "opex": 1250000
+          },
+          "aggr": {
+            "price": 110000,
+            "perDay": 2.8,
+            "days": 150,
+            "opex": 1400000
+          }
+        },
+        "basis": {
+          "mn": "Өөрөө жолоодох түрээс мотоцикл бүрээр хагас өдөр ₮90,000 (Дунд), бүх мотоциклоор өдөрт ~2 түрээс, зун (~150 өдөр). Цасны иж бүрдэл нэмбэл өвөл ч түрээслэх боломжтой — ажиллах өдрийг нэмнэ. Зардал: цэнэглэлт, дугуй, засвар, жилд ~₮1.25 сая.",
+          "en": "Self-drive rental at ₮90,000 per bike for a half-day (Base), about 2 rentals a day across the fleet, in summer (~150 days). If snow kits are added, they can also be rented in winter — raise the operating days to include it. Running cost: charging, tyres and servicing, about ₮1.25m a year."
+        }
+      }
+    },
+    {
+      "id": "jet-boat",
+      "category": "vehicles",
+      "earns": "yes",
+      "name": {
+        "mn": "Усан онгоц (жет)",
+        "en": "Jet boat"
+      },
+      "summary": {
+        "mn": "Голын аялалд зориулсан жет усан онгоц. Үнэ нь дилерийн бодит үнийн санал.",
+        "en": "A jet boat for guided river rides. Prices are real dealer quotations."
+      },
+      "images": [
+        {
+          "src": "assets/img/items/jet-boat/20261013-192218-612.jpg",
+          "option": "main/fregat-480-jet-sp"
+        },
+        {
+          "src": "assets/img/items/jet-boat/20261013-192250-856.jpg",
+          "option": "main/fregat-f600-jet-sp"
+        },
+        {
+          "src": "assets/img/items/jet-boat/20261013-192323-000.jpg",
+          "option": "main/fregat-480-jet"
+        }
+      ],
+      "components": [
+        {
+          "id": "main",
+          "quantity": 1,
+          "quantityBasis": {
+            "mn": "1 усан онгоц. F600 6–10 суудалтай тул нэг онгоц хүрэлцээтэй.",
+            "en": "1 boat. The F600 seats 6–10, so one boat covers expected demand."
+          },
+          "options": [
+            {
+              "id": "fregat-480-jet",
+              "name": {
+                "mn": "Fregat 480 FM Jet — 40 морь, 2–4 суудал",
+                "en": "Fregat 480 FM Jet — 40 hp, 2–4 seats"
+              },
+              "note": {
+                "mn": "Хамгийн жижиг, хямд; 2 тактын хөдөлгүүр.",
+                "en": "Smallest and cheapest; 2-stroke engine."
+              },
+              "source": "quote",
+              "price": {
+                "amount": 65900000,
+                "currency": "MNT"
+              },
+              "origin": "local",
+              "shipping": 0,
+              "default": false,
+              "basis": {
+                "mn": "Fregat-ийн дилер (Стихия)-ийн бодит үнийн санал — НӨАТ орсон, Монголд хүргэгдсэн тул тээвэр, гааль, НӨАТ нэмэхгүй.",
+                "en": "Real quotation from the Fregat dealer (Стихия) — VAT included and delivered in Mongolia, so no shipping, duty or VAT is added."
+              }
+            },
+            {
+              "id": "fregat-480-jet-sp",
+              "name": {
+                "mn": "Fregat 480 FM Jet SP — 70 морь, 2–4 суудал",
+                "en": "Fregat 480 FM Jet SP — 70 hp, 2–4 seats"
+              },
+              "note": {
+                "mn": "Ижил хэмжээтэй, 4 тактын илүү найдвартай хөдөлгүүр.",
+                "en": "Same size, quieter and more reliable 4-stroke engine."
+              },
+              "source": "quote",
+              "price": {
+                "amount": 145000000,
+                "currency": "MNT"
+              },
+              "origin": "local",
+              "shipping": 0,
+              "default": false,
+              "basis": {
+                "mn": "Fregat-ийн дилер (Стихия)-ийн бодит үнийн санал — НӨАТ орсон, Монголд хүргэгдсэн тул тээвэр, гааль, НӨАТ нэмэхгүй.",
+                "en": "Real quotation from the Fregat dealer (Стихия) — VAT included and delivered in Mongolia, so no shipping, duty or VAT is added."
+              }
+            },
+            {
+              "id": "fregat-f600-jet-sp",
+              "name": {
+                "mn": "Fregat F600 Jet SP — 115 морь, 6–10 суудал",
+                "en": "Fregat F600 Jet SP — 115 hp, 6–10 seats"
+              },
+              "note": {
+                "mn": "Нэг удаад 6–10 зочин — бүлгийн аялалд хамгийн тохиромжтой.",
+                "en": "Carries 6–10 guests a trip — best for group tours."
+              },
+              "source": "quote",
+              "price": {
+                "amount": 210000000,
+                "currency": "MNT"
+              },
+              "origin": "local",
+              "shipping": 0,
+              "default": true,
+              "basis": {
+                "mn": "Fregat-ийн дилер (Стихия)-ийн бодит үнийн санал — НӨАТ орсон, Монголд хүргэгдсэн тул тээвэр, гааль, НӨАТ нэмэхгүй.",
+                "en": "Real quotation from the Fregat dealer (Стихия) — VAT included and delivered in Mongolia, so no shipping, duty or VAT is added."
+              }
+            }
+          ]
+        }
+      ],
+      "timeline": {
+        "work": [
+          4,
+          5
+        ],
+        "use": [
+          6,
+          9
+        ],
+        "note": {
+          "mn": "Хавар захиалж, буудал бэлэн болмогц усанд гарна.",
+          "en": "Ordered in spring, on the water when the landing is ready."
+        }
+      },
+      "revenue": {
+        "unit": {
+          "mn": "зочин бүрээр 1 цаг",
+          "en": "per guest per hour"
+        },
+        "attachApplies": true,
+        "capexShare": 1.0,
+        "scenarios": {
+          "cons": {
+            "price": 170000,
+            "perDay": 2.4,
+            "days": 128,
+            "opex": 20000000
+          },
+          "base": {
+            "price": 200000,
+            "perDay": 4,
+            "days": 150,
+            "opex": 23000000
+          },
+          "aggr": {
+            "price": 240000,
+            "perDay": 5.6,
+            "days": 150,
+            "opex": 26000000
+          }
+        },
+        "basis": {
+          "mn": "Зочин бүрээр 1 цагийн аялал ₮200,000 (Дунд), өдөрт ~4 зочин, мөсгүй улиралд (~150 өдөр). Аялал бүрийг ажилтан жолооддог. Жилийн зардал ~₮23 сая: жолоочийн улирлын цалин (сард ~₮2.5 сая × 5 сар ≈ ₮12.5 сая), шатахуун (F600 цагт ~12–14 л; өдөрт ~1.5 цаг × ~₮2,800/л ≈ ₮8 сая), засвар, өвлийн хадгалалт (~₮2 сая). Буудлыг тусад нь тооцсон.",
+          "en": "₮200,000 per guest for a 1-hour ride (Base), about 4 guests a day, in the ice-free season (~150 days). A staff member drives every trip. Running cost about ₮23m a year: the driver's seasonal pay (~₮2.5m a month × 5 months ≈ ₮12.5m), fuel (the F600 burns ~12–14 L an hour; ~1.5 engine-hours a day at ~₮2,800/L ≈ ₮8m) and servicing plus winter storage (~₮2m). The landing is costed separately."
+        }
+      }
+    },
+    {
+      "id": "horse-carriage",
+      "category": "vehicles",
+      "earns": "yes",
+      "name": {
+        "mn": "Морин тэрэг",
+        "en": "Horse-drawn carriage"
+      },
+      "summary": {
+        "mn": "Лодж орчмын үзэсгэлэнт аялалд зориулсан, Монгол урчуудын хийсэн 4+ суудалтай бат бөх морин тэрэг. Энд зөвхөн тэргийг тооцсон: морь, хариуцагчийг нутгийн малчидтай тохиролцож байгаа тул тэр зардал хараахан тодорхойгүй.",
+        "en": "A sturdy 4+ seat horse-drawn carriage, built by a Mongolian cart-builder, for scenic rides around the lodge. Only the carriage is costed here: the horses and their handler are being arranged with local herders, so that cost is still open."
+      },
+      "images": [
+        {
+          "src": "assets/img/items/horse-carriage/20261013-192627-768.jpg",
+          "option": "main/local-built"
+        },
+        {
+          "src": "assets/img/items/horse-carriage/20261013-192638-257.jpg",
+          "option": "main/imported"
+        }
+      ],
+      "components": [
+        {
+          "id": "main",
+          "quantity": 1,
+          "options": [
+            {
+              "id": "local-built",
+              "name": {
+                "mn": "Монголд хийсэн",
+                "en": "Built locally in Mongolia"
+              },
+              "source": "research-mongolia",
+              "price": {
+                "amount": 3500,
+                "currency": "USD"
+              },
+              "origin": "local",
+              "shipping": 0,
+              "default": true,
+              "basis": {
+                "mn": "Монгол урчуудын хийсэн 4+ суудалтай бат бөх тэрэгний тооцоо. Дотоодоос авах тул импортын зардалгүй. 2–3 орон нутгийн үнийн санал авах нь зүйтэй.",
+                "en": "An estimate for a sturdy 4+ seat carriage made by a Mongolian cart-builder. Bought locally, so no import costs. Worth getting two or three local quotes."
+              },
+              "note": {
+                "mn": "Монгол урчуудын хийсэн: нутагт засахад хялбар, импортын зардалгүй.",
+                "en": "Built by a Mongolian cart-builder: easy to repair locally, no import costs."
+              }
+            },
+            {
+              "id": "imported",
+              "name": {
+                "mn": "Tianjin Brother марафон тэрэг (Хятад)",
+                "en": "Tianjin Brother marathon wagon (China)"
+              },
+              "note": {
+                "mn": "Хятадын үйлдвэрт хийсэн: ган каркас, түдгэлзүүлэлт, тоормос, халхавчтай; бартаат замд зориулсан.",
+                "en": "Factory-built in China: steel frame, suspension, brakes and a canopy; built for cross-country driving."
+              },
+              "source": "research-china",
+              "price": {
+                "amount": 4800,
+                "currency": "USD"
+              },
+              "origin": "import",
+              "shipping": 0.125,
+              "basis": {
+                "mn": "Tianjin Brother Tourist Train Co. зөөлөн хоёр суудалтай 'марафон' морин тэргийг $4,800-аар (нэг ширхэгээр) зардаг. Марафон тэрэг нь уралдаанд хэрэглэдэг бат бөх бартаат замын төрөл — ган каркас, түдгэлзүүлэлт, тоормостой — Хятадын ихэнх үйлдвэрийн гоёлын хуримын тэргээс шороон замд илүү тохиромжтой. Том овор тул том ачааны тээвэр. Халхавч, хийн дугуйг үнийн саналд баталгаажуулах.",
+                "en": "Tianjin Brother Tourist Train Co. sells a 'marathon' horse wagon with soft double seats for $4,800 (one at a time). Marathon wagons are the sturdy cross-country type used in driving competitions — steel frame, suspension and brakes — which suits dirt tracks better than the decorative wedding-style carriages most Chinese factories sell. Oversized, so bulky-goods shipping. A canopy and pneumatic tyres should be confirmed in the quote."
+              }
+            }
+          ]
+        }
+      ],
+      "timeline": {
+        "work": [
+          4,
+          5
+        ],
+        "use": [
+          6,
+          10
+        ],
+        "note": {
+          "mn": "Хавар хийж, 6-р сараас аялна.",
+          "en": "Built over spring, rides from June."
+        }
+      },
+      "revenue": {
+        "unit": {
+          "mn": "нэг аялал",
+          "en": "per ride"
+        },
+        "attachApplies": true,
+        "capexShare": 1.0,
+        "scenarios": {
+          "cons": {
+            "price": 100000,
+            "perDay": 0.6,
+            "days": 180,
+            "opex": 7000000
+          },
+          "base": {
+            "price": 120000,
+            "perDay": 1,
+            "days": 200,
+            "opex": 7000000
+          },
+          "aggr": {
+            "price": 145000,
+            "perDay": 1.4,
+            "days": 200,
+            "opex": 8000000
+          }
+        },
+        "basis": {
+          "mn": "Нэг аялал ₮120,000 (Дунд), өдөрт ~1, ~200 өдөр. Жилийн зардал (~₮7 сая) нь морь, хариуцагчийн (тэжээл, мал эмнэлэг, цалин, эсвэл нутгийн малчдад төлөх хөлс) түр тооцоо — тэдэнтэй тохиролцсоны дараа шинэчилнэ.",
+          "en": "₮120,000 per ride (Base), about 1 ride a day, on ~200 days. The running cost (~₮7m a year) is a placeholder for the horses and a handler — feed, vet and pay, or a fee to the local herders — until the arrangement with them is agreed; update it then."
+        }
+      }
+    },
+    {
+      "id": "thermal-drone",
+      "category": "safety",
+      "earns": "no",
+      "name": {
+        "mn": "Дулааны камертай дрон",
+        "en": "Thermal drone"
+      },
+      "summary": {
+        "mn": "Аюулгүй байдал болон зочдод зориулсан дулааны камертай дрон. Харанхуйд төөрсөн зочин эсвэл лоджийн ойролцоох баавгайг агаараас олно, зочдод шөнийн ан амьтныг харах сонирхолтой боломж олгоно. Орлого олох зүйл биш.",
+        "en": "A drone with a thermal camera, for safety and for guests. It can find a lost guest or a bear near the lodge in the dark from the air, and gives guests a fun night-time view of wildlife. Not a money-making item."
+      },
+      "images": [
+        {
+          "src": "assets/img/items/thermal-drone/20261013-192716-974.jpg",
+          "option": "main/matrice-4t"
+        },
+        {
+          "src": "assets/img/items/thermal-drone/20261013-192741-251.jpg",
+          "option": "main/autel-640t-v3"
+        },
+        {
+          "src": "assets/img/items/thermal-drone/20261013-193025-746.jpg"
+        }
+      ],
+      "components": [
+        {
+          "id": "main",
+          "name": {
+            "mn": "Дрон",
+            "en": "Drone"
+          },
+          "quantity": 1,
+          "options": [
+            {
+              "id": "matrice-4t",
+              "name": {
+                "mn": "DJI Matrice 4T",
+                "en": "DJI Matrice 4T"
+              },
+              "note": {
+                "mn": "Зөөврийн дронд хамгийн сайн дулааны камер; гэрэл, чанга яригч залгана; УБ-д засвар үйлчилгээтэй.",
+                "en": "Best thermal camera in a portable drone; spotlight and loudspeaker add-ons; supported in UB."
+              },
+              "source": "research-global",
+              "price": {
+                "amount": 7849,
+                "currency": "USD"
+              },
+              "origin": "import",
+              "shipping": 0.04,
+              "default": true,
+              "basis": {
+                "mn": "Зөөврийн дронд хамгийн сайн дулааны камертай (640 × 512, ойртуулалт, хүн, амьтан хүртэлх зайг хэмжих лазер), эрэн хайх ажиллагаанд гэрэл, чанга яригч залгадаг — төөрсөн зочныг агаараас гэрэлтүүлж, ярьж болно — хүйтэнд өөрөө халдаг батарейтай тул сонгосон. DJI-г Улаанбаатарт зарж, засдаг. Жагсаалтын үнэ $7,849. Хятадад үйлдвэрлэсэн.",
+                "en": "Chosen because it has the best thermal camera in a portable drone (640 × 512, with zoom and a laser rangefinder that tells you how far away a person or animal is), takes a spotlight and a loudspeaker for search and rescue — you can light up and talk to a lost guest from the air — and has self-heating batteries for cold weather. DJI is sold and repaired in Ulaanbaatar. List price $7,849. Made in China."
+              }
+            },
+            {
+              "id": "autel-640t-v3",
+              "name": {
+                "mn": "Autel EVO II Dual 640T V3",
+                "en": "Autel EVO II Dual 640T V3"
+              },
+              "note": {
+                "mn": "Ижил дулааны нягтрал, ~$2,500 хямд; хуучин загвар, нэмэлт цөөн, Монголд дэмжлэг бага.",
+                "en": "Same thermal resolution, about $2,500 cheaper; older, fewer add-ons, little support in Mongolia."
+              },
+              "source": "research-global",
+              "price": {
+                "amount": 5299,
+                "currency": "USD"
+              },
+              "origin": "import",
+              "shipping": 0.04,
+              "basis": {
+                "mn": "Autel Robotics (Шэньжэнь, Хятад) EVO II Dual 640T V3: DJI-тай ижил 640 × 512 дулааны нягтрал, ~$5,299 (Enterprise багц). Хуучин загвар, нэмэлт хэрэгсэл цөөн, Монголд засварын дэмжлэг хамаагүй бага.",
+                "en": "Autel Robotics (Shenzhen, China) EVO II Dual 640T V3: the same 640 × 512 thermal resolution as the DJI for about $5,299 (Enterprise bundle). An older design with fewer accessories, and far less repair support in Mongolia."
+              }
+            }
+          ]
+        }
+      ],
+      "timeline": {
+        "work": [
+          5,
+          5
+        ],
+        "use": [
+          6,
+          12
+        ],
+        "note": {
+          "mn": "Зуны улирлаас өмнө авна.",
+          "en": "Bought before the summer season."
+        }
+      }
+    },
+    {
+      "id": "night-vision",
+      "category": "safety",
+      "earns": "no",
+      "name": {
+        "mn": "Дулааны монокуляр",
+        "en": "Thermal monoculars"
+      },
+      "summary": {
+        "mn": "Аюулгүй байдал, зугаа цэнгэлд зориулсан гарын хоёр дулааны дуран: ажилтан бүрэн харанхуй, манан, бутанд хүн, мал, баавгайг илрүүлнэ, зочид шөнө ан амьтан харна. Орлого олох зүйл биш.",
+        "en": "Two hand-held thermal viewers for safety and fun: staff can spot a person, livestock or a bear in total darkness, fog or brush, and guests can look for wildlife at night. Not a money-making item."
+      },
+      "images": [
+        {
+          "src": "assets/img/items/night-vision/20261013-192913-652.jpg"
+        },
+        {
+          "src": "assets/img/items/night-vision/20261013-192942-345.jpg"
+        }
+      ],
+      "components": [
+        {
+          "id": "main",
+          "name": {
+            "mn": "Монокуляр",
+            "en": "Monocular"
+          },
+          "quantity": 2,
+          "quantityBasis": {
+            "mn": "Таны заасны дагуу 2: нэг нь хамгаалалтын ажилтанд, нэг нь зочдод.",
+            "en": "2, as you specified: one for staff on safety duty, one for guests."
+          },
+          "options": [
+            {
+              "id": "hikmicro-lynx-lh19",
+              "name": {
+                "mn": "HIKMICRO Lynx 2.0 LH19",
+                "en": "HIKMICRO Lynx 2.0 LH19"
+              },
+              "source": "research-global",
+              "price": {
+                "amount": 1100,
+                "currency": "USD"
+              },
+              "origin": "import",
+              "shipping": 0.04,
+              "default": true,
+              "basis": {
+                "mn": "Найдвартай, боломжийн үнээр сонгосон: HIKMICRO нь Hikvision-ий дулааны оптикийн брэнд (Хятад), Lynx 2.0 нь хамгийн их зарагддаг хямд монокуляр. Гэрэл биш дулаан хардаг тул бүрэн харанхуй, манан, бутанд дулаан биеийг олно — аюулгүй байдалд энгийн шөнийн харааны төхөөрөмжөөс илүү — сольж болох батарейгаар ~6.5 цаг ажиллана. ~£820–999 (≈$1,100), PVS-14 шөнийн харааны гуравны нэг үнэ.",
+                "en": "Chosen as a reliable, affordable choice: HIKMICRO is Hikvision's thermal-optics brand (China) and the Lynx 2.0 is its best-selling budget monocular. It sees heat, not light, so it finds warm bodies in total darkness, fog or brush — better for safety than classic night vision — with about 6.5 hours per set of swappable batteries. About £820–999 (≈$1,100), a third of the price of PVS-14 night-vision goggles."
+              }
+            }
+          ]
+        }
+      ],
+      "timeline": {
+        "work": [
+          5,
+          5
+        ],
+        "use": [
+          6,
+          12
+        ],
+        "note": {
+          "mn": "Зуны улирлаас өмнө авна.",
+          "en": "Bought before the summer season."
+        }
+      }
+    },
+    {
+      "id": "bear-shotgun",
+      "category": "safety",
+      "earns": "no",
+      "name": {
+        "mn": "Баавгайн хамгаалалтын буу",
+        "en": "Bear-defence shotgun"
+      },
+      "summary": {
+        "mn": "Хөтөчийн аюулгүй байдалд зориулсан помп буу, баавгайн сум. Зочдод зориулаагүй. Хөлдсөн, бохирдсон, сул сумтай ч ажилладаг тул помп сонгосон — баавгайгаас хамгаалах стандарт буу.",
+        "en": "A pump-action shotgun and bear slugs, carried by guides for safety. Not for guest use. Pump-action because it keeps working when frozen, dirty or with weak shells — the standard bear-defence gun."
+      },
+      "images": [
+        {
+          "src": "assets/img/items/bear-shotgun/20261013-193059-260.jpg",
+          "option": "shotgun/mossberg-590a1"
+        },
+        {
+          "src": "assets/img/items/bear-shotgun/20261013-193127-798.jpg",
+          "option": "shotgun/remington-870"
+        },
+        {
+          "src": "assets/img/items/bear-shotgun/20261013-193157-956.jpg",
+          "option": "shells/main"
+        }
+      ],
+      "components": [
+        {
+          "id": "shotgun",
+          "name": {
+            "mn": "Буу",
+            "en": "Shotgun"
+          },
+          "quantity": 1,
+          "options": [
+            {
+              "id": "mossberg-590a1",
+              "name": {
+                "mn": "Mossberg 590A1, 12 калибрын помп",
+                "en": "Mossberg 590A1, 12-gauge pump"
+              },
+              "note": {
+                "mn": "Хамгийн бат бөх түгээмэл помп; 8+1 сум.",
+                "en": "Toughest common pump; 8+1 rounds."
+              },
+              "source": "research-mongolia",
+              "price": {
+                "amount": 900,
+                "currency": "USD"
+              },
+              "origin": "local",
+              "shipping": 0,
+              "default": true,
+              "basis": {
+                "mn": "Цэргийн стандартаар хийсэн бат бөх помп буу (ган гох хамгаалагч, зузаан ам), 8+1 сум. Хатуу хүйтэн, бохирд хагас автомат гацдаг үед помп ажиллаж чаддаг, 590A1 нь түгээмэл загваруудаас хамгийн бат бөх тул сонгосон. АНУ-д ~$650–750; УБ-ын дэлгүүрт ~$900. Улаанбаатарын зөвшөөрөлтэй бууны дэлгүүрээс авна (галт зэвсэг импортлох нь хатуу хязгаарлалттай) тул дотоодын үнэд дэлгүүрийн импортын зардал, ашиг шингэсэн.",
+                "en": "A heavy-duty pump shotgun built to military standards (steel trigger guard and safety, thick barrel), holding 8+1 rounds. Chosen because pump actions keep cycling in deep cold and dirt where semi-autos can jam, and the 590A1 is the toughest of the common models. About $650–750 in the US; ~$900 in a UB shop. Bought from a licensed gun shop in Ulaanbaatar (importing firearms is heavily restricted), so the local price already includes the shop's import costs and margin."
+              }
+            },
+            {
+              "id": "remington-870",
+              "name": {
+                "mn": "Remington 870 Tactical, 12 калибрын помп",
+                "en": "Remington 870 Tactical, 12-gauge pump"
+              },
+              "note": {
+                "mn": "Хамгийн түгээмэл помп; сэлбэг олоход хялбар.",
+                "en": "Most common pump; easiest to find parts."
+              },
+              "source": "research-mongolia",
+              "price": {
+                "amount": 800,
+                "currency": "USD"
+              },
+              "origin": "local",
+              "shipping": 0,
+              "basis": {
+                "mn": "Хамгийн их зарагдсан помп буу, маш түгээмэл, сэлбэг хаа сайгүй; сумны багтаамж арай бага (6+1). АНУ-д ~$550–650; УБ-ын дэлгүүрт ~$800. Улаанбаатарын зөвшөөрөлтэй бууны дэлгүүрээс авна (галт зэвсэг импортлох нь хатуу хязгаарлалттай) тул дотоодын үнэд дэлгүүрийн импортын зардал, ашиг шингэсэн.",
+                "en": "The best-selling pump shotgun ever, very common, with spare parts everywhere; slightly smaller magazine (6+1). About $550–650 in the US; ~$800 in a UB shop. Bought from a licensed gun shop in Ulaanbaatar (importing firearms is heavily restricted), so the local price already includes the shop's import costs and margin."
+              }
+            }
+          ]
+        },
+        {
+          "id": "shells",
+          "name": {
+            "mn": "Баавгайн сум",
+            "en": "Bear slugs"
+          },
+          "quantity": 1,
+          "quantityBasis": {
+            "mn": "Дасгал, биедээ авч явахад ~100 сумны анхны нөөц.",
+            "en": "An initial stock of about 100 rounds for practice and carrying."
+          },
+          "options": [
+            {
+              "id": "main",
+              "name": {
+                "mn": "12 калибрын пуль, ~100 сум",
+                "en": "12-gauge slugs, ~100 rounds"
+              },
+              "source": "research-mongolia",
+              "price": {
+                "amount": 200,
+                "currency": "USD"
+              },
+              "origin": "local",
+              "shipping": 0,
+              "default": true,
+              "basis": {
+                "mn": "Баавгайгаас хамгаалах хүнд 12 калибрын пуль, дасгалын сумтай нийт ~100. Улаанбаатарын зөвшөөрөлтэй бууны дэлгүүрээс авна (галт зэвсэг импортлох нь хатуу хязгаарлалттай) тул дотоодын үнэд дэлгүүрийн импортын зардал, ашиг шингэсэн.",
+                "en": "Heavy 12-gauge slugs for bear defence plus practice rounds, about 100 in all. Bought from a licensed gun shop in Ulaanbaatar (importing firearms is heavily restricted), so the local price already includes the shop's import costs and margin."
+              }
+            }
+          ]
+        },
+        {
+          "id": "licence",
+          "name": {
+            "mn": "Зөвшөөрөл, бүртгэл",
+            "en": "Licence and registration"
+          },
+          "quantity": 1,
+          "quantityBasis": {
+            "mn": "Энэ буунд нэг зөвшөөрөл.",
+            "en": "One licence for this gun."
+          },
+          "options": [
+            {
+              "id": "main",
+              "name": {
+                "mn": "Цагдаагийн зөвшөөрөл, бүртгэл, тодорхойлолт",
+                "en": "Police permit, registration and certificates"
+              },
+              "source": "construction-benchmark",
+              "price": {
+                "amount": 500000,
+                "currency": "MNT"
+              },
+              "origin": "local",
+              "shipping": 0,
+              "remote": false,
+              "default": true,
+              "basis": {
+                "mn": "Буу-г цагдаад бүртгүүлж эзэмших зөвшөөрөл авах, эрүүл мэнд, ял шийтгэлгүйн тодорхойлолт, шаардлагатай сургалтын хамт: ~₮500,000. Орон нутгийн цагдаагаас тодруулна.",
+                "en": "Registering the shotgun with the police and getting the owner's permit, including the medical and background certificates and the required training: roughly ₮500,000. Confirm with the local police."
+              }
+            }
+          ]
+        }
+      ],
+      "timeline": {
+        "work": [
+          3,
+          5
+        ],
+        "use": [
+          6,
+          12
+        ],
+        "note": {
+          "mn": "Зөвшөөрөл удаан тул 3-р сараас эхэлнэ.",
+          "en": "Licences take time: start in March."
+        }
+      }
+    },
+    {
+      "id": "hunting-rifle",
+      "category": "safety",
+      "earns": "no",
+      "name": {
+        "mn": "Анчны буу",
+        "en": "Hunting rifle"
+      },
+      "summary": {
+        "mn": "Ан агнуурт зочидтой хамт хэрэглэх .308 Winchester калибрын винтов — хамгийн түгээмэл томоохон ангийн калибр, Монголд сум олдоход хялбар — дурантай. Бат бөх хямдаас маш нарийвчлалтай хүртэл дөрвөн сонголт.",
+        "en": "A hunting rifle in .308 Winchester — the most common big-game calibre, with ammunition easy to find in Mongolia — with a scope, for hunting with guests. Four rifles to choose from, from tough and cheap to very accurate."
+      },
+      "images": [
+        {
+          "src": "assets/img/items/hunting-rifle/20261013-193229-998.jpg",
+          "option": "main/tikka-t3x"
+        },
+        {
+          "src": "assets/img/items/hunting-rifle/20261013-193255-225.jpg",
+          "option": "main/cz-600"
+        },
+        {
+          "src": "assets/img/items/hunting-rifle/20261013-193335-708.jpg",
+          "option": "main/molot-vepr"
+        },
+        {
+          "src": "assets/img/items/hunting-rifle/20261013-193400-742.jpg",
+          "option": "main/saiga-308"
+        },
+        {
+          "src": "assets/img/items/hunting-rifle/20261013-193432-187.jpg"
+        }
+      ],
+      "components": [
+        {
+          "id": "main",
+          "name": {
+            "mn": "Винтов",
+            "en": "Rifle"
+          },
+          "quantity": 1,
+          "options": [
+            {
+              "id": "tikka-t3x",
+              "name": {
+                "mn": "Tikka T3x Hunter (.308) — затвортой",
+                "en": "Tikka T3x Hunter (.308) — bolt-action"
+              },
+              "note": {
+                "mn": "Маш нарийвчлалтай, найдвартай; ан агнуурын винтовын жишиг.",
+                "en": "Very accurate and reliable; the benchmark hunting rifle."
+              },
+              "source": "research-mongolia",
+              "price": {
+                "amount": 1900,
+                "currency": "USD"
+              },
+              "origin": "local",
+              "shipping": 0,
+              "default": true,
+              "basis": {
+                "mn": "Финландад Sako үйлдвэрлэсэн. Дунд үнэтэй нарийвчлал, найдвартай байдлын жишиг тул анхдагч болгосон: хүйтэнд ажилладаг зөөлөн затвор, үйлдвэрийн нарийвчлалын баталгаа, явахад хөнгөн. АНУ-д ~$1,000–1,300; УБ-ын дэлгүүрт ~$1,900. Улаанбаатарын зөвшөөрөлтэй бууны дэлгүүрээс авна (галт зэвсэг импортлох нь хатуу хязгаарлалттай) тул дотоодын үнэд дэлгүүрийн импортын зардал, ашиг шингэсэн.",
+                "en": "Made by Sako in Finland. Chosen as the default because it is the benchmark for accuracy and reliability at a mid price: a smooth bolt that works in deep cold, a factory accuracy guarantee and a light weight for walking. About $1,000–1,300 in the US; ~$1,900 in a UB shop. Bought from a licensed gun shop in Ulaanbaatar (importing firearms is heavily restricted), so the local price already includes the shop's import costs and margin."
+              }
+            },
+            {
+              "id": "cz-600",
+              "name": {
+                "mn": "CZ 600 Lux (.308) — затвортой",
+                "en": "CZ 600 Lux (.308) — bolt-action"
+              },
+              "note": {
+                "mn": "Нарийвчлалтай, сонгодог модон их бие; арай хямд.",
+                "en": "Accurate, classic wood stock; a little cheaper."
+              },
+              "source": "research-mongolia",
+              "price": {
+                "amount": 1700,
+                "currency": "USD"
+              },
+              "origin": "local",
+              "shipping": 0,
+              "basis": {
+                "mn": "Чех улсад хийсэн, сонгодог хушга модон их биетэй; маш нарийвчлалтай, сайн хийцтэй, Tikka-гаас арай хямд. АНУ-д ~$900–1,200; УБ-ын дэлгүүрт ~$1,700. Улаанбаатарын зөвшөөрөлтэй бууны дэлгүүрээс авна (галт зэвсэг импортлох нь хатуу хязгаарлалттай) тул дотоодын үнэд дэлгүүрийн импортын зардал, ашиг шингэсэн.",
+                "en": "Czech-made, with a classic walnut stock; very accurate and well made, slightly cheaper than the Tikka. About $900–1,200 in the US; ~$1,700 in a UB shop. Bought from a licensed gun shop in Ulaanbaatar (importing firearms is heavily restricted), so the local price already includes the shop's import costs and margin."
+              }
+            },
+            {
+              "id": "molot-vepr",
+              "name": {
+                "mn": "Молот Вепрь (.308) — хагас автомат",
+                "en": "Molot Vepr (.308) — semi-automatic"
+              },
+              "note": {
+                "mn": "Орос, бараг эвдэрдэггүй, нутагт түгээмэл; нарийвчлал бага.",
+                "en": "Russian, nearly indestructible, common locally; less accurate."
+              },
+              "source": "research-mongolia",
+              "price": {
+                "amount": 1300,
+                "currency": "USD"
+              },
+              "origin": "local",
+              "shipping": 0,
+              "basis": {
+                "mn": "Орос, RPK пулемётын бат бөх хайрцаг дээр хийсэн: бараг эвдэрдэггүй, Монголд түгээмэл, сэлбэг, засварчин олдоно. Затвортой винтовоос нарийвчлал бага, хүнд. УБ-ын дэлгүүрт ~$1,300. Улаанбаатарын зөвшөөрөлтэй бууны дэлгүүрээс авна (галт зэвсэг импортлох нь хатуу хязгаарлалттай) тул дотоодын үнэд дэлгүүрийн импортын зардал, ашиг шингэсэн.",
+                "en": "Russian, built on the heavy-duty RPK machine-gun receiver: almost indestructible and common in Mongolia, with parts and gunsmiths familiar with it. Less accurate than a bolt-action and heavy. ~$1,300 in a UB shop. Bought from a licensed gun shop in Ulaanbaatar (importing firearms is heavily restricted), so the local price already includes the shop's import costs and margin."
+              }
+            },
+            {
+              "id": "saiga-308",
+              "name": {
+                "mn": "Калашников Сайга MK (.308) — хагас автомат",
+                "en": "Kalashnikov Saiga MK (.308) — semi-automatic"
+              },
+              "note": {
+                "mn": "Хамгийн хямд; энгийн, бат бөх, нарийвчлал хамгийн бага.",
+                "en": "Cheapest; simple and tough, least accurate."
+              },
+              "source": "research-mongolia",
+              "price": {
+                "amount": 1200,
+                "currency": "USD"
+              },
+              "origin": "local",
+              "shipping": 0,
+              "basis": {
+                "mn": "Оросын Калашников загварын ангийн винтов: энгийн, хүйтэн, бохирд маш найдвартай, хамгийн хямд, гэхдээ дөрвөөс хамгийн бага нарийвчлалтай. УБ-ын дэлгүүрт ~$1,200. Улаанбаатарын зөвшөөрөлтэй бууны дэлгүүрээс авна (галт зэвсэг импортлох нь хатуу хязгаарлалттай) тул дотоодын үнэд дэлгүүрийн импортын зардал, ашиг шингэсэн.",
+                "en": "Russian Kalashnikov-pattern hunting rifle: simple, very reliable in cold and dirt and the cheapest option, but the least accurate of the four. ~$1,200 in a UB shop. Bought from a licensed gun shop in Ulaanbaatar (importing firearms is heavily restricted), so the local price already includes the shop's import costs and margin."
+              }
+            }
+          ]
+        },
+        {
+          "id": "scope",
+          "name": {
+            "mn": "Дуран, бэхэлгээ",
+            "en": "Scope and mounts"
+          },
+          "quantity": 1,
+          "options": [
+            {
+              "id": "main",
+              "name": {
+                "mn": "Ангийн дуран 3–9× эсвэл 2.5–10×, бэхэлгээтэй",
+                "en": "Hunting scope 3–9× or 2.5–10×, with rings"
+              },
+              "source": "research-mongolia",
+              "price": {
+                "amount": 500,
+                "currency": "USD"
+              },
+              "origin": "local",
+              "shipping": 0,
+              "default": true,
+              "basis": {
+                "mn": "Дунд зэргийн сайн ангийн дуран (Vortex, Leupold, Hawke ангилал) бэхэлгээтэй: ~$350–600. Улаанбаатарын зөвшөөрөлтэй бууны дэлгүүрээс авна (галт зэвсэг импортлох нь хатуу хязгаарлалттай) тул дотоодын үнэд дэлгүүрийн импортын зардал, ашиг шингэсэн.",
+                "en": "A good mid-range hunting scope (e.g. Vortex, Leupold or Hawke class) with mounts: about $350–600. Bought from a licensed gun shop in Ulaanbaatar (importing firearms is heavily restricted), so the local price already includes the shop's import costs and margin."
+              }
+            }
+          ]
+        },
+        {
+          "id": "ammo",
+          "name": {
+            "mn": "Сум",
+            "en": "Ammunition"
+          },
+          "quantity": 1,
+          "quantityBasis": {
+            "mn": "Тохируулах, дасгал хийх, агнахад ~200 ширхэг .308 сум.",
+            "en": "About 200 rounds of .308 to sight in, practise and hunt."
+          },
+          "options": [
+            {
+              "id": "main",
+              "name": {
+                "mn": ".308 ангийн сум, ~200 ширхэг",
+                "en": ".308 hunting ammunition, ~200 rounds"
+              },
+              "source": "research-mongolia",
+              "price": {
+                "amount": 400,
+                "currency": "USD"
+              },
+              "origin": "local",
+              "shipping": 0,
+              "default": true,
+              "basis": {
+                "mn": "Нутагт нэг сум ~$1.50–2.50. Улаанбаатарын зөвшөөрөлтэй бууны дэлгүүрээс авна (галт зэвсэг импортлох нь хатуу хязгаарлалттай) тул дотоодын үнэд дэлгүүрийн импортын зардал, ашиг шингэсэн.",
+                "en": "About $1.50–2.50 a round locally. Bought from a licensed gun shop in Ulaanbaatar (importing firearms is heavily restricted), so the local price already includes the shop's import costs and margin."
+              }
+            }
+          ]
+        },
+        {
+          "id": "licence",
+          "name": {
+            "mn": "Зөвшөөрөл, бүртгэл",
+            "en": "Licence and registration"
+          },
+          "quantity": 1,
+          "quantityBasis": {
+            "mn": "Энэ буунд нэг зөвшөөрөл.",
+            "en": "One licence for this gun."
+          },
+          "options": [
+            {
+              "id": "main",
+              "name": {
+                "mn": "Цагдаагийн зөвшөөрөл, бүртгэл, тодорхойлолт",
+                "en": "Police permit, registration and certificates"
+              },
+              "source": "construction-benchmark",
+              "price": {
+                "amount": 500000,
+                "currency": "MNT"
+              },
+              "origin": "local",
+              "shipping": 0,
+              "remote": false,
+              "default": true,
+              "basis": {
+                "mn": "Винтов-г цагдаад бүртгүүлж эзэмших зөвшөөрөл авах, эрүүл мэнд, ял шийтгэлгүйн тодорхойлолт, шаардлагатай сургалтын хамт: ~₮500,000. Орон нутгийн цагдаагаас тодруулна.",
+                "en": "Registering the rifle with the police and getting the owner's permit, including the medical and background certificates and the required training: roughly ₮500,000. Confirm with the local police."
+              }
+            }
+          ]
+        }
+      ],
+      "timeline": {
+        "work": [
+          3,
+          5
+        ],
+        "use": [
+          6,
+          12
+        ],
+        "note": {
+          "mn": "Зөвшөөрөл удаан тул 3-р сараас эхэлнэ.",
+          "en": "Licences take time: start in March."
+        }
+      }
+    },
+    {
+      "id": "gun-safe",
+      "category": "safety",
+      "earns": "no",
+      "name": {
+        "mn": "Зэвсгийн сейф",
+        "en": "Gun safe"
+      },
+      "summary": {
+        "mn": "Буу, винтов, сумыг хадгалах цоожтой ган шүүгээ — бүртгэлтэй галт зэвсгийг аюулгүй хадгалахад шаардлагатай.",
+        "en": "A lockable steel cabinet for the shotgun, the rifle and their ammunition — required to store registered firearms securely."
+      },
+      "images": [
+        {
+          "src": "assets/img/items/gun-safe/20261013-193557-064.jpg"
+        }
+      ],
+      "components": [
+        {
+          "id": "main",
+          "quantity": 1,
+          "options": [
+            {
+              "id": "main",
+              "name": {
+                "mn": "Ган бууны шүүгээ, 4–6 буу, сумны хайрцагтай",
+                "en": "Steel long-gun cabinet, 4–6 guns, with ammo box"
+              },
+              "source": "research-mongolia",
+              "price": {
+                "amount": 700,
+                "currency": "USD"
+              },
+              "origin": "local",
+              "shipping": 0,
+              "default": true,
+              "basis": {
+                "mn": "Ханад боолтоор бэхэлдэг, тусдаа цоожтой сумны хайрцагтай 4–6 урт бууны ган шүүгээ: УБ-ын хамгаалалтын эсвэл бууны дэлгүүрээс ~$500–800.",
+                "en": "A steel gun cabinet for 4–6 long guns with a separate locked ammunition box, bolted to the wall: about $500–800 from a UB security or gun shop."
+              }
+            }
+          ]
+        }
+      ],
+      "timeline": {
+        "work": [
+          4,
+          5
+        ],
+        "use": [
+          6,
+          12
+        ],
+        "note": {
+          "mn": "Буу ирэхээс өмнө байрлуулна.",
+          "en": "In place before the guns arrive."
+        }
+      }
+    },
+    {
+      "id": "mosquito-traps",
+      "category": "safety",
+      "earns": "no",
+      "name": {
+        "mn": "Шумуулын хяналт",
+        "en": "Mosquito control"
+      },
+      "summary": {
+        "mn": "Клуб байр, бөмбөгөр байшин, голын эргийн орчимд шумуулын урхины сүлжээ. Урхи нь хүнийг дуурайж (CO₂, дулаан, үнэр) шумуулыг хазахаас өмнө барина; зочдын ашигладаг бүх талбайд нягт — ойролцоогоор акр (0.4 га) тутам нэг — байрлуулсан үед л үр дүнтэй. Дадал шиг голын хөндийд шумуулыг мэдэгдэхүйц багасгана, гэхдээ бүрэн арилгахгүй тул тортой хаалга, шумуулын тос хэрэгтэй хэвээр.",
+        "en": "A network of mosquito traps around the clubhouse, domes and riverside. Traps work by mimicking a person (CO₂, heat, scent) and catching mosquitoes before they bite; they only make a real difference when placed densely — about one per acre (0.4 ha) — across the whole area guests use. In a river valley like Dadal they reduce mosquitoes noticeably but will not remove them, so screened doors and repellent are still needed."
+      },
+      "images": [
+        {
+          "src": "assets/img/items/mosquito-traps/20261013-193658-841.jpg",
+          "option": "main/mosquito-magnet-executive"
+        },
+        {
+          "src": "assets/img/items/mosquito-traps/20261013-193733-511.jpg",
+          "option": "main/mosqitter-grand"
+        },
+        {
+          "src": "assets/img/items/mosquito-traps/20261013-193809-659.jpg",
+          "option": "main/biogents-co2"
+        }
+      ],
+      "params": [
+        {
+          "id": "area",
+          "name": {
+            "mn": "Хамгаалах талбай",
+            "en": "Area to protect"
+          },
+          "unit": {
+            "mn": "га",
+            "en": "ha"
+          },
+          "value": 3,
+          "basis": {
+            "mn": "~3 га: клуб байр, бөмбөгөр байшингийн хэсэг, хоорондох зам, голын буудал. Газрын зураг дээр хэмжиж тохируулна.",
+            "en": "About 3 hectares: the clubhouse, the dome area, the paths between them and the riverside landing. Measure on a map and adjust."
+          }
+        }
+      ],
+      "components": [
+        {
+          "id": "main",
+          "name": {
+            "mn": "Урхи",
+            "en": "Traps"
+          },
+          "quantity": "area",
+          "unit": {
+            "mn": "га",
+            "en": "ha"
+          },
+          "quantityBasis": {
+            "mn": "Хамгаалах га тутмаар тооцсон: сонголт бүрийн үнэ нь га-д шаардлагатай урхины тоо × нэг урхины үнэ.",
+            "en": "Priced per hectare protected: each option's price is the number of its traps needed per hectare × the price of one trap."
+          },
+          "options": [
+            {
+              "id": "mosquito-magnet-executive",
+              "name": {
+                "mn": "Mosquito Magnet Executive (пропан)",
+                "en": "Mosquito Magnet Executive (propane)"
+              },
+              "note": {
+                "mn": "Энгийн пропан баллоноор ажиллана — Монголд олдоход хялбар. Га-д ~2.5 урхи.",
+                "en": "Runs on ordinary propane bottles — easy to get in Mongolia. ~2.5 traps per hectare."
+              },
+              "source": "research-global",
+              "price": {
+                "amount": 2625,
+                "currency": "USD"
+              },
+              "origin": "import",
+              "shipping": 0.04,
+              "default": true,
+              "basis": {
+                "mn": "Хамгийн алдартай арилжааны урхи: пропан шатааж CO₂, дулаан, чийг гаргана, цахилгаан шаардлагагүй, ~1 акр (0.4 га) хамарна. Тус бүр $1,050 (АНУ-ын үнэ); га-д 2.5 урхи = га тутам $2,625. Пропан Монголд олдоход хялбар тул анхдагч болгосон. Ашиглалтын зардал (энд тооцоогүй): урхи бүрт 3 долоо хоногт нэг 9 кг баллон, татагч бодис, зун урхи тутам ~₮500,000.",
+                "en": "The best-known commercial trap: it burns propane to make CO₂, heat and moisture, needs no mains power, and is rated for about 1 acre (0.4 ha). $1,050 each (US list); 2.5 traps per hectare = $2,625 per hectare. Chosen as the default because propane is easy to buy in Mongolia. Running cost (not counted here): about one 9 kg propane bottle per trap every 3 weeks plus lures, roughly ₮500,000 per trap per summer."
+              }
+            },
+            {
+              "id": "mosqitter-grand",
+              "name": {
+                "mn": "Mosqitter Grand (CO₂ + дулаан + UV)",
+                "en": "Mosqitter Grand (CO₂ + heat + UV)"
+              },
+              "note": {
+                "mn": "Нэг урхи хоёр дахин том талбай хамарна; цахилгаан, баллонтой CO₂ шаардана — Дадалд олдоход хэцүү байж магадгүй. Га-д ~1.25 урхи.",
+                "en": "Covers twice the area per trap; needs mains power and bottled CO₂, which may be hard to get in Dadal. ~1.25 traps per hectare."
+              },
+              "source": "research-global",
+              "price": {
+                "amount": 2311,
+                "currency": "USD"
+              },
+              "origin": "import",
+              "shipping": 0.04,
+              "basis": {
+                "mn": "CO₂, дулаан, UV гэрлийг хослуулсан шинэ ухаалаг урхи, 2 акр (0.8 га) хүртэл хамарна. Тус бүр $1,849; га-д 1.25 урхи = га тутам $2,311. Урхи цөөн, гэхдээ цахилгаан, тогтмол дүүргэх CO₂ баллон шаардана.",
+                "en": "A newer smart trap combining CO₂, heat and UV light, rated for up to 2 acres (0.8 ha). $1,849 each; 1.25 traps per hectare = $2,311 per hectare. Fewer traps, but it needs electricity and refilled CO₂ cylinders delivered regularly."
+              }
+            },
+            {
+              "id": "biogents-co2",
+              "name": {
+                "mn": "Biogents BG-Mosquitaire CO₂",
+                "en": "Biogents BG-Mosquitaire CO₂"
+              },
+              "note": {
+                "mn": "Нэг урхи хямд, гэхдээ бага талбай хамарна; цахилгаан, CO₂ шаардана. Га-д ~14 урхи.",
+                "en": "Cheap per trap but covers little ground; needs power and CO₂. ~14 traps per hectare."
+              },
+              "source": "research-global",
+              "price": {
+                "amount": 6300,
+                "currency": "USD"
+              },
+              "origin": "import",
+              "shipping": 0.04,
+              "basis": {
+                "mn": "Судалгаанд хэрэглэдэг Германы шинжлэх ухааны түвшний урхи, барих чадвар өндөр, гэхдээ ~700 м² л хамарна. CO₂ иж бүрдэлтэй тус бүр ~$450; га-д ~14 урхи = га тутам $6,300. Том талбайд биш, дэнж зэрэг жижиг газарт тохиромжтой.",
+                "en": "A German scientific-grade trap used in research, very good at catching but rated for only about 700 m². About $450 each with the CO₂ kit; ~14 traps per hectare = $6,300 per hectare. Best for small spots like terraces, not large grounds."
+              }
+            }
+          ]
+        }
+      ],
+      "timeline": {
+        "work": [
+          4,
+          5
+        ],
+        "use": [
+          6,
+          8
+        ],
+        "note": {
+          "mn": "6-р сард шумуул гарахаас өмнө ажиллана.",
+          "en": "Running before the mosquitoes hatch in June."
+        }
+      },
+      "upkeep": {
+        "perYear": "area * 1250000",
+        "basis": {
+          "mn": "6–8-р сард Mosquito Magnet урхины пропан, татагч бодис: урхи бүрт 3 долоо хоногт нэг 9 кг баллон, татагч бодис, зун урхи тутам ~₮500,000; га-д ~2.5 урхи тул га тутам ~₮1.25 сая.",
+          "en": "Propane and lures for the Mosquito Magnet traps over June–August: about one 9 kg propane bottle per trap every 3 weeks plus lures, roughly ₮500,000 per trap per summer; at ~2.5 traps per hectare that is about ₮1.25m per hectare."
+        }
+      }
+    },
+    {
+      "id": "battery-ev-charging",
+      "category": "partners",
+      "earns": "no",
+      "funding": {
+        "by": {
+          "mn": "Ногоон Өртөө Төсөл",
+          "en": "Nogoon Urtuu (Green Station) Project"
+        }
+      },
+      "name": {
+        "mn": "Батарей ба цэнэглэгч",
+        "en": "Battery & EV charger"
+      },
+      "summary": {
+        "mn": "Цахилгаан тасрахад нөөц болох, зочдын цахилгаан машиныг цэнэглэх хурдан цэнэглэгчтэй 240 кВт.ц батарей. Ногоон Өртөө Төсөл барьж, зардлыг нь гаргана; цэнэглэлтийн орлогыг мөн тэд авна.",
+        "en": "A 240 kWh battery with a fast charger for electric cars, giving backup power during outages and charging for guests' EVs. Built and paid for by the Nogoon Urtuu (Green Station) Project, which also keeps the charging income."
+      },
+      "images": [
+        {
+          "src": "assets/img/items/battery-ev-charging/20261013-194722-766.jpg"
+        },
+        {
+          "src": "assets/img/items/battery-ev-charging/20261013-194743-940.jpg"
+        }
+      ],
+      "components": [
+        {
+          "id": "battery",
+          "quantity": 1,
+          "options": [
+            {
+              "id": "main",
+              "name": {
+                "mn": "240 кВт.ц батарей",
+                "en": "240 kWh battery"
+              },
+              "source": "research-china",
+              "price": {
+                "amount": 56000,
+                "currency": "USD"
+              },
+              "origin": "import",
+              "shipping": 0.125,
+              "default": true,
+              "basis": {
+                "mn": "Зөвхөн мэдээлэл — Ногоон Өртөө Төсөл төлнө, лодж биш. Хятадын арилжааны батарей систем 200 кВт.ц нь хувиргагчтайгаа ~$47,300; 240 кВт.ц-д тохируулсан. Лити батарей аюултай ачаанд тооцогдох тул тээвэр өндөр.",
+                "en": "For information only — paid by the Nogoon Urtuu Project, not the lodge. Chinese commercial battery systems quote about $47,300 for 200 kWh including the power converter; we scaled that to 240 kWh. Lithium batteries ship as dangerous goods, so shipping is higher."
+              },
+              "remote": false
+            }
+          ],
+          "name": {
+            "mn": "240 кВт.ц батарей",
+            "en": "240 kWh battery"
+          }
+        },
+        {
+          "id": "charger",
+          "quantity": 1,
+          "options": [
+            {
+              "id": "main",
+              "name": {
+                "mn": "Хурдан цэнэглэгч",
+                "en": "Fast charger"
+              },
+              "source": "research-china",
+              "price": {
+                "amount": 6500,
+                "currency": "USD"
+              },
+              "origin": "import",
+              "shipping": 0.04,
+              "default": true,
+              "basis": {
+                "mn": "Зөвхөн мэдээлэл — Ногоон Өртөө Төсөл төлнө, лодж биш. Хятадын 60–120 кВт DC хурдан цэнэглэгч цөөн тоогоор ~$6,000.",
+                "en": "For information only — paid by the Nogoon Urtuu Project, not the lodge. Chinese 60–120 kW DC fast chargers sell for about $6,000 each at low volume."
+              },
+              "remote": false
+            }
+          ],
+          "name": {
+            "mn": "Хурдан цэнэглэгч",
+            "en": "Fast charger"
+          }
+        }
+      ],
+      "timeline": {
+        "work": [
+          9,
+          10
+        ],
+        "use": [
+          11,
+          12
+        ],
+        "note": {
+          "mn": "Зогсоолын барилга босмогц түнш суурилуулна.",
+          "en": "The partner installs it once the parking building is up."
+        }
+      }
+    },
+    {
+      "id": "solar-panels",
+      "category": "energy",
+      "earns": "yes",
+      "name": {
+        "mn": "Нарны хавтан",
+        "en": "Solar panels"
+      },
+      "summary": {
+        "mn": "Зогсоолын барилгын дээвэр дээр одоо байгаа 15 кВт дээр нэмэх нарны хавтан. 240 кВт.ц батарей (түнш), одоо байгаа 28 кВт.ц батарейтай хамт зун лодж ихэвчлэн өөрийн эрчим хүчээр ажиллах боломжтой. Ашиг нь сүлжээнээс худалдан авахаа больсон цахилгаан.",
+        "en": "Extra solar panels on the parking building roof, added to the 15 kW already installed. With the 240 kWh battery (partner) and the existing 28 kWh battery, the lodge could run largely on its own power in summer. The value is the grid electricity it no longer has to buy."
+      },
+      "images": [
+        {
+          "src": "assets/img/items/solar-panels/20261013-192834-509.jpg"
+        }
+      ],
+      "params": [
+        {
+          "id": "kw",
+          "name": {
+            "mn": "Шинэ хавтан",
+            "en": "New panels"
+          },
+          "unit": {
+            "mn": "кВт",
+            "en": "kW"
+          },
+          "value": 30,
+          "basis": {
+            "mn": "30 кВт шинэ + 15 кВт одоо байгаа = 45 кВт. Дадалд 1 кВт хавтан зун өдөрт ~5 кВт.ц, дунджаар ~3.8, хатуу өвөл ~2 өгнө. 240 кВт.ц батарейг нэг өдөрт дүүргэхэд ~250 кВт.ц хэрэгтэй: 45 кВт нь нартай зуны өдөр бараг дүүргэнэ, өвөл гуравны нэгийг л. ~50 кВт шинэ хавтан дундаж өдөр дүүргэнэ; зогсоолын дээвэр (~250 м² ашиглах) ~55–60 кВт багтаана.",
+            "en": "30 kW new + 15 kW existing = 45 kW. In Dadal each kW of panels gives about 5 kWh a day in summer, ~3.8 on average and ~2 in deep winter. Filling the 240 kWh battery in a day takes about 250 kWh: 45 kW nearly does that on a sunny summer day, but only about a third in winter. ~50 kW new would fill it on an average day; the parking roof (~250 m² usable) fits about 55–60 kW."
+          }
+        }
+      ],
+      "components": [
+        {
+          "id": "main",
+          "name": {
+            "mn": "Нарны систем",
+            "en": "Solar system"
+          },
+          "quantity": "kw",
+          "unit": {
+            "mn": "кВт",
+            "en": "kW"
+          },
+          "quantityBasis": {
+            "mn": "Дээрх шинэ хавтангийн хэмжээ.",
+            "en": "The new panel size above."
+          },
+          "options": [
+            {
+              "id": "main",
+              "name": {
+                "mn": "Хавтан + гибрид инвертер + бэхэлгээ, суурилуулалттай",
+                "en": "Panels + hybrid inverter + mounting, installed"
+              },
+              "source": "research-china",
+              "price": {
+                "amount": 700,
+                "currency": "USD"
+              },
+              "origin": "import",
+              "shipping": 0.04,
+              "default": true,
+              "basis": {
+                "mn": "Хятадын хавтан ватт тутам ~$0.11–0.12; бүрэн систем — хавтан, батарей цэнэглэдэг гибрид инвертер, дээврийн бэхэлгээ, утас, суурилуулалт — ватт тутам ~$0.70, өөрөөр хэлбэл кВт тутам $700. Инвертер түншийн 240 кВт.ц батарейтай нийцэх ёстой; захиалахдаа баталгаажуулна.",
+                "en": "Chinese panels cost about $0.11–0.12 per watt; a complete system — panels, a hybrid inverter that can charge the batteries, roof mounting, wiring and installation — about $0.70 per watt, i.e. $700 per kW. The inverter must work with the partner's 240 kWh battery; confirm this when ordering."
+              }
+            }
+          ]
+        }
+      ],
+      "timeline": {
+        "work": [
+          9,
+          10
+        ],
+        "use": [
+          11,
+          12
+        ],
+        "note": {
+          "mn": "Зогсоолын дээвэр дуусмагц суурилуулна.",
+          "en": "Fitted on the parking roof once it is finished."
+        }
+      },
+      "revenue": {
+        "unit": {
+          "mn": "сүлжээнээс хэмнэсэн кВт.ц тутам",
+          "en": "per kWh of grid power saved"
+        },
+        "attachApplies": false,
+        "capexShare": 1.0,
+        "scenarios": {
+          "cons": {
+            "price": 260,
+            "perDay": 100,
+            "days": 365,
+            "opex": 500000
+          },
+          "base": {
+            "price": 290,
+            "perDay": 114,
+            "days": 365,
+            "opex": 500000
+          },
+          "aggr": {
+            "price": 330,
+            "perDay": 126,
+            "days": 365,
+            "opex": 600000
+          }
+        },
+        "basis": {
+          "mn": "Борлуулалт биш, хэмнэлт: хавтангийн үйлдвэрлэсэн кВт.ц бүр нь сүлжээнээс авахгүй кВт.ц. Дунд: 30 кВт × өдөрт ~3.8 кВт.ц = өдөрт ~114 кВт.ц, жилийн турш, кВт.ц ~₮290 (аж ахуйн тариф 2024 оны 11-р сард ~30% өссөн — бодит тарифаа ашиглана). Зардал: хавтан цэвэрлэх (цас), инвертерийн арчилгаа, жилд ~₮0.5 сая. Хавтангийн хэмжээг өөрчилбөл өдрийн кВт.ц-г тохируулна (~3.8 × кВт).",
+          "en": "Savings, not sales: every kWh the panels make is a kWh not bought from the grid. Base: 30 kW × ~3.8 kWh a day = ~114 kWh a day, all year, valued at ~₮290 per kWh (business tariffs rose ~30% in Nov 2024 — use your actual rate). Running cost: panel cleaning (snow) and inverter upkeep, ~₮0.5m a year. If you change the panel size, change the kWh per day to match (about 3.8 × kW)."
+        }
+      }
+    },
+    {
+      "id": "pacojet",
+      "category": "kitchen",
+      "earns": "yes",
+      "name": {
+        "mn": "Pacojet 4 (зайрмаг, сорбет)",
+        "en": "Pacojet 4 (ice cream & sorbet)"
+      },
+      "summary": {
+        "mn": "Гал тогоонд өөрийн дээд зэргийн зайрмаг, сорбет хийх Pacojet 4 — жишээ нь нутгийн чацаргана, нэрс, шинэ цөцгийгөөр — зочдод төлбөртэй амттан болгон үйлчилнэ.",
+        "en": "A Pacojet 4 for the kitchen to make its own premium ice cream and sorbet — for example from local sea buckthorn, blueberries and fresh cream — served to guests as a paid dessert or treat."
+      },
+      "images": [
+        {
+          "src": "assets/img/items/pacojet/20261013-193907-039.jpg"
+        },
+        {
+          "src": "assets/img/items/pacojet/20261013-193932-069.jpg"
+        },
+        {
+          "src": "assets/img/items/pacojet/20261013-194155-614.jpg"
+        }
+      ],
+      "components": [
+        {
+          "id": "main",
+          "quantity": 1,
+          "options": [
+            {
+              "id": "main",
+              "name": {
+                "mn": "Pacojet 4",
+                "en": "Pacojet 4"
+              },
+              "source": "research-global",
+              "price": {
+                "amount": 7299,
+                "currency": "USD"
+              },
+              "origin": "import",
+              "shipping": 0.04,
+              "default": true,
+              "basis": {
+                "mn": "Pacojet 4 нь дэлхийн ресторануудад хэрэглэдэг Швейцарийн мэргэжлийн машины одоогийн загвар: хөлдөөсөн орцтой стаканыг ~2 минутад маш зөөлөн зайрмаг, сорбет болгоно, нэг порц эсвэл бүтэн стаканаар — гал тогоо урьдчилан хөлдөөж, захиалгаар шинээр бэлтгэнэ. АНУ-ын үнэ $7,299. Нэг үйлдвэрлэгч (Швейцарь); импорт.",
+                "en": "The Pacojet 4 is the current model of the Swiss professional machine used in restaurants worldwide: it shaves a frozen beaker of ingredients into ultra-smooth ice cream or sorbet in about 2 minutes, one portion or a whole beaker at a time, so the kitchen can freeze batches ahead and make fresh servings on demand. $7,299 US list price. Single source (Switzerland); imported."
+              }
+            }
+          ],
+          "name": {
+            "mn": "Машин",
+            "en": "Machine"
+          }
+        },
+        {
+          "id": "beakers",
+          "name": {
+            "mn": "Нэмэлт стакан, таг",
+            "en": "Extra beakers and lids"
+          },
+          "quantity": 10,
+          "quantityBasis": {
+            "mn": "Хэд хэдэн амтыг зэрэг хөлдөөж бэлэн байлгах 10 нэмэлт стакан (нэг стакан = ~10 порцын нэг багц).",
+            "en": "10 extra beakers so several flavours can be frozen and ready at once (one beaker = one batch of about 10 servings)."
+          },
+          "options": [
+            {
+              "id": "main",
+              "name": {
+                "mn": "Pacojet стакан",
+                "en": "Pacojet beaker set"
+              },
+              "source": "research-global",
+              "price": {
+                "amount": 90,
+                "currency": "USD"
+              },
+              "origin": "import",
+              "shipping": 0.04,
+              "default": true,
+              "basis": {
+                "mn": "Жинхэнэ Pacojet таглаатай стакан тус бүр ~$80–100.",
+                "en": "Genuine Pacojet beakers with lids cost about $80–100 each."
+              }
+            }
+          ]
+        }
+      ],
+      "timeline": {
+        "work": [
+          5,
+          5
+        ],
+        "use": [
+          6,
+          12
+        ],
+        "note": {
+          "mn": "Зуны улирлаас өмнө авна.",
+          "en": "Bought before the summer season."
+        }
+      },
+      "revenue": {
+        "unit": {
+          "mn": "нэг порц",
+          "en": "per serving"
+        },
+        "attachApplies": true,
+        "capexShare": 1.0,
+        "scenarios": {
+          "cons": {
+            "price": 15000,
+            "perDay": 1.5,
+            "days": 330,
+            "opex": 2700000
+          },
+          "base": {
+            "price": 18000,
+            "perDay": 2.5,
+            "days": 365,
+            "opex": 5400000
+          },
+          "aggr": {
+            "price": 22000,
+            "perDay": 3.5,
+            "days": 365,
+            "opex": 9000000
+          }
+        },
+        "basis": {
+          "mn": "Гэрийн зайрмаг, сорбет нэг порц ₮18,000 (Дунд), өдөрт ~2.5 порц (зочдын ~дөрөвний нэг), жилийн турш. Зардал: орц үнийн ~30%, машины засвар, жилд ~₮5.4 сая. Хоолон дээр нэмж зарвал л нэмэлт орлого; багцад орсон өөр амттаныг орлох бол бодит ашиг бага.",
+          "en": "House-made ice cream or sorbet at ₮18,000 a serving (Base), about 2.5 servings a day (roughly a quarter of guests have one), all year. Running cost: ingredients at about 30% of the price plus machine servicing, ~₮5.4m a year. Counted as extra money only if it is sold on top of meals; if it simply replaces another dessert in an included menu, the real gain is smaller."
+        }
+      }
+    },
+    {
+      "id": "jacuzzi",
+      "category": "amenities",
+      "earns": "yes",
+      "name": {
+        "mn": "Түлээгээр халаадаг халуун ванн",
+        "en": "Wood-fired hot tub"
+      },
+      "summary": {
+        "mn": "Клуб байрны хажууд, цагаар хувийн захиалгаар ашиглах 6–8 хүний гадаа халуун ванн. Түлээний зуухаар халаана (зун хүйтэн уснаас 2–3 цаг, хатуу өвөл тагтай 3–5 цаг), жижиг цахилгаан халаагуур усыг хөлдөхөөс сэргийлж, захиалгын хооронд дулаан байлгана — өвөл өдөр бүр юүлж дүүргэх шаардлагагүй. Ус, бохир усны холболттой жижиг шинэсэн тавцан дээр байрлана.",
+        "en": "A 6–8 person outdoor hot tub near the clubhouse, booked privately by the hour. Heated with a wood stove (2–3 hours from cold in summer, 3–5 hours in deep winter with the lid on), with a small electric heater that keeps the water from freezing and warm between bookings, so it does not have to be drained and refilled every day in winter. Sits on a small larch deck with water and drain connections."
+      },
+      "images": [
+        {
+          "src": "assets/img/items/jacuzzi/20261013-194347-242.jpg",
+          "option": "main/hybrid"
+        },
+        {
+          "src": "assets/img/items/jacuzzi/20261013-194423-285.jpg",
+          "option": "main/wood-only"
+        },
+        {
+          "src": "assets/img/items/jacuzzi/20261013-194500-893.jpg",
+          "option": "main/baltresto-fiberglass"
+        },
+        {
+          "src": "assets/img/items/jacuzzi/20261013-194540-119.jpg"
+        }
+      ],
+      "components": [
+        {
+          "id": "main",
+          "name": {
+            "mn": "Халуун ванн",
+            "en": "Hot tub"
+          },
+          "quantity": 1,
+          "options": [
+            {
+              "id": "hybrid",
+              "name": {
+                "mn": "Alpha Sauna хуш модон ванн, түлээ + цахилгаан (хосолсон)",
+                "en": "Alpha Sauna cedar tub, wood + electric (hybrid)"
+              },
+              "note": {
+                "mn": "Хурдан халаах түлээний зуух, хөлдөхөөс сэргийлэх цахилгаан халаагуур: хурдан бэлэн болно, өвөл өдөр бүр дүүргэхгүй.",
+                "en": "Wood stove for the fast heat-up, electric heater to keep it from freezing: ready sooner and no daily refill in winter."
+              },
+              "source": "research-china",
+              "price": {
+                "amount": 3500,
+                "currency": "USD"
+              },
+              "origin": "import",
+              "shipping": 0.125,
+              "default": true,
+              "basis": {
+                "mn": "Shenzhen Alpha Sauna (Хятад) 1–10 хүний модон халуун ванн хийдэг, түлээний зуух, цахилгаан халаагууртай хосолсон хувилбартай. Энгийн түлээний хуш модон ванн ~$950–1,500; цахилгаан халаагуур, дулаалгатай таг, зэвэрдэггүй хэрэгсэлтэй 6–8 хүний хосолсон загварыг ~$3,500 гэж тооцов. Том оврын ачаа. Үнийн санал хэрэгтэй.",
+                "en": "Shenzhen Alpha Sauna (China) builds wooden hot tubs for 1–10 people and offers a hybrid version with both a wood stove and an electric heater. Its plain wood-fired cedar tubs list at roughly $950–1,500; we estimate about $3,500 for a 6–8 person hybrid with the electric heater, insulated lid and stainless fittings. Bulky to ship. Needs a quote."
+              }
+            },
+            {
+              "id": "wood-only",
+              "name": {
+                "mn": "Alpha Sauna хуш модон ванн, зөвхөн түлээ",
+                "en": "Alpha Sauna cedar tub, wood-fired only"
+              },
+              "note": {
+                "mn": "Хамгийн хямд, гэхдээ өвөл ашигласны дараа юүлэхгүй бол хөлдөнө.",
+                "en": "Cheapest, but must be drained after each winter use or it freezes."
+              },
+              "source": "research-china",
+              "price": {
+                "amount": 1500,
+                "currency": "USD"
+              },
+              "origin": "import",
+              "shipping": 0.125,
+              "basis": {
+                "mn": "Мөн үйлдвэрлэгчийн энгийн түлээний 6–8 хүний хуш модон ванн: ~$950–1,500. Өвөл ашиглах бүрийн дараа юүлж (дахин дүүргэж халаана), ажил, ус их.",
+                "en": "The same maker's plain wood-fired 6–8 person cedar tub: about $950–1,500. In winter it has to be drained after every use (and refilled and reheated each time), which is more work and water."
+              }
+            },
+            {
+              "id": "baltresto-fiberglass",
+              "name": {
+                "mn": "Baltresto 'Octa' шилэн доторлогоотой, түлээ (Литва)",
+                "en": "Baltresto 'Octa' fibreglass-lined, wood-fired (Lithuania)"
+              },
+              "note": {
+                "mn": "Дотроо шилэн: гоожихгүй, бүлгүүдийн хооронд цэвэрлэхэд хялбар, дулаан сайн барина. Европт үйлдвэрлэсэн.",
+                "en": "Fibreglass inside: no leaks, easy to clean between groups, holds heat better. Made in Europe."
+              },
+              "source": "research-global",
+              "price": {
+                "amount": 2000,
+                "currency": "USD"
+              },
+              "origin": "import",
+              "shipping": 0.125,
+              "basis": {
+                "mn": "Термо модон бүрхүүлтэй, 5 мм шилэн доторлогоотой Европын 6 хүний ванн (~1,200 л), гадна түлээний зуухтай: ~€1,100–1,500, зуухтай ~$2,000. Гөлгөр доторлогоо бүлгүүдийн хооронд ариун цэвэр сахихад хамгийн хялбар, нүцгэн мод шиг гоождоггүй. ЕХ-оос удаан тээвэр.",
+                "en": "A European-made 6-person tub with a 5 mm fibreglass liner inside a thermowood shell (about 1,200 L), with an external wood stove: about €1,100–1,500, ~$2,000 with the stove. The smooth liner is easiest to keep hygienic between groups and doesn't leak like bare wood can. Long shipping from the EU."
+              }
+            }
+          ]
+        },
+        {
+          "id": "deck",
+          "name": {
+            "mn": "Шинэсэн тавцан, шат",
+            "en": "Larch deck and steps"
+          },
+          "quantity": 16,
+          "unit": {
+            "mn": "м²",
+            "en": "m²"
+          },
+          "quantityBasis": {
+            "mn": "Ванны эргэн тойронд 4 × 4 м тавцан.",
+            "en": "A 4 × 4 m deck around the tub."
+          },
+          "options": [
+            {
+              "id": "main",
+              "name": {
+                "mn": "Өндөрлөсөн шинэсэн тавцан",
+                "en": "Raised larch deck"
+              },
+              "source": "construction-benchmark",
+              "price": {
+                "amount": 170000,
+                "currency": "MNT"
+              },
+              "origin": "local",
+              "shipping": 0,
+              "default": true,
+              "basis": {
+                "mn": "Ажиглалтын асрын шалтай ижил: м² тутам ~₮170,000, лоджийн мужаан барина.",
+                "en": "Same rate as the viewpoint pavilion floor: about ₮170,000 per m², built by the lodge carpenter."
+              }
+            }
+          ]
+        },
+        {
+          "id": "plumbing",
+          "name": {
+            "mn": "Ус, бохир усны холболт",
+            "en": "Water supply and drain"
+          },
+          "quantity": 1,
+          "options": [
+            {
+              "id": "main",
+              "name": {
+                "mn": "Клуб байраас дулаалгатай хоолой + бохир ус",
+                "en": "Insulated pipe from the clubhouse + drain"
+              },
+              "source": "construction-benchmark",
+              "price": {
+                "amount": 2000000,
+                "currency": "MNT"
+              },
+              "origin": "local",
+              "shipping": 0,
+              "default": true,
+              "basis": {
+                "mn": "Ваннаа хялбар дүүргэж, юүлэхийн тулд клуб байраас дулаалгатай, халаалттай богино хоолой, бохир ус: ~₮2 сая.",
+                "en": "A short insulated, heat-traced water pipe from the clubhouse and a drain so the tub can be filled and emptied easily: about ₮2m."
+              }
+            }
+          ]
+        }
+      ],
+      "timeline": {
+        "work": [
+          7,
+          8
+        ],
+        "use": [
+          9,
+          12
+        ],
+        "note": {
+          "mn": "Зуны сүүлээр суурилуулж, намар, өвөлд бэлэн.",
+          "en": "Installed in late summer, ready for autumn and winter."
+        }
+      },
+      "revenue": {
+        "unit": {
+          "mn": "цаг тутам (хувийн захиалга)",
+          "en": "per hour (private booking)"
+        },
+        "attachApplies": false,
+        "capexShare": 1.0,
+        "scenarios": {
+          "cons": {
+            "price": 210000,
+            "perDay": 1,
+            "days": 135,
+            "opex": 10000000
+          },
+          "base": {
+            "price": 250000,
+            "perDay": 1.5,
+            "days": 150,
+            "opex": 11600000
+          },
+          "aggr": {
+            "price": 300000,
+            "perDay": 2.5,
+            "days": 165,
+            "opex": 13500000
+          }
+        },
+        "basis": {
+          "mn": "Зочид ваннаа бүхэлд нь цагаар ₮250,000-аар захиална (Дунд) — түлээгээр халаах нь ажил тул дээд зэргийн үйлчилгээ гэж үнэлсэн. Өдөрт ~1.5 цаг (урьдчилан халаах тул голдуу орой), жилд ~150 өдөр (өвөл, зуны оргил үед хамгийн их). Жилийн зардал ~₮11.6 сая: түлээ (~₮4.5 сая), өвөл хөлдөхөөс сэргийлэх цахилгаан (~₮1.6 сая), галлаж цэвэрлэх ажилтан (~₮4.5 сая), ус цэвэршүүлэх (~₮1 сая). Зөвхөн түлээний ванн цахилгаан хэмнэх ч өвөл ашиглах бүрийн дараа юүлнэ.",
+          "en": "Guests book the whole tub privately at ₮250,000 per hour (Base) — firing it with wood is work, so it is priced as a premium experience. About 1.5 hours booked a day (mostly evenings, since it needs heating in advance), on ~150 days a year (busiest in winter and peak summer). Running cost ~₮11.6m a year: firewood (~₮4.5m), electricity to keep it from freezing in winter (~₮1.6m), a staff member firing and cleaning it (~₮4.5m) and water treatment (~₮1m). The wood-only tub saves the electricity but must be drained after each winter use."
+        }
+      }
+    }
+  ]
+}

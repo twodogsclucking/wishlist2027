@@ -1,0 +1,168 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Nine Pines wishlist settings",
+  "type": "object",
+  "required": [
+    "lodge",
+    "fx",
+    "guestNights",
+    "defaultScenario",
+    "scenarios",
+    "categories",
+    "sources",
+    "customsDuty",
+    "vat",
+    "remotePremium"
+  ],
+  "additionalProperties": false,
+  "definitions": {
+    "text": {
+      "type": "object",
+      "required": [
+        "mn",
+        "en"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "mn": {
+          "type": "string",
+          "minLength": 1
+        },
+        "en": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    }
+  },
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "lodge": {
+      "type": "object",
+      "required": [
+        "name",
+        "url"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
+    "fx": {
+      "type": "number",
+      "exclusiveMinimum": 0,
+      "description": "MNT per 1 USD. Only affects USD-priced options."
+    },
+    "customsDuty": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Mongolian customs duty as a fraction (0.05 = 5%). Charged on price + shipping for imported options."
+    },
+    "vat": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Mongolian VAT as a fraction (0.10 = 10%). Charged at the border on price + shipping + duty for imported options."
+    },
+    "remotePremium": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Countryside premium as a fraction (0.08 = 8%): transport UB -> Dadal and remote labour, added on top of every option unless that option has \"remote\": false."
+    },
+    "guestNights": {
+      "type": "number",
+      "exclusiveMinimum": 0,
+      "description": "Projected guest-nights per year, for the 'share of guests' figure."
+    },
+    "defaultScenario": {
+      "type": "string",
+      "description": "The scenario a first-time visitor sees. Must be one of the scenario ids below."
+    },
+    "scenarios": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "$ref": "#/definitions/slug"
+          },
+          "name": {
+            "$ref": "#/definitions/text"
+          }
+        }
+      }
+    },
+    "categories": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "$ref": "#/definitions/slug"
+          },
+          "name": {
+            "$ref": "#/definitions/text"
+          }
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "confidence",
+          "name"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "$ref": "#/definitions/slug"
+          },
+          "confidence": {
+            "enum": [
+              "high",
+              "medium",
+              "low"
+            ]
+          },
+          "name": {
+            "$ref": "#/definitions/text"
+          }
+        }
+      }
+    },
+    "timeline": {
+      "type": "object",
+      "description": "Plan year and the milestone strip shown above the home-page timeline."
+    }
+  }
+}

@@ -1,0 +1,16 @@
+# Nine Pines wishlist — server rules (Hostinger runs LiteSpeed, which reads this file)
+Options -Indexes
+
+# Never serve the repo's internals or tooling: git history, CI, hooks, scripts, docs, spreadsheets
+RewriteEngine On
+RewriteRule (^|/)\.(git|github|githooks)(/|$) - [F,L]
+RewriteRule ^scripts(/|$) - [F,L]
+RewriteRule \.(py|md|xlsx|xls|bat|sh|yml|yaml)$ - [F,L]
+
+# Internal planning document: tell search engines not to index anything
+<IfModule mod_headers.c>
+  Header set X-Robots-Tag "noindex, nofollow, noarchive"
+  <FilesMatch "\.json$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+</IfModule>

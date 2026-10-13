@@ -1,0 +1,6 @@
+#!/bin/sh
+# Blocks a commit when the site data is broken.
+# Turn on once per computer, from the repo folder:   git config core.hooksPath .githooks
+PY=$(command -v python3 || command -v python || command -v py)
+if [ -z "$PY" ]; then echo "pre-commit: Python not found - skipping data check"; exit 0; fi
+"$PY" scripts/validate.py || { echo "Commit blocked: fix the problems above, then commit again."; exit 1; }

@@ -1,0 +1,492 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Nine Pines wishlist items",
+  "description": "Every item on the wishlist. A 'fixed' item is just a component with one option; add a second option to make it swappable. scripts/validate.py is the final authority — it also checks things a schema can't (unique ids, one default per component, references).",
+  "type": "object",
+  "required": [
+    "items"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "items": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/definitions/item"
+      }
+    }
+  },
+  "definitions": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "lowercase-with-dashes. Never change an existing id — share links and saved scenarios refer to it."
+    },
+    "text": {
+      "type": "object",
+      "required": [
+        "mn",
+        "en"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "mn": {
+          "type": "string",
+          "minLength": 1
+        },
+        "en": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "price": {
+      "type": "object",
+      "required": [
+        "amount",
+        "currency"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "amount": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Price for ONE unit."
+        },
+        "currency": {
+          "enum": [
+            "MNT",
+            "USD"
+          ],
+          "description": "USD prices follow the exchange rate; MNT prices (e.g. a local quote) never move."
+        }
+      }
+    },
+    "option": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "source",
+        "price",
+        "origin",
+        "shipping",
+        "basis"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "$ref": "#/definitions/id"
+        },
+        "name": {
+          "$ref": "#/definitions/text"
+        },
+        "note": {
+          "$ref": "#/definitions/text",
+          "description": "Shown on the option card. Required when there is more than one option."
+        },
+        "source": {
+          "anyOf": [
+            {
+              "enum": [
+                "quote",
+                "given",
+                "user-adjusted",
+                "research-mongolia",
+                "research-china",
+                "research-global",
+                "construction-benchmark"
+              ]
+            },
+            {
+              "type": "string"
+            }
+          ],
+          "description": "Where the price came from — drives the confidence badge. Must match an id in settings.json > sources."
+        },
+        "price": {
+          "$ref": "#/definitions/price"
+        },
+        "origin": {
+          "enum": [
+            "local",
+            "import"
+          ],
+          "description": "\"local\" = bought in Mongolia or an all-in delivered quote: price used as-is. \"import\" = shipping + customs duty + VAT are added on top (rates for duty and VAT are in settings.json)."
+        },
+        "shipping": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Freight to the lodge as a fraction of the price: 0.04 = 4% (normal goods), 0.125 = 12.5% (bulky or dangerous goods). Must be 0 for local options."
+        },
+        "remote": {
+          "type": "boolean",
+          "description": "Set to false when the price is already delivered and installed at the lodge, so the countryside premium is not added. Leave out otherwise (default: added)."
+        },
+        "basis": {
+          "$ref": "#/definitions/text",
+          "description": "Plain-language explanation of how the unit price was worked out. Shown behind the (i) button."
+        },
+        "default": {
+          "type": "boolean",
+          "description": "Exactly one option per component must be the default."
+        }
+      }
+    },
+    "component": {
+      "type": "object",
+      "required": [
+        "id",
+        "quantity",
+        "options"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "$ref": "#/definitions/id"
+        },
+        "name": {
+          "$ref": "#/definitions/text",
+          "description": "Required when an item has more than one component."
+        },
+        "unit": {
+          "$ref": "#/definitions/text",
+          "description": "Optional unit for the quantity, e.g. m² or m."
+        },
+        "quantity": {
+          "anyOf": [
+            {
+              "type": "number",
+              "minimum": 0
+            },
+            {
+              "type": "string"
+            }
+          ],
+          "description": "A number, or a formula of the item's params, e.g. \"length * width\" or \"ceil(length / 5)\". Allowed: + - * / ( ) ceil floor round max min."
+        },
+        "quantityBasis": {
+          "$ref": "#/definitions/text",
+          "description": "Optional: why this quantity. Shown behind the (i) button."
+        },
+        "options": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/definitions/option"
+          }
+        }
+      }
+    },
+    "scenarioValues": {
+      "type": "object",
+      "required": [
+        "price",
+        "perDay",
+        "days",
+        "opex"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "price": {
+          "type": "number",
+          "minimum": 0,
+          "description": "MNT per unit sold (see revenue.unit)."
+        },
+        "perDay": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Units sold per operating day."
+        },
+        "days": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 366,
+          "description": "Operating days per year."
+        },
+        "opex": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Annual running cost in MNT."
+        }
+      }
+    },
+    "item": {
+      "type": "object",
+      "required": [
+        "id",
+        "category",
+        "earns",
+        "name",
+        "summary",
+        "components"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "$ref": "#/definitions/id"
+        },
+        "category": {
+          "anyOf": [
+            {
+              "enum": [
+                "buildings",
+                "vehicles",
+                "safety",
+                "energy",
+                "kitchen",
+                "amenities"
+              ]
+            },
+            {
+              "type": "string"
+            }
+          ],
+          "description": "Must match an id in settings.json > categories."
+        },
+        "earns": {
+          "enum": [
+            "yes",
+            "partial",
+            "no"
+          ]
+        },
+        "name": {
+          "$ref": "#/definitions/text"
+        },
+        "summary": {
+          "$ref": "#/definitions/text",
+          "description": "One or two plain-language sentences for the item page."
+        },
+        "params": {
+          "type": "array",
+          "description": "Editable dimensions of the item (length, width, …). Component quantities can be formulas of them.",
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "name",
+              "value"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9]*$"
+              },
+              "name": {
+                "$ref": "#/definitions/text"
+              },
+              "unit": {
+                "$ref": "#/definitions/text"
+              },
+              "value": {
+                "type": "number",
+                "minimum": 0
+              },
+              "basis": {
+                "$ref": "#/definitions/text"
+              }
+            }
+          }
+        },
+        "image": {
+          "type": "string",
+          "description": "Optional, e.g. assets/img/items/jet-boat.jpg. Leave out to show the placeholder."
+        },
+        "images": {
+          "type": "array",
+          "description": "Photos for the item page, first one is the cover. Added automatically by the Photos panel in preview.bat.",
+          "items": {
+            "type": "object",
+            "required": [
+              "src"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "src": {
+                "type": "string",
+                "description": "Path inside the project, e.g. assets/img/items/jet-boat/1.jpg"
+              },
+              "source": {
+                "type": "string",
+                "description": "Where the picture came from (web link), for the record."
+              },
+              "option": {
+                "type": "string",
+                "description": "Optional: the option this photo shows, as '<component-id>/<option-id>'. It is shown only while that option is selected. Leave out for photos of the whole item."
+              }
+            }
+          }
+        },
+        "revenueCountedWith": {
+          "type": "string",
+          "description": "Id of another item whose revenue covers this one (e.g. goggles counted with the drone)."
+        },
+        "components": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/definitions/component"
+          }
+        },
+        "revenue": {
+          "type": "object",
+          "required": [
+            "attachApplies",
+            "capexShare"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "unit": {
+              "$ref": "#/definitions/text",
+              "description": "What one sale is, e.g. 'per ride'."
+            },
+            "attachApplies": {
+              "type": "boolean",
+              "description": "true if it is sold per guest, so the 'share of guests' figure makes sense."
+            },
+            "capexShare": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Share of the item's cost to recover from this revenue (1 = all of it)."
+            },
+            "scenarios": {
+              "type": "object",
+              "description": "One block per scenario id in settings.json.",
+              "additionalProperties": {
+                "$ref": "#/definitions/scenarioValues"
+              }
+            },
+            "basis": {
+              "$ref": "#/definitions/text",
+              "description": "Plain-language explanation of how the sales numbers were set. Shown behind the (i) button."
+            },
+            "variants": {
+              "type": "array",
+              "minItems": 2,
+              "description": "Optional: versions of how it is sold (e.g. self-drive / guided). Each has its own unit, scenarios and basis; exactly one is the default. Use instead of unit/scenarios/basis.",
+              "items": {
+                "type": "object",
+                "required": [
+                  "id",
+                  "name",
+                  "unit",
+                  "scenarios",
+                  "basis"
+                ],
+                "properties": {
+                  "id": {
+                    "$ref": "#/definitions/id"
+                  },
+                  "name": {
+                    "$ref": "#/definitions/text"
+                  },
+                  "note": {
+                    "$ref": "#/definitions/text"
+                  },
+                  "default": {
+                    "type": "boolean"
+                  },
+                  "unit": {
+                    "$ref": "#/definitions/text"
+                  },
+                  "scenarios": {
+                    "type": "object",
+                    "description": "One block per scenario id in settings.json.",
+                    "additionalProperties": {
+                      "$ref": "#/definitions/scenarioValues"
+                    }
+                  },
+                  "basis": {
+                    "$ref": "#/definitions/text"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "included": {
+          "type": "boolean",
+          "description": "Set to false to leave the item out of the plan by default (still listed, not counted). Leave out otherwise."
+        },
+        "funding": {
+          "type": "object",
+          "required": [
+            "by"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "by": {
+              "$ref": "#/definitions/text"
+            }
+          },
+          "description": "Set when someone else pays (e.g. Unitel). The item is listed under 'Asked of partners', its cost is shown for information only and never counted in our totals or Excel."
+        },
+        "upkeep": {
+          "type": "object",
+          "required": [
+            "perYear",
+            "basis"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "perYear": {
+              "anyOf": [
+                {
+                  "type": "number",
+                  "minimum": 0
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "basis": {
+              "$ref": "#/definitions/text"
+            }
+          },
+          "description": "Yearly running cost (₮) of an item that earns no revenue — heating, fuel, supplies. A number or a formula of the item's params. Shown as 'Running costs per year', not part of net revenue."
+        },
+        "timeline": {
+          "type": "object",
+          "required": [
+            "work",
+            "use"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "work": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 12
+              },
+              "minItems": 2,
+              "maxItems": 2
+            },
+            "use": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 12
+              },
+              "minItems": 2,
+              "maxItems": 2
+            },
+            "note": {
+              "$ref": "#/definitions/text"
+            }
+          },
+          "description": "When it happens in the plan year: work = build/buy/install months [from, to]; use = in-use months [from, to]. Shown on the home-page timeline."
+        }
+      }
+    }
+  }
+}

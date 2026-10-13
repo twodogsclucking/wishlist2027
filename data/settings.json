@@ -1,0 +1,208 @@
+{
+  "$schema": "./settings.schema.json",
+  "lodge": {
+    "name": "Nine Pines Lodge",
+    "url": "https://ninepines.mn"
+  },
+  "fx": 3650,
+  "customsDuty": 0.05,
+  "vat": 0.1,
+  "remotePremium": 0.08,
+  "guestNights": 3350,
+  "defaultScenario": "cons",
+  "scenarios": [
+    {
+      "id": "cons",
+      "name": {
+        "mn": "Болгоомжтой",
+        "en": "Conservative"
+      }
+    },
+    {
+      "id": "base",
+      "name": {
+        "mn": "Дунд",
+        "en": "Base"
+      }
+    },
+    {
+      "id": "aggr",
+      "name": {
+        "mn": "Өөдрөг",
+        "en": "Aggressive"
+      }
+    }
+  ],
+  "categories": [
+    {
+      "id": "buildings",
+      "name": {
+        "mn": "Барилга, дэд бүтэц",
+        "en": "Buildings & infrastructure"
+      }
+    },
+    {
+      "id": "vehicles",
+      "name": {
+        "mn": "Тээврийн хэрэгсэл",
+        "en": "Vehicles"
+      }
+    },
+    {
+      "id": "safety",
+      "name": {
+        "mn": "Аюулгүй байдал, ан амьтан",
+        "en": "Safety & wildlife"
+      }
+    },
+    {
+      "id": "energy",
+      "name": {
+        "mn": "Эрчим хүч",
+        "en": "Energy"
+      }
+    },
+    {
+      "id": "kitchen",
+      "name": {
+        "mn": "Гал тогоо",
+        "en": "Kitchen"
+      }
+    },
+    {
+      "id": "amenities",
+      "name": {
+        "mn": "Зочдын тав тух",
+        "en": "Guest amenities"
+      }
+    },
+    {
+      "id": "partners",
+      "name": {
+        "mn": "Түншээс хүсэх",
+        "en": "Asked of partners"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "quote",
+      "confidence": "high",
+      "name": {
+        "mn": "Бодит үнийн санал",
+        "en": "Real quotation"
+      }
+    },
+    {
+      "id": "given",
+      "confidence": "high",
+      "name": {
+        "mn": "Удирдлагаас өгсөн",
+        "en": "Provided by management"
+      }
+    },
+    {
+      "id": "user-adjusted",
+      "confidence": "high",
+      "name": {
+        "mn": "Гараар тохируулсан",
+        "en": "Manually set"
+      }
+    },
+    {
+      "id": "research-mongolia",
+      "confidence": "medium",
+      "name": {
+        "mn": "Судалгаа — Монгол",
+        "en": "Researched — Mongolia"
+      }
+    },
+    {
+      "id": "research-china",
+      "confidence": "medium",
+      "name": {
+        "mn": "Судалгаа — Хятадын нийлүүлэлт",
+        "en": "Researched — China supply"
+      }
+    },
+    {
+      "id": "research-global",
+      "confidence": "medium",
+      "name": {
+        "mn": "Судалгаа — дэлхийн зах зээл",
+        "en": "Researched — global market"
+      }
+    },
+    {
+      "id": "construction-benchmark",
+      "confidence": "low",
+      "name": {
+        "mn": "Барилгын жишиг — гүйцэтгэгчийн үнийн санал хэрэгтэй",
+        "en": "Construction benchmark — needs a contractor quote"
+      }
+    },
+    {
+      "id": "partner-estimate",
+      "name": {
+        "mn": "Түншийн зардлын ойролцоо тооцоо",
+        "en": "Rough estimate of the partner's cost"
+      },
+      "confidence": "low"
+    }
+  ],
+  "timeline": {
+    "year": 2027,
+    "milestones": [
+      {
+        "when": {
+          "mn": "1–3 сар",
+          "en": "Jan–Mar"
+        },
+        "text": {
+          "mn": "Төлөвлөгөөг батлах, гүйцэтгэгчийн үнийн санал авах, захиалга өгөх; бууны зөвшөөрөл эхлүүлэх.",
+          "en": "Approve the plan, get contractor quotes, place orders; start gun licences."
+        }
+      },
+      {
+        "when": {
+          "mn": "4–5 сар",
+          "en": "Apr–May"
+        },
+        "text": {
+          "mn": "Барилга эхэлнэ (зогсоол, ангар); хоолойн гарц, буудал, зам баригдана; зуны тоног төхөөрөмж ирнэ.",
+          "en": "Construction starts (parking, hangar); culvert, landing, boardwalk and path built; summer equipment arrives."
+        }
+      },
+      {
+        "when": {
+          "mn": "6–9 сар",
+          "en": "Jun–Sep"
+        },
+        "text": {
+          "mn": "Зуны улирал: усан онгоц, тэрэг, мотоцикл, ATV, морин тэрэг, талбай ашиглалтад; барилга үргэлжилнэ.",
+          "en": "Summer season: boat, carts, bikes, ATVs, carriage and court in use; buildings keep going up."
+        }
+      },
+      {
+        "when": {
+          "mn": "9–10 сар",
+          "en": "Sep–Oct"
+        },
+        "text": {
+          "mn": "Өвлийн тоног төхөөрөмж захиалж хүлээн авна; нарны хавтан, халуун ванн суурилуулна.",
+          "en": "Winter equipment ordered and delivered; solar panels and hot tub fitted."
+        }
+      },
+      {
+        "when": {
+          "mn": "11–12 сар",
+          "en": "Nov–Dec"
+        },
+        "text": {
+          "mn": "Зогсоол, ангар бэлэн; зуны хэрэгслийг дотор хадгална; цасны мотоцикл, скүтертэй өвлийн улирал.",
+          "en": "Parking and hangar ready; summer gear stored inside; winter season with snowmobiles and scooters."
+        }
+      }
+    ]
+  }
+}
