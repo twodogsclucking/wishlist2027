@@ -139,11 +139,11 @@ heavy wooden picnic table benches larch
 
 TAG: The whole item
 SEARCH:
-4 seater electric golf cart lithium
+Evolution D5 Maverick 6 Plus golf cart
 
 TAG: The whole item  (optional context shot)
 AI PROMPT:
-Two white 4-seat electric golf carts parked on a gravel path outside a timber lodge, one with guest luggage on the rear rack, summer, in Dadal, Khentii, northern Mongolia among rolling hills of Siberian larch and pine forest, photorealistic photograph, natural light, 35 mm lens, landscape 4:3, no people facing the camera, no text, no logos, no watermarks
+Two 6-seat electric golf carts parked on a gravel path outside a timber lodge, one with guest luggage on the rear rack, summer, in Dadal, Khentii, northern Mongolia among rolling hills of Siberian larch and pine forest, photorealistic photograph, natural light, 35 mm lens, landscape 4:3, no people facing the camera, no text, no logos, no watermarks
 
 
 ============================================================

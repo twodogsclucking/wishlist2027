@@ -1962,7 +1962,7 @@
       },
       "images": [
         {
-          "src": "assets/img/items/golf-carts/20261013-185848-064.jpg"
+          "src": "assets/img/items/golf-carts/20261013-205200-000.jpg"
         }
       ],
       "components": [
@@ -1980,10 +1980,6 @@
                 "mn": "Evolution D5 Maverick 6 Plus, Батсуурь ахаас",
                 "en": "Evolution D5 Maverick 6 Plus, from Batsuur"
               },
-              "note": {
-                "mn": "6 суудалтай, лити батарей; Батсуурь ахаас авна.",
-                "en": "6 seats, lithium battery; bought from Batsuur."
-              },
               "source": "given",
               "price": {
                 "amount": 12000,
@@ -1995,28 +1991,6 @@
               "basis": {
                 "mn": "Таны өгсөн үнэ: тус бүр $12,000, Батсуурь ахаас Монголд худалдан авна (импортын зардалгүй). УБ-аас Дадал хүртэлх тээвэр хөдөө орон нутгийн нэмэгдэлд орсон. 6 суудалтай тул нэг удаад илүү олон зочин, ачаа зөөнө. Лити батарей хүйтэнд хар тугалганыхаас хамаагүй сайн ажилладаг, өвөл дулаан барилгад хадгална.",
                 "en": "The price you gave: $12,000 each, bought in Mongolia from Batsuur (so no import costs). Transport from UB to Dadal is in the countryside premium. Six seats means more guests and luggage per trip. Lithium batteries hold their range far better in the cold than lead-acid, and they winter in the heated building."
-              }
-            },
-            {
-              "id": "premium-lithium",
-              "name": {
-                "mn": "4 суудалтай цахилгаан тэрэг, лити батарей",
-                "en": "4-seat electric cart, lithium battery"
-              },
-              "source": "given",
-              "price": {
-                "amount": 8000,
-                "currency": "USD"
-              },
-              "origin": "local",
-              "shipping": 0,
-              "basis": {
-                "mn": "Энгийн 4 суудалтай лити батарейтай цахилгаан тэрэг, Монголоос ~$8,000 (импортын зардалгүй). УБ-аас Дадал хүртэлх тээвэр хөдөө орон нутгийн нэмэгдэлд орсон.",
-                "en": "A plain 4-seat electric cart with a lithium battery, about $8,000 in Mongolia (so no import costs). Transport from UB to Dadal is in the countryside premium."
-              },
-              "note": {
-                "mn": "Хямд хувилбар: жижиг, 4 суудалтай.",
-                "en": "Cheaper choice: smaller, 4 seats."
               }
             }
           ]
