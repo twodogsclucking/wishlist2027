@@ -1893,8 +1893,8 @@
         "en": "Mobile coverage on the Norovlin–Dadal road"
       },
       "summary": {
-        "mn": "Норовлиноос Дадал хүртэл явж буй зочид одоогоор утасны сүлжээгүй: төөрөх эсвэл шаварт суувал тусламж дуудаж чадахгүй. Энэ замд Юнителийн реле станц / антен аль хэдийн байгаа; зөвхөн гар утасны дохио нэмэх шаардлагатай. Үүнийг Юнителийн 2027 оны дэд бүтцийн төлөвлөгөөнд оруулахыг хүсэж байна — лодж зардал гаргахгүй.",
-        "en": "Guests driving from Norovlin to Dadal currently have no phone reception: if they get lost or stuck in mud, they cannot call for help. Unitel already has a relay station / antenna along this road; it only needs mobile signal added. We are asking Unitel to include this in their 2027 infrastructure plan — the lodge does not pay for it."
+        "mn": "Норовлиноос Дадал хүртэл явж буй зочид одоогоор утасны сүлжээгүй: төөрөх эсвэл шаварт суувал тусламж дуудаж чадахгүй. Энэ замд Юнителийн реле станц / антен аль хэдийн байгаа; зөвхөн гар утасны дохио нэмэх шаардлагатай. Үүнийг Юнителийн 2027 оны дэд бүтцийн төлөвлөгөөнд оруулахыг хүсэж байна — лоджийн төсөвт ороогүй.",
+        "en": "Guests driving from Norovlin to Dadal currently have no phone reception: if they get lost or stuck in mud, they cannot call for help. Unitel already has a relay station / antenna along this road; it only needs mobile signal added. We are asking Unitel to include this in their 2027 infrastructure plan — it is not in the lodge's budget."
       },
       "images": [
         {
@@ -1926,8 +1926,8 @@
               "remote": false,
               "default": true,
               "basis": {
-                "mn": "Зөвхөн мэдээлэл — Юнител төлнө, лодж биш. Удирдлагын өмнөх ₮350 сая нь шинэ станцын бүтэн зардал байсан; цамхаг, тэжээл, сүлжээний холболт аль хэдийн байгаа тул гар утасны станцын радио, антен нэмэх нь Юнителд хамаагүй хямд байх ёстой. ₮150 сая нь ойролцоо таамаг; бодит дүнг Юнител мэднэ.",
-                "en": "For information only — Unitel pays, not the lodge. Management's earlier figure was ₮350m for a full new station; because the tower, power and link to the network are already there, adding a mobile base-station radio and antennas should cost Unitel much less. ₮150m is a rough guess; Unitel will know the real figure."
+                "mn": "Зөвхөн мэдээлэл — Юнителд хүсэлт тавина; лоджийн төсөвт ороогүй. Удирдлагын өмнөх ₮350 сая нь шинэ станцын бүтэн зардал байсан; цамхаг, тэжээл, сүлжээний холболт аль хэдийн байгаа тул гар утасны станцын радио, антен нэмэх нь Юнителд хамаагүй хямд байх ёстой. ₮150 сая нь ойролцоо таамаг; бодит дүнг Юнител мэднэ.",
+                "en": "For information only — to be asked of Unitel; not in the lodge's budget. Management's earlier figure was ₮350m for a full new station; because the tower, power and link to the network are already there, adding a mobile base-station radio and antennas should cost Unitel much less. ₮150m is a rough guess; Unitel will know the real figure."
               }
             }
           ]
@@ -1982,15 +1982,15 @@
               },
               "source": "given",
               "price": {
-                "amount": 12000,
+                "amount": 10500,
                 "currency": "USD"
               },
               "origin": "local",
               "shipping": 0,
               "default": true,
               "basis": {
-                "mn": "Таны өгсөн үнэ: тус бүр $12,000, Батсуурь ахаас Монголд худалдан авна (импортын зардалгүй). УБ-аас Дадал хүртэлх тээвэр хөдөө орон нутгийн нэмэгдэлд орсон. 6 суудалтай тул нэг удаад илүү олон зочин, ачаа зөөнө. Лити батарей хүйтэнд хар тугалганыхаас хамаагүй сайн ажилладаг, өвөл дулаан барилгад хадгална.",
-                "en": "The price you gave: $12,000 each, bought in Mongolia from Batsuur (so no import costs). Transport from UB to Dadal is in the countryside premium. Six seats means more guests and luggage per trip. Lithium batteries hold their range far better in the cold than lead-acid, and they winter in the heated building."
+                "mn": "Таны өгсөн үнэ: тус бүр $10,500, Батсуурь ахаас Монголд худалдан авна (импортын зардалгүй). УБ-аас Дадал хүртэлх тээвэр хөдөө орон нутгийн нэмэгдэлд орсон. 6 суудалтай тул нэг удаад илүү олон зочин, ачаа зөөнө. Лити батарей хүйтэнд хар тугалганыхаас хамаагүй сайн ажилладаг, өвөл дулаан барилгад хадгална.",
+                "en": "The price you gave: $10,500 each, bought in Mongolia from Batsuur (so no import costs). Transport from UB to Dadal is in the countryside premium. Six seats means more guests and luggage per trip. Lithium batteries hold their range far better in the cold than lead-acid, and they winter in the heated building."
               }
             }
           ]
@@ -3292,34 +3292,34 @@
       },
       "revenue": {
         "unit": {
-          "mn": "зочин бүрээр 1 цаг",
-          "en": "per guest per hour"
+          "mn": "аялал бүрээр (бүтэн завь)",
+          "en": "per tour (whole boat)"
         },
         "attachApplies": true,
         "capexShare": 1.0,
         "scenarios": {
           "cons": {
-            "price": 170000,
-            "perDay": 2.4,
+            "price": 450000,
+            "perDay": 0.7,
             "days": 128,
             "opex": 20000000
           },
           "base": {
-            "price": 200000,
-            "perDay": 4,
+            "price": 500000,
+            "perDay": 1,
             "days": 150,
             "opex": 23000000
           },
           "aggr": {
-            "price": 240000,
-            "perDay": 5.6,
+            "price": 550000,
+            "perDay": 1.5,
             "days": 150,
             "opex": 26000000
           }
         },
         "basis": {
-          "mn": "Зочин бүрээр 1 цагийн аялал ₮200,000 (Дунд), өдөрт ~4 зочин, мөсгүй улиралд (~150 өдөр). Аялал бүрийг ажилтан жолооддог. Жилийн зардал ~₮23 сая: жолоочийн улирлын цалин (сард ~₮2.5 сая × 5 сар ≈ ₮12.5 сая), шатахуун (F600 цагт ~12–14 л; өдөрт ~1.5 цаг × ~₮2,800/л ≈ ₮8 сая), засвар, өвлийн хадгалалт (~₮2 сая). Буудлыг тусад нь тооцсон.",
-          "en": "₮200,000 per guest for a 1-hour ride (Base), about 4 guests a day, in the ice-free season (~150 days). A staff member drives every trip. Running cost about ₮23m a year: the driver's seasonal pay (~₮2.5m a month × 5 months ≈ ₮12.5m), fuel (the F600 burns ~12–14 L an hour; ~1.5 engine-hours a day at ~₮2,800/L ≈ ₮8m) and servicing plus winter storage (~₮2m). The landing is costed separately."
+          "mn": "Аялал бүрээр (бүтэн завь, хэдэн зочин байхаас үл хамааран) ₮500,000 (Дунд), өдөрт ~1 аялал зарагдана, мөсгүй улиралд (~150 өдөр). Аялал бүрийг ажилтан жолооддог. Жилийн зардал ~₮23 сая: жолоочийн улирлын цалин (сард ~₮2.5 сая × 5 сар ≈ ₮12.5 сая), шатахуун, засвар, өвлийн хадгалалт. Буудлыг тусад нь тооцсон.",
+          "en": "₮500,000 per tour for the whole boat, however many guests are on it (Base), about 1 tour sold a day, in the ice-free season (~150 days). A staff member drives every trip. Running cost about ₮23m a year: the driver's seasonal pay (~₮2.5m a month × 5 months ≈ ₮12.5m), fuel, servicing and winter storage. The landing is costed separately."
         }
       }
     },
@@ -4249,8 +4249,8 @@
         "en": "Battery & EV charger"
       },
       "summary": {
-        "mn": "Цахилгаан тасрахад нөөц болох, зочдын цахилгаан машиныг цэнэглэх хурдан цэнэглэгчтэй 240 кВт.ц батарей. Ногоон Өртөө Төсөл барьж, зардлыг нь гаргана; цэнэглэлтийн орлогыг мөн тэд авна.",
-        "en": "A 240 kWh battery with a fast charger for electric cars, giving backup power during outages and charging for guests' EVs. Built and paid for by the Nogoon Urtuu (Green Station) Project, which also keeps the charging income."
+        "mn": "Цахилгаан тасрахад нөөц болох, зочдын цахилгаан машиныг цэнэглэх хурдан цэнэглэгчтэй 240 кВт.ц батарей. Ногоон Өртөө Төслөөр бариулж, санхүүжүүлэхийг хүснэ; цэнэглэлтийн орлого тэдэнд очно.",
+        "en": "A 240 kWh battery with a fast charger for electric cars, giving backup power during outages and charging for guests' EVs. We will ask the Nogoon Urtuu (Green Station) Project to build and fund it; the charging income would be theirs."
       },
       "images": [
         {
@@ -4280,8 +4280,8 @@
               "shipping": 0.125,
               "default": true,
               "basis": {
-                "mn": "Зөвхөн мэдээлэл — Ногоон Өртөө Төсөл төлнө, лодж биш. Хятадын арилжааны батарей систем 200 кВт.ц нь хувиргагчтайгаа ~$47,300; 240 кВт.ц-д тохируулсан. Лити батарей аюултай ачаанд тооцогдох тул тээвэр өндөр.",
-                "en": "For information only — paid by the Nogoon Urtuu Project, not the lodge. Chinese commercial battery systems quote about $47,300 for 200 kWh including the power converter; we scaled that to 240 kWh. Lithium batteries ship as dangerous goods, so shipping is higher."
+                "mn": "Зөвхөн мэдээлэл — Ногоон Өртөө Төсөлд хүсэлт тавина; лоджийн төсөвт ороогүй. Хятадын арилжааны батарей систем 200 кВт.ц нь хувиргагчтайгаа ~$47,300; 240 кВт.ц-д тохируулсан. Лити батарей аюултай ачаанд тооцогдох тул тээвэр өндөр.",
+                "en": "For information only — to be asked of the Nogoon Urtuu Project; not in the lodge's budget. Chinese commercial battery systems quote about $47,300 for 200 kWh including the power converter; we scaled that to 240 kWh. Lithium batteries ship as dangerous goods, so shipping is higher."
               },
               "remote": false
             }
@@ -4310,8 +4310,8 @@
               "shipping": 0.04,
               "default": true,
               "basis": {
-                "mn": "Зөвхөн мэдээлэл — Ногоон Өртөө Төсөл төлнө, лодж биш. Хятадын 60–120 кВт DC хурдан цэнэглэгч цөөн тоогоор ~$6,000.",
-                "en": "For information only — paid by the Nogoon Urtuu Project, not the lodge. Chinese 60–120 kW DC fast chargers sell for about $6,000 each at low volume."
+                "mn": "Зөвхөн мэдээлэл — Ногоон Өртөө Төсөлд хүсэлт тавина; лоджийн төсөвт ороогүй. Хятадын 60–120 кВт DC хурдан цэнэглэгч цөөн тоогоор ~$6,000.",
+                "en": "For information only — to be asked of the Nogoon Urtuu Project; not in the lodge's budget. Chinese 60–120 kW DC fast chargers sell for about $6,000 each at low volume."
               },
               "remote": false
             }
