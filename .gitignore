@@ -8,3 +8,6 @@ node_modules/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Supplier quotations and other documents stay private (the repo is public)
+*.pdf

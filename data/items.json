@@ -2,6 +2,162 @@
   "$schema": "./items.schema.json",
   "items": [
     {
+      "id": "wastewater-treatment",
+      "category": "buildings",
+      "earns": "no",
+      "included": false,
+      "name": {
+        "mn": "Бохир ус цэвэрлэх байгууламж шинэчлэх — НЭН ТЭРГҮҮНД",
+        "en": "Wastewater treatment upgrade — PRIORITY"
+      },
+      "summary": {
+        "mn": "Нэн тэргүүний асуудал. Одоогийн бактерийн аргаар ажилладаг Эколос септик систем 30-аас дээш зочинтой үед маш муу үнэр гаргадаг — 2026 оны зуны зочдын гомдлын хамгийн том шалтгаан. 2027 онд мэргэжлийн үнэлгээ хийж, засах уу, солих уу гэдгийг шийднэ; солих шаардлагатай гэж гарвал энэ хөрөнгө оруулалтаас зайлсхийх аргагүй. Үнэлгээ хийгдэх хүртэл нийт дүнд оруулаагүй (\"Төлөвлөгөөнд оруулах\"-ыг Тийм болгож нэмнэ), гэхдээ төлөвлөх ёстой. Үнийн санал: Алтай Эколосын ТОПАЭРО-16 — 100 хүртэл хүнд зориулсан хоногт 16 м³ биологийн гүн цэвэрлэгээтэй байгууламж, цэвэрлэсэн ус MNS 4943:2015 стандартад нийцнэ. Төлбөрөөс хойш 4–6 долоо хоногт УБ-аас хүргэж, 30–45 хоногт суурилуулна.",
+        "en": "A priority problem. The current bacteria-based Ecolos septic system gives off a terrible smell whenever we have more than 30 guests — the biggest single source of guest complaints in summer 2026. An assessment in 2027 will decide whether it can be fixed or must be replaced; if it must be replaced, this cost is unavoidable. It is left out of the totals until that assessment (switch \"Included in the plan\" to Yes to add it), but it should be planned for. Quoted: Altai Ekolos TOPAERO-16, a biological treatment plant for 16 m³ a day — up to 100 people — that cleans the water to the Mongolian discharge standard (MNS 4943:2015). Delivered from UB 4–6 weeks after payment and installed in 30–45 days."
+      },
+      "components": [
+        {
+          "id": "plant",
+          "name": {
+            "mn": "Цэвэрлэх байгууламж",
+            "en": "Treatment plant"
+          },
+          "quantity": 1,
+          "options": [
+            {
+              "id": "topaero-16",
+              "name": {
+                "mn": "ТОПАЭРО-16 цэвэрлэх байгууламж (хоногт 16 м³)",
+                "en": "TOPAERO-16 treatment plant (16 m³/day)"
+              },
+              "source": "quote",
+              "price": {
+                "amount": 145750000,
+                "currency": "MNT"
+              },
+              "origin": "local",
+              "shipping": 0,
+              "default": true,
+              "basis": {
+                "mn": "Үнийн саналын бодит үнэ: ТОПАЭРО блок (6 тасалгаа, 5.1 × 2.0 × 2.87 м), ослын дохио, дренажийн насос, 3 компрессор, кабель. Хоногт 16 м³ нь ~100 хүнд хүрэлцэнэ, 2 цагт 4,500 л хүртэл оргил ачааллыг хүлээн авна — дүүрэн зочинтой үед хэт ачаалагдахгүй. Өдөрт ~17.6 кВт·ц цахилгаан хэрэглэнэ. Алтай Эколос ХХК-ийн 2026.08.04-ний үнийн санал (НӨАТ орсон).",
+                "en": "Firm price from the quotation: the TOPAERO plant block (6 chambers, 5.1 × 2.0 × 2.87 m), alarm, drainage pump, 3 air compressors and cabling. 16 m³ a day is enough for about 100 people and it takes peaks of up to 4,500 L in 2 hours, so a full house no longer overloads it. Uses about 17.6 kWh of electricity a day. Altai Ekolos LLC quotation of 4 Aug 2026 (VAT included)."
+              },
+              "remote": false
+            }
+          ]
+        },
+        {
+          "id": "head-station",
+          "name": {
+            "mn": "Толгой станц",
+            "en": "Head (inlet pump) station"
+          },
+          "quantity": 1,
+          "options": [
+            {
+              "id": "main",
+              "name": {
+                "mn": "Толгой станц",
+                "en": "Head station"
+              },
+              "source": "quote",
+              "price": {
+                "amount": 16500000,
+                "currency": "MNT"
+              },
+              "origin": "local",
+              "shipping": 0,
+              "default": true,
+              "basis": {
+                "mn": "Үнийн саналын бодит үнэ: бохир усыг байгууламж руу шахах толгой станц. Алтай Эколос ХХК-ийн 2026.08.04-ний үнийн санал (НӨАТ орсон).",
+                "en": "Firm price from the quotation: the inlet pump station that feeds wastewater into the plant. Altai Ekolos LLC quotation of 4 Aug 2026 (VAT included)."
+              },
+              "remote": false
+            }
+          ]
+        },
+        {
+          "id": "install",
+          "name": {
+            "mn": "Материал, ажиллах хүч, тээвэр, угсралт",
+            "en": "Materials, labour, transport & installation"
+          },
+          "quantity": 1,
+          "options": [
+            {
+              "id": "main",
+              "name": {
+                "mn": "Алтай Эколосын инженерүүд угсарна",
+                "en": "Installed by Altai Ekolos engineers"
+              },
+              "source": "quote",
+              "price": {
+                "amount": 42350000,
+                "currency": "MNT"
+              },
+              "origin": "local",
+              "shipping": 0,
+              "default": true,
+              "basis": {
+                "mn": "Үнийн саналын бодит үнэ: материал, ажиллах хүч, УБ-ын агуулахаас тээвэр, Алтай Эколосын инженерүүдийн угсралт, томилолтын зардал орсон — тиймээс хөдөө орон нутгийн нэмэгдэл нэмэхгүй. Алтай Эколос ХХК-ийн 2026.08.04-ний үнийн санал (НӨАТ орсон).",
+                "en": "Firm price from the quotation: materials, labour, transport from their UB warehouse and installation by Altai Ekolos engineers, including their travel costs — so the countryside premium is not added. Altai Ekolos LLC quotation of 4 Aug 2026 (VAT included)."
+              },
+              "remote": false
+            }
+          ]
+        },
+        {
+          "id": "site-works",
+          "name": {
+            "mn": "Газар шорооны ажил, цэвэрлэсэн усны гарц (үнийн саналд ороогүй)",
+            "en": "Excavation & treated-water outlet (not in the quote)"
+          },
+          "quantity": 1,
+          "options": [
+            {
+              "id": "estimate",
+              "name": {
+                "mn": "Экскаватор, газар шороо, гарц — ойролцоо тооцоо",
+                "en": "Excavator, earthworks and outlet — rough allowance"
+              },
+              "source": "construction-benchmark",
+              "price": {
+                "amount": 20000000,
+                "currency": "MNT"
+              },
+              "origin": "local",
+              "shipping": 0,
+              "default": true,
+              "basis": {
+                "mn": "Үнийн саналд ороогүй: газар шорооны ажил, цэвэрлэсэн усны гарцын өртгийг хөрсний бүтцээс хамааруулж тусад нь тооцно гэжээ; мөн ажлын талбайд экскаватор, цахилгаан, усаар лодж хангана. ₮20 сая нь ойролцоо тооцоо (экскаватор ~2 долоо хоног, хайрга, хоолой, гарцын шүүрүүлэх байгууламж) — 2027 оны үнэлгээгээр тодорхой болно.",
+                "en": "Not in the quote: the quotation says earthworks and the outlet for the treated water are priced separately once the soil is known, and the lodge must supply an excavator, power and water on site. ₮20m is a rough allowance (excavator for about 2 weeks, gravel, pipe and a soak-away for the outlet) — it will be firmed up by the 2027 assessment."
+              }
+            }
+          ]
+        }
+      ],
+      "upkeep": {
+        "perYear": 3400000,
+        "basis": {
+          "mn": "Цахилгаан: өдөрт ~17.6 кВт·ц × 365 × ~₮290 ≈ ₮1.9 сая; лаг соруулах, компрессорын засвар үйлчилгээ ~₮1.5 сая. Жилд нийт ~₮3.4 сая (ойролцоо).",
+          "en": "Electricity: about 17.6 kWh a day × 365 × ~₮290 ≈ ₮1.9m; sludge pump-out and compressor servicing about ₮1.5m. Roughly ₮3.4m a year."
+        }
+      },
+      "timeline": {
+        "work": [
+          4,
+          5
+        ],
+        "use": [
+          6,
+          12
+        ],
+        "note": {
+          "mn": "Үнэлгээгээр солих шаардлагатай гэвэл: 4–5-р сард (30–45 хоног) суурилуулж, зуны оргил ачааллаас өмнө ажиллуулна.",
+          "en": "If the assessment says replace: installed in Apr–May (30–45 days) so it is working before the summer peak."
+        }
+      }
+    },
+    {
       "id": "storage-parking",
       "category": "buildings",
       "earns": "no",
