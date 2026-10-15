@@ -14,6 +14,11 @@
         "mn": "Нэн тэргүүний асуудал. Одоогийн бактерийн аргаар ажилладаг Эколос септик систем 30-аас дээш зочинтой үед маш муу үнэр гаргадаг — 2026 оны зуны зочдын гомдлын хамгийн том шалтгаан. 2027 онд мэргэжлийн үнэлгээ хийж, засах уу, солих уу гэдгийг шийднэ; солих шаардлагатай гэж гарвал энэ хөрөнгө оруулалтаас зайлсхийх аргагүй. Үнэлгээ хийгдэх хүртэл нийт дүнд оруулаагүй (\"Төлөвлөгөөнд оруулах\"-ыг Тийм болгож нэмнэ), гэхдээ төлөвлөх ёстой. Үнийн санал: Алтай Эколосын ТОПАЭРО-16 — 100 хүртэл хүнд зориулсан хоногт 16 м³ биологийн гүн цэвэрлэгээтэй байгууламж, цэвэрлэсэн ус MNS 4943:2015 стандартад нийцнэ. Төлбөрөөс хойш 4–6 долоо хоногт УБ-аас хүргэж, 30–45 хоногт суурилуулна.",
         "en": "A priority problem. The current bacteria-based Ecolos septic system gives off a terrible smell whenever we have more than 30 guests — the biggest single source of guest complaints in summer 2026. An assessment in 2027 will decide whether it can be fixed or must be replaced; if it must be replaced, this cost is unavoidable. It is left out of the totals until that assessment (switch \"Included in the plan\" to Yes to add it), but it should be planned for. Quoted: Altai Ekolos TOPAERO-16, a biological treatment plant for 16 m³ a day — up to 100 people — that cleans the water to the Mongolian discharge standard (MNS 4943:2015). Delivered from UB 4–6 weeks after payment and installed in 30–45 days."
       },
+      "images": [
+        {
+          "src": "assets/img/items/wastewater-treatment/20261015-091600-000.jpg"
+        }
+      ],
       "components": [
         {
           "id": "plant",
