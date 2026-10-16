@@ -29,6 +29,10 @@
     "staff": {
       "mn": "Дадалд сайн ажилтнуудыг тогтоон барих арга болгож",
       "en": "as a way to keep good staff in Dadal"
+    },
+    "growth": {
+      "mn": "үйл ажиллагаа өргөжвөл",
+      "en": "if the operation keeps expanding"
     }
   },
   "groups": [
@@ -130,6 +134,19 @@
           "text": {
             "mn": "Дадал руу гэр бүлээрээ нүүж ирэх ажилчдад зориулсан орон сууцыг сум дахь газар дээрээ барих санаа. Сайн ажилтнуудыг, ялангуяа хүүхэдтэй хүмүүсийг Дадалд тогтоон барих нь одоогийн хамгийн том бэрхшээл.",
             "en": "An idea for living quarters on our town land for staff who move to Dadal with their families. Keeping good people in Dadal, especially those with children, is currently our biggest challenge."
+          }
+        },
+        {
+          "id": "town-storage",
+          "place": "town",
+          "if": "growth",
+          "title": {
+            "mn": "Агуулах, аж ахуйн барилга",
+            "en": "Storage and utility building"
+          },
+          "text": {
+            "mn": "Үйл ажиллагаа өргөжихийн хэрээр агуулах, аж ахуйн ажилд зориулсан тусдаа, илүү том барилга хэрэгтэй болж магадгүй. Сум дахь газар дээрээ, ажилчдын орон сууцны хажууд барих санаа.",
+            "en": "As the operation grows, a dedicated, larger building for storage and utility work (maintenance, repairs and supplies) could be needed. The idea is to build it next to the staff housing on our town land."
           }
         }
       ]
