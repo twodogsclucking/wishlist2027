@@ -1,36 +1,66 @@
 {
   "places": {
-    "dadal": { "mn": "Дадал лодж", "en": "Dadal lodge" },
-    "bulgan": { "mn": "Булган", "en": "Bulgan" },
-    "both": { "mn": "Хоёр лодж", "en": "Both lodges" },
-    "town": { "mn": "Дадал сум дахь газар", "en": "Dadal town land" }
+    "dadal": {
+      "mn": "Дадал лодж",
+      "en": "Dadal lodge"
+    },
+    "bulgan": {
+      "mn": "Булган",
+      "en": "Bulgan"
+    },
+    "both": {
+      "mn": "Хоёр лодж",
+      "en": "Both lodges"
+    },
+    "town": {
+      "mn": "Дадал сум дахь газар",
+      "en": "Dadal town land"
+    }
   },
   "triggers": {
-    "bulgan": { "mn": "Булганы лодж хэрэгжвэл", "en": "the Bulgan lodge going ahead" },
-    "road": { "mn": "Дадал хүртэлх хатуу хучилттай зам дуусвал", "en": "the paved road to Dadal being finished" },
-    "staff": { "mn": "Дадалд сайн ажилтнуудыг тогтоон барих", "en": "keeping good staff in Dadal" }
+    "bulgan": {
+      "mn": "Булганы лодж хэрэгжвэл",
+      "en": "if the Bulgan lodge goes ahead"
+    },
+    "road": {
+      "mn": "Дадал хүртэлх хатуу хучилттай зам дуусвал",
+      "en": "if the paved road to Dadal is finished"
+    },
+    "staff": {
+      "mn": "Дадалд сайн ажилтнуудыг тогтоон барих арга болгож",
+      "en": "as a way to keep good staff in Dadal"
+    }
   },
   "groups": [
     {
-      "when": { "mn": "2027", "en": "2027" },
+      "when": {
+        "mn": "2027",
+        "en": "2027"
+      },
       "items": [
         {
           "id": "hiace",
           "place": "both",
           "if": "bulgan",
-          "title": { "mn": "Toyota Hiace микроавтобус", "en": "Toyota Hiace van" },
+          "title": {
+            "mn": "Toyota Hiace микроавтобус",
+            "en": "Toyota Hiace van"
+          },
           "text": {
-            "mn": "Хоёр бааз руу болон хооронд нь зочид, хүнсний бараа тээвэрлэнэ. Top Motors-оос худалдан авна.",
-            "en": "To carry guests and groceries to and between both camps. To be purchased from Top Motors."
+            "mn": "Хоёр бааз руу болон хооронд нь зочид, хүнсний бараа тээвэрлэх микроавтобус. Авах бол Top Motors-оос худалдан авна.",
+            "en": "A van to carry guests and groceries to and between both camps. It would be purchased from Top Motors."
           }
         },
         {
           "id": "town-fence",
           "place": "town",
-          "title": { "mn": "Сум дахь газрын хашаа", "en": "Fence around our town land" },
+          "title": {
+            "mn": "Сум дахь газрын хашаа",
+            "en": "Fence around our town land"
+          },
           "text": {
-            "mn": "Дадал суманд эзэмшдэг газраа хил хязгаарыг нь тогтоож, хамгаалахын тулд хашаална — тэнд юм барихаас өмнө.",
-            "en": "Fence the plot we own in Dadal town to mark and protect it, ahead of building anything there."
+            "mn": "Дадал суманд эзэмшдэг газраа хашаалбал хил хязгаар нь тогтож, хамгаалагдана — тэнд юм барихаас өмнө.",
+            "en": "Fencing the plot we own in Dadal town would mark and protect it, ahead of building anything there."
           }
         },
         {
@@ -38,65 +68,89 @@
           "place": "bulgan",
           "if": "bulgan",
           "showWishlistTotal": true,
-          "title": { "mn": "Булганы лоджид мөн адил хүслийн жагсаалт", "en": "The same wishlist for the Bulgan lodge" },
+          "title": {
+            "mn": "Булганы лоджид мөн адил хүслийн жагсаалт",
+            "en": "The same wishlist for the Bulgan lodge"
+          },
           "text": {
-            "mn": "Энэ жагсаалтын бүх зүйл — барилга, тээврийн хэрэгсэл, аюулгүй байдлын хэрэгсэл, зочдын тав тух — Булганы лоджид ч хэрэгтэй байж болно; тэр лоджийн хэмжээнд тохируулна.",
-            "en": "Everything on this wishlist may be needed at the Bulgan lodge too — buildings, vehicles, safety gear and guest amenities — sized to that lodge."
+            "mn": "Энэ жагсаалтын ихэнх зүйл — барилга, тээврийн хэрэгсэл, аюулгүй байдлын хэрэгсэл, зочдын тав тух — Булганы лоджид ч хэрэгтэй байж болно; тэр лоджийн хэмжээнд тохируулна.",
+            "en": "Much of this wishlist could be needed at a Bulgan lodge too — buildings, vehicles, safety gear and guest amenities — sized to that lodge."
           }
         }
       ]
     },
     {
-      "when": { "mn": "2028", "en": "2028" },
+      "when": {
+        "mn": "2028",
+        "en": "2028"
+      },
       "items": [
         {
           "id": "deep-pipes",
           "place": "dadal",
           "if": "road",
-          "title": { "mn": "Ус, бохирын шугамыг хөлдөлтийн гүнээс доош буулгах", "en": "Lower the water and sewage pipes below the frost line" },
+          "title": {
+            "mn": "Ус, бохирын шугамыг хөлдөлтийн гүнээс доош буулгах",
+            "en": "Lower the water and sewage pipes below the frost line"
+          },
           "text": {
-            "mn": "Нэг шуудуунд байрлах ~150 м цэвэр ус, бохир усны шугамыг өвөл хөлдөхгүйн тулд 0.8 м-ээс ~4 м гүнд шилжүүлнэ.",
-            "en": "Move about 150 m of fresh-water and sewage pipes, which share one trench, from 0.8 m to about 4 m underground so they cannot freeze in winter."
+            "mn": "Нэг шуудуунд байрлах ~150 м цэвэр ус, бохир усны шугамыг өвөл хөлдөхгүйн тулд 0.8 м-ээс ~4 м гүнд шилжүүлэх шаардлагатай болж магадгүй.",
+            "en": "About 150 m of fresh-water and sewage pipes, which share one trench, would move from 0.8 m to about 4 m underground so they cannot freeze in winter."
           }
         },
         {
           "id": "dome-retrofit",
           "place": "dadal",
           "if": "road",
-          "title": { "mn": "12 бөмбөгөр байшинг өвөлжүүлэх", "en": "Winterise the 12 dome houses" },
+          "title": {
+            "mn": "12 бөмбөгөр байшинг өвөлжүүлэх",
+            "en": "Winterise the 12 dome houses"
+          },
           "text": {
-            "mn": "12 бөмбөгөр байшингийн (тус бүр ~38 м²) дулаалгыг сайжруулж, шалны халаалт суурилуулан жилийн турш ашиглах боломжтой болгоно.",
-            "en": "Retrofit all 12 domes (about 38 m² each) with better insulation and floor heating so they can be used all year."
+            "mn": "12 бөмбөгөр байшингийн (тус бүр ~38 м²) дулаалгыг сайжруулж, шалны халаалт суурилуулбал жилийн турш ашиглах боломжтой болно.",
+            "en": "All 12 domes (about 38 m² each) would get better insulation and floor heating so they can be used all year."
           }
         }
       ]
     },
     {
-      "when": { "mn": "2028–2029", "en": "2028–2029" },
+      "when": {
+        "mn": "2028–2029",
+        "en": "2028–2029"
+      },
       "items": [
         {
           "id": "staff-housing",
           "place": "town",
           "if": "staff",
-          "title": { "mn": "Ажилчдын гэр бүлийн орон сууц", "en": "Housing for staff families" },
+          "title": {
+            "mn": "Ажилчдын гэр бүлийн орон сууц",
+            "en": "Housing for staff families"
+          },
           "text": {
-            "mn": "Дадал руу гэр бүлээрээ нүүж ирэх ажилчдад зориулсан орон сууцыг сум дахь газар дээрээ барина. Сайн ажилтнуудыг, ялангуяа хүүхэдтэй хүмүүсийг Дадалд тогтоон барих нь одоогийн хамгийн том бэрхшээл.",
-            "en": "Living quarters on our town land for staff who move to Dadal with their families. Keeping good people in Dadal, especially those with children, is currently our biggest challenge."
+            "mn": "Дадал руу гэр бүлээрээ нүүж ирэх ажилчдад зориулсан орон сууцыг сум дахь газар дээрээ барих санаа. Сайн ажилтнуудыг, ялангуяа хүүхэдтэй хүмүүсийг Дадалд тогтоон барих нь одоогийн хамгийн том бэрхшээл.",
+            "en": "An idea for living quarters on our town land for staff who move to Dadal with their families. Keeping good people in Dadal, especially those with children, is currently our biggest challenge."
           }
         }
       ]
     },
     {
-      "when": { "mn": "2029", "en": "2029" },
+      "when": {
+        "mn": "2029",
+        "en": "2029"
+      },
       "items": [
         {
           "id": "year-round-gers",
           "place": "dadal",
           "if": "road",
-          "title": { "mn": "Жилийн турш ажиллах 10 тансаг гэр", "en": "10 high-end year-round gers" },
+          "title": {
+            "mn": "Жилийн турш ажиллах 10 тансаг гэр",
+            "en": "10 high-end year-round gers"
+          },
           "text": {
             "mn": "Жинхэнэ монгол аялал хүсдэг гадаад зочдод зориулсан, дотроо халаалт, ариун цэврийн шугамтай, жилийн турш ажиллах 10 тансаг зэрэглэлийн монгол гэр.",
-            "en": "Ten high-end Mongolian gers (yurts) with indoor heating and plumbing that work all year round, for foreign guests who want a true Mongolian experience."
+            "en": "Ten high-end Mongolian gers (yurts) with indoor heating and plumbing, usable all year, for foreign guests who want a true Mongolian experience."
           }
         }
       ]

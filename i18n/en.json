@@ -260,8 +260,9 @@
   "tl.monthsShort": "J,F,M,A,M,J,J,A,S,O,N,D",
   "tl.miles": "Key milestones",
   "tl.chart": "Month by month",
-  "fut.title": "Further out — 2027–2029",
-  "fut.sub": "Not part of this package and not counted anywhere — a heads-up on spending that may come later, so it is no surprise. Most of it depends on two things: whether we open a second lodge in Bulgan, and whether the paved road to Dadal is finished in 2028–2029. A paved road would make Dadal easy to reach all year and could bring many more guests, including in winter — so several items are about making the lodge fully usable in winter.",
-  "fut.if": "Depends on",
-  "fut.ref": "For reference, this wishlist currently totals {v}."
+  "fut.title": "Ideas for later — decisions needed",
+  "fut.sub": "These are not plans or commitments — they are ideas that each need a decision first, listed so that possible future spending is no surprise. None of them is part of this package or counted anywhere. Most depend on two things nobody can confirm yet: whether a second lodge opens in Bulgan, and whether the paved road to Dadal is finished in 2028–2029. A paved road would make Dadal easy to reach all year and could bring many more guests, including in winter — which is why several ideas are about winter use.",
+  "fut.if": "Decision needed",
+  "fut.ref": "For reference, this wishlist currently totals {v}.",
+  "fut.when": "Could come up in {when}"
 }

@@ -4,7 +4,7 @@
 (function () {
 "use strict";
 
-const VER = "16";                                   // bump when app/excel code changes, to dodge stale browser caches
+const VER = "17";                                   // bump when app/excel code changes, to dodge stale browser caches
 const LSK = "ninepines_wishlist_v2";
 const $app = document.getElementById("app");
 let SET, RAW, ITEMS, I18N, ORDER, S, FUT;
@@ -496,11 +496,11 @@ function future() {
   if (!FUT || !FUT.groups) return "";
   const card = (x) => `<div class="fut"><div class="fut-h"><b>${esc(tx(x.title))}</b><span class="fut-pl">${esc(tx(FUT.places[x.place]))}</span></div>`
     + `<p>${esc(tx(x.text))}</p>`
-    + (x.if ? `<p class="fut-if"><b>${t("fut.if")}:</b> ${esc(tx(FUT.triggers[x.if]))}</p>` : "")
+    + `<p class="fut-if"><b>${t("fut.if")}</b>${x.if ? " — " + esc(tx(FUT.triggers[x.if])) : ""}</p>`
     + (x.showWishlistTotal ? `<p class="fut-ref">${esc(t("fut.ref", { v: moneyText(totals(S).all) }))}</p>` : "")
     + `</div>`;
   return `<section id="future"><div class="sec-h"><h2>${t("fut.title")}</h2><p>${t("fut.sub")}</p></div>
-    ${FUT.groups.map((g, i) => acc("fut:" + i, esc(tx(g.when)), `<span class="c">${g.items.length}</span>`,
+    ${FUT.groups.map((g, i) => acc("fut:" + i, esc(t("fut.when", { when: tx(g.when) })), `<span class="c">${g.items.length}</span>`,
       `<div class="pad"><div class="futs">${g.items.map(card).join("")}</div></div>`)).join("")}</section>`;
 }
 
