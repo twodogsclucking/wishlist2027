@@ -4,10 +4,10 @@
 (function () {
 "use strict";
 
-const VER = "15";                                   // bump when app/excel code changes, to dodge stale browser caches
+const VER = "16";                                   // bump when app/excel code changes, to dodge stale browser caches
 const LSK = "ninepines_wishlist_v2";
 const $app = document.getElementById("app");
-let SET, RAW, ITEMS, I18N, ORDER, S;
+let SET, RAW, ITEMS, I18N, ORDER, S, FUT;
 const UI = { open: new Set(), info: new Set(), edit: new Set(), saving: false, exporting: false, xl: false, lastPath: null,
              photoIdx: {}, photos: false, photoSrv: null, photoMsg: "", photoBusy: 0, photoTarget: {} };
 /* "Export as defaults" is a maintainer tool: shown only when previewing locally (preview.bat), never on the live site. */
@@ -17,9 +17,10 @@ const shipDefault = (o) => o.origin === "import" ? o.shipping : DEFAULT_SHIP;
 
 /* ================================================================ boot */
 const getJSON = (p) => fetch(p, { cache: "no-cache" }).then(r => { if (!r.ok) throw new Error(p); return r.json(); });
-Promise.all([getJSON("data/settings.json"), getJSON("data/items.json"), getJSON("i18n/mn.json"), getJSON("i18n/en.json")])
-  .then(([set, items, mn, en]) => {
-    SET = set; RAW = items; ITEMS = items.items; I18N = { mn, en };
+Promise.all([getJSON("data/settings.json"), getJSON("data/items.json"), getJSON("i18n/mn.json"), getJSON("i18n/en.json"),
+             getJSON("data/future.json").catch(() => null)])          // optional: the site works without it
+  .then(([set, items, mn, en, fut]) => {
+    SET = set; RAW = items; ITEMS = items.items; I18N = { mn, en }; FUT = fut;
     const catOrder = SET.categories.map(c => c.id);
     ORDER = ITEMS.slice().sort((a, b) => catOrder.indexOf(a.category) - catOrder.indexOf(b.category)).map(i => i.id);
     S = loadState();
@@ -489,6 +490,20 @@ function timeline() {
       <div class="tbl tl-scroll"><div class="tl">${head}${rows.join("")}</div></div></div>`)}</section>`;
 }
 
+/* ================================================================ FURTHER OUT (home page)
+   Possible later projects, for expectations only: never part of totals, Excel or share links. */
+function future() {
+  if (!FUT || !FUT.groups) return "";
+  const card = (x) => `<div class="fut"><div class="fut-h"><b>${esc(tx(x.title))}</b><span class="fut-pl">${esc(tx(FUT.places[x.place]))}</span></div>`
+    + `<p>${esc(tx(x.text))}</p>`
+    + (x.if ? `<p class="fut-if"><b>${t("fut.if")}:</b> ${esc(tx(FUT.triggers[x.if]))}</p>` : "")
+    + (x.showWishlistTotal ? `<p class="fut-ref">${esc(t("fut.ref", { v: moneyText(totals(S).all) }))}</p>` : "")
+    + `</div>`;
+  return `<section id="future"><div class="sec-h"><h2>${t("fut.title")}</h2><p>${t("fut.sub")}</p></div>
+    ${FUT.groups.map((g, i) => acc("fut:" + i, esc(tx(g.when)), `<span class="c">${g.items.length}</span>`,
+      `<div class="pad"><div class="futs">${g.items.map(card).join("")}</div></div>`)).join("")}</section>`;
+}
+
 /* ================================================================ HOME */
 function viewHome() {
   const T = totals(S);
@@ -556,6 +571,7 @@ function viewHome() {
       <div class="card">${ORDER.map(findItem).filter(i => !ours(i)).map(it => `<a class="irow partner" href="#/item/${it.id}"><span class="nm">${esc(tx(it.name))}`
         + `<small>${esc(t("partner.est", { by: tx(it.funding.by) }))}: ${moneyText(itemCost(S, it))}</small></span>${pill(it)}<span class="amt"></span>${ico.chev}</a>`).join("")}</div></section>` : ""}
     ${timeline()}
+    ${future()}
   </div>`;
 }
 

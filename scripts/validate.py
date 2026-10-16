@@ -229,6 +229,31 @@ if items_doc:
         ref = it.get("revenueCountedWith")
         if ref and ref not in item_ids: err(f"item '{it.get('id')}'.revenueCountedWith", f"points to unknown item '{ref}'")
 
+# ---------------------------------------------------------------- future.json (optional "further out" section)
+if os.path.exists(os.path.join(ROOT, "data/future.json")):
+    fut = load("data/future.json")
+    if fut is not None:
+        places, triggers = fut.get("places") or {}, fut.get("triggers") or {}
+        for k, v in places.items(): text(f"future.places.{k}", v)
+        for k, v in triggers.items(): text(f"future.triggers.{k}", v)
+        seen = set()
+        groups = fut.get("groups")
+        if not isinstance(groups, list) or not groups: err("data/future.json", 'needs a non-empty "groups" list')
+        for gi, g in enumerate(groups or []):
+            gw = f"future.groups[{gi}]"
+            text(f"{gw}.when", g.get("when"))
+            if not isinstance(g.get("items"), list) or not g["items"]: err(gw, 'needs a non-empty "items" list'); continue
+            for x in g["items"]:
+                xid = x.get("id"); xw = f"future item '{xid}'"
+                if not isinstance(xid, str) or not ID.match(xid): err(xw, "id must be lowercase-with-dashes")
+                if xid in seen: err(xw, "id is used twice")
+                seen.add(xid)
+                text(f"{xw}.title", x.get("title")); text(f"{xw}.text", x.get("text"))
+                if x.get("place") not in places: err(f"{xw}.place", f"'{x.get('place')}' is not one of {sorted(places)}")
+                if "if" in x and x["if"] not in triggers: err(f"{xw}.if", f"'{x['if']}' is not one of {sorted(triggers)}")
+                extra = set(x) - {"id", "place", "if", "title", "text", "showWishlistTotal"}
+                if extra: err(xw, f"has unknown fields {sorted(extra)}")
+
 # ---------------------------------------------------------------- translations
 if mn and en:
     missing_en, missing_mn = set(mn) - set(en), set(en) - set(mn)

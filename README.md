@@ -19,6 +19,7 @@ assets/js/vendor/          ExcelJS 4.4 (MIT licence) — the library excel.js us
 assets/img/                logo, and item photos in assets/img/items/
 data/items.json            ★ EVERY ITEM — the master data. Edit this.
 data/settings.json         exchange rate, customs duty, VAT, guest-nights, scenarios, categories, price sources
+data/future.json           "Further out" home section: possible 2027–2029 projects (text only, never in totals or Excel)
 data/*.schema.json         rules VS Code uses to autocomplete and underline mistakes
 i18n/mn.json, en.json      every piece of on-screen wording
 scripts/validate.py        checks the data — run before publishing
